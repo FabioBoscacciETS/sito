@@ -289,3 +289,56 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+/* FIX DEFINITIVO GRIGLIA DYNAMES */
+
+.dynames-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 30px !important;
+    width: 100%;
+}
+
+.dynames-grid > .author-box {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+}
+
+/* FOTO TUTTE IDENTICHE */
+.dynames-grid .author-icon {
+    width: 140px !important;
+    height: 140px !important;
+    min-width: 140px !important;
+    min-height: 140px !important;
+    margin: 0 auto 20px !important;
+    overflow: hidden !important;
+    border-radius: 50% !important;
+}
+
+.dynames-grid .author-icon img {
+    width: 140px !important;
+    height: 140px !important;
+    max-width: 140px !important;
+    max-height: 140px !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    border-radius: 50% !important;
+    display: block !important;
+}
+
+@media (max-width: 900px) {
+    .dynames-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .dynames-grid {
+        grid-template-columns: 1fr !important;
+    }
+    }

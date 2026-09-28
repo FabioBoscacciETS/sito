@@ -234,3 +234,58 @@ footer {
     .hero h2 { font-size: 2.5rem; }
     .author-box { flex-direction: column; text-align: left; gap: 1.5rem; }
 }
+
+/* ===== GRIGLIA COLLABORATORI DYNAMES ===== */
+
+.dynames-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+.dynames-grid .author-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    margin: 0;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.dynames-grid .author-icon {
+    margin: 0 auto 20px auto;
+}
+
+.dynames-grid .author-icon img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.dynames-grid .author-info {
+    width: 100%;
+}
+
+.dynames-grid .author-info h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+    .dynames-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* SMARTPHONE */
+@media (max-width: 600px) {
+    .dynames-grid {
+        grid-template-columns: 1fr;
+    }
+}

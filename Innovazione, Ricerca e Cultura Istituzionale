@@ -141,6 +141,29 @@
 
     <!-- HERO -->
     <section class="hero">
+        <style>
+    .hero .container {
+        text-align: center;
+    }
+
+    .hero h1 {
+        color: #ffffff !important;
+        font-family: 'Playfair Display', serif !important;
+        font-size: 3.2rem;
+        font-weight: 600;
+        text-align: center;
+        margin: 0 0 0.8rem 0;
+    }
+
+    .hero p {
+        color: #ffffff !important;
+        font-family: 'Playfair Display', serif !important;
+        font-size: 1.45rem;
+        font-style: italic;
+        text-align: center !important;
+        margin: 0 auto !important;
+    }
+</style>
         <div class="container">
             <h1>Fondazione Boscacci ETS</h1>
             <p>Innovazione, Ricerca e Cultura Istituzionale</p>

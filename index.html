@@ -5,198 +5,897 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fondazione Boscacci ETS</title>
-    <!-- Fonts unified in style.css -->
+
     <link rel="stylesheet" href="css/style.css?v=4">
     <link rel="icon" href="assets/logo_grafico.png" type="image/png">
+
+    <style>
+        .dynames-section-title {
+            margin: 3rem 0 1.25rem;
+            font-size: 1.35rem;
+            letter-spacing: 0.02em;
+        }
+
+        .dynames-badge {
+            display: inline-block;
+            margin: 0.35rem 0 0.55rem;
+            padding: 0.32rem 0.7rem;
+            border-left: 3px solid var(--primary-dark);
+            background: rgba(0, 0, 0, 0.055);
+            font-size: 0.76rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .dynames-role {
+            margin-bottom: 0.45rem;
+            font-weight: 700;
+        }
+    </style>
 </head>
 
 <body>
 
-    <header>
-        <div class="container header-inner">
-            <div class="brand">
-                <a href="index.html" style="display: flex; align-items: center;">
-                    <img src="assets/logo_boscacci_rosso.png" alt="Fondazione Boscacci ETS" style="height: 150px; width: auto;">
-                </a>
-            </div>
+<header>
+    <div class="container header-inner">
 
-            <!-- Hamburger Menu Icon -->
-            <div class="menu-toggle" id="menuToggle">
-                <span></span><span></span><span></span>
-            </div>
-
-            <nav class="desktop-nav" id="mainNav">
-                <a href="index.html" class="active">Chi Siamo</a>
-                <a href="aree-interesse.html">Aree di Interesse</a>
-                <a href="eventi.html">Eventi</a>
-                <a href="progetti.html">Progetti</a>
-                <a href="collaborare.html">Collaborare</a>
-                <a href="contatti.html">Contatti</a>
-            </nav>
+        <div class="brand">
+            <a href="index.html"
+               style="display: flex; align-items: center;">
+                <img src="assets/logo_boscacci_rosso.png"
+                     alt="Fondazione Boscacci ETS"
+                     style="height: 150px; width: auto;">
+            </a>
         </div>
-    </header>
 
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="desktop-nav" id="mainNav">
+            <a href="index.html" class="active">Chi Siamo</a>
+            <a href="aree-interesse.html">Aree di Interesse</a>
+            <a href="eventi.html">Eventi</a>
+            <a href="progetti.html">Progetti</a>
+            <a href="collaborare.html">Collaborare</a>
+            <a href="contatti.html">Contatti</a>
+        </nav>
+
+    </div>
+</header>
+<main>
+
+    <!-- HERO -->
     <section class="hero">
         <div class="container">
-            <h2>Innovazione, Ricerca e Cultura Istituzionale</h2>
-            <p>Fondazione Boscacci ETS sviluppa e divulga studi e ricerche volti alla prevenzione e promozione della salute, alla comunicazione e alla formazione strategica nelle relazioni istituzionali.</p>
+            <h1>Fondazione Boscacci ETS</h1>
+            <p>Innovazione, Ricerca e Cultura Istituzionale</p>
         </div>
     </section>
 
-    <!-- COSA FACCIAMO -->
-    <section id="cosa-facciamo" class="container">
-        <h2 class="section-title">La Nostra Missione</h2>
-        <div class="grid-2">
-            <div class="card">
-                <h3>ANALISI SCIENTIFICA</h3>
-                <p>Fondazione Boscacci ETS sviluppa e divulga studi, ricerche e approfondimenti mirati a sensibilizzare temi di interesse sociale con il coinvolgimento diretto degli stakeholder di settore.</p>
-                <p style="margin-top: 1rem;">Insieme ai progetti di sviluppo e ricerca scientifica, aiuta e facilita il raggiungimento di obiettivi multidisciplinari volti alla prevenzione e promozione della salute dell’individuo, alla comunicazione e alla formazione nelle relazioni istituzionali.</p>
-            </div>
-            <div class="card">
-                <h3>EVENTI E RELAZIONI</h3>
-                <p>Fondazione Boscacci ETS promuove incontri, conferenze e momenti di dialogo tra istituzioni, accademia, società civile e industria, favorendo una maggiore consapevolezza delle sfide strategiche contemporanee.</p>
-                <p style="margin-top: 1rem;">Grazie ai suoi membri, professori Universitari, professionisti, clinici di fama nazionale ed internazionale, Onorevoli parlamentari e giornalisti di fama nazionale, Fondazione Boscacci ETS vanta un importante networking regionale e nazionale.</p>
+    <!-- MISSIONE -->
+    <section>
+        <div class="container">
+
+            <h2 class="section-title">La Nostra Missione</h2>
+
+            <div class="mission-grid">
+
+                <div class="mission-box">
+                    <h3>ANALISI SCIENTIFICA</h3>
+                    <p>
+                        Fondazione Boscacci ETS sviluppa e divulga studi,
+                        ricerche e approfondimenti mirati a sensibilizzare
+                        e informare.
+                    </p>
+                </div>
+
+                <div class="mission-box">
+                    <h3>EVENTI E RELAZIONI</h3>
+                    <p>
+                        Fondazione Boscacci ETS promuove incontri,
+                        conferenze e momenti di dialogo tra istituzioni,
+                        professionisti ed esperti.
+                    </p>
+                </div>
+
             </div>
         </div>
     </section>
 
     <!-- CHI SIAMO -->
-    <section id="chi-siamo" style="background: var(--optical-white);">
+    <section id="chi-siamo">
         <div class="container">
+
             <h2 class="section-title">Chi Siamo</h2>
-            
+
             <div class="author-box">
-                <div class="author-icon"><img src="assets/Fabio Boscacci.jfif" alt="Fabio Boscacci"></div>
+                <div class="author-icon">
+                    <img src="assets/Fabio Boscacci.jfif" alt="Fabio Boscacci">
+                </div>
                 <div class="author-info">
                     <h4>Dott. Fabio Boscacci</h4>
-                    <p>Presidente della Fondazione Boscacci, Cofondatore e Direttore Responsabile di DYNAMES. Consulente strategico sui temi di Health care, Pharmaceutical, Public Affairs, Patient Access. Specializzato in relazioni istituzionali e politica diplomatica.</p>
+                    <p>
+                        Presidente della Fondazione Boscacci, Cofondatore
+                        e Direttore Responsabile di DYNAMES.
+                    </p>
                 </div>
             </div>
 
             <div class="author-box">
-                <div class="author-icon"><img src="assets/Vinenzo D'ANNA.png" alt="Vincenzo D’Anna"></div>
+                <div class="author-icon">
+                    <img src="assets/Vinenzo D'ANNA.png" alt="Vincenzo D'Anna">
+                </div>
                 <div class="author-info">
                     <h4>Dott. Vincenzo D’Anna</h4>
-                    <p>Cofondatore e Consigliere editoriale e scientifico di DYNAMES. Ex allievo della scuola militare Nunziatella, Tenente Colonnello dell'esercito italiano. Analista geopolitico e consulente strategico sui temi di sicurezza nazionale e deterrenza integrata. Specializzato in relazioni istituzionali e cerimoniere esperto.</p>
+                    <p>
+                        Cofondatore e Consigliere editoriale e scientifico
+                        di DYNAMES.
+                    </p>
                 </div>
             </div>
 
             <div class="author-box">
-                <div class="author-icon"><img src="assets/Stefano De Lillo.jpeg" alt="Stefano De Lillo"></div>
+                <div class="author-icon">
+                    <img src="assets/Stefano De Lillo.jpeg" alt="Stefano De Lillo">
+                </div>
                 <div class="author-info">
-                    <h4>Prof. Stefano de Lillo</h4>
-                    <p>Medico Chirurgo, Cardiologo e medico dello Sport. Presidente dell'Ordine dei Medici di Roma (OMCeO Roma). Senatore della XVI Legislatura.</p>
+                    <h4>Dott. Stefano De Lillo</h4>
                 </div>
             </div>
 
             <div class="author-box">
-                <div class="author-icon"><img src="assets/Massimo Ciccozzi.jpeg" alt="Massimo Ciccozzi"></div>
+                <div class="author-icon">
+                    <img src="assets/Massimo Ciccozzi.jpeg" alt="Massimo Ciccozzi">
+                </div>
                 <div class="author-info">
                     <h4>Prof. Massimo Ciccozzi</h4>
-                    <p>Professore ordinario di Statistica Medica ed Epidemiologia presso l'Università Campus Bio-Medico di Roma. H-index 60, membro GOARN (Global Outbreak Alert and Response Network) dell'Organizzazione Mondiale della Sanità (OMS). Ufficiale Ordine al Merito della Repubblica Italiana.</p>
                 </div>
             </div>
 
             <div class="author-box">
-                <div class="author-icon"><img src="assets/Gianna Zamaro.jpeg" alt="Gianna Zamaro"></div>
+                <div class="author-icon">
+                    <img src="assets/Gianna Zamaro.jpeg" alt="Gianna Zamaro">
+                </div>
                 <div class="author-info">
-                    <h4>Prof.ssa Gianna Zamaro</h4>
-                    <p>Medico chirurgo, anestesista rianimatore, Docente Master all'Università Cà Foscari. Direttore Centrale Salute Politiche Sociali e Disabilità Regione Friuli Venezia Giulia, delegata all'Organizzazione Mondiale della Sanità (OMS) e presso le Nazioni Unite. Esperta riconosciuta di digital Health con particolare attenzione all'uso dell'AI nel settore salute.</p>
+                    <h4>Dott.ssa Gianna Zamaro</h4>
                 </div>
             </div>
 
             <div class="author-box">
-                <div class="author-icon"><img src="assets/curtopassi.jpeg" alt="Elena Curtopassi"></div>
+                <div class="author-icon">
+                    <img src="assets/curtopassi.jpeg" alt="Elena Curtopassi">
+                </div>
                 <div class="author-info">
                     <h4>Dott.ssa Elena Curtopassi</h4>
-                    <p>Direttore Centrale Salute Politiche Sociali Regione Veneto presso l'ufficio di Bruxelles. Membro di molteplici organizzazioni internazionali. Esperta riconosciuta di relazioni istituzionali e internazionali.</p>
                 </div>
             </div>
 
             <div class="author-box">
-                <div class="author-icon"><img src="assets/elisabetta_panico_nuova.jpeg" alt="Elisabetta Panico"></div>
+                <div class="author-icon">
+                    <img src="assets/elisabetta_panico_nuova.jpeg" alt="Elisabetta Panico">
+                </div>
                 <div class="author-info">
                     <h4>Dott.ssa Elisabetta Panico</h4>
-                    <p>Staff Manager del Luiss Data Lab e della Scuola di Giornalismo Luiss. Specializzata di Relazioni Internazionali e Politica Globale, Sistemi e Tecnologie Elettroniche per la Sicurezza, la Difesa e l’Intelligence. Esperta riconosciuta per le relazioni con i media e la stampa.</p>
                 </div>
             </div>
 
             <div class="author-box">
-                <div class="author-icon"><img src="assets/brancato guglielmo.png" alt="Guglielmo Brancato"></div>
+                <div class="author-icon">
+                    <img src="assets/brancato guglielmo.png" alt="Guglielmo Brancato">
+                </div>
                 <div class="author-info">
                     <h4>Dott. Guglielmo Brancato</h4>
-                    <p>Produttore cinematografico per Marte Studios, Technology Advisor di DYNAMES. Ex Allievo della Scuola Militare Nunziatella.</p>
+                    <p>
+                        Produttore cinematografico per Marte Studios,
+                        Technology Advisor di DYNAMES. Ex Allievo della
+                        Scuola Militare Nunziatella.
+                    </p>
                 </div>
             </div>
-<div class="author-box">
-    <div class="author-icon"><img src="assets/antonio-brigandi.jpg" alt="Antonino Brigandì"></div>
-    <div class="author-info">
-        <h4>Dott. Antonino Brigandì</h4>
-        <p><strong>Governance Pubblica</strong></p>
-        <p>Laureato magistrale in Relazioni internazionali e sicurezza globale presso La Sapienza, ha conseguito un master in Public Affairs e Lobbying alla Luiss Business School. Consulente di relazioni istituzionali, lavora con clienti nei settori difesa, cybersicurezza ed energia e scrive di geopolitica e politica italiana.</p>
-    </div>
-</div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="assets/antonio-brigandi.jpg" alt="Antonino Brigandì">
+                </div>
+                <div class="author-info">
+                    <h4>Dott. Antonino Brigandì</h4>
+                    <p><strong>Governance Pubblica</strong></p>
+                    <p>
+                        Laureato magistrale in Relazioni internazionali e
+                        sicurezza globale presso La Sapienza, ha conseguito
+                        un master in Public Affairs e Lobbying alla Luiss
+                        Business School. Consulente di relazioni istituzionali,
+                        lavora con clienti nei settori difesa, cybersicurezza
+                        ed energia e scrive di geopolitica e politica italiana.
+                    </p>
+                </div>
+            </div>
+
+            <!-- NUOVI COLLABORATORI DYNAMES -->
+
+            <h3 class="dynames-section-title">Direzione DYNAMES</h3>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/Alessiopostiglione.jpeg"
+                         alt="Alessio Postiglione" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Alessio Postiglione</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">Direttore Scientifico</p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/massimo%20panizzi.jpeg"
+                         alt="Massimo Panizzi" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Massimo Panizzi</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">Direttore Editoriale</p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/michele-punzi.jpg"
+                         alt="Michele Punzi" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Michele Punzi</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">Consulente editoriale</p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/Maria%20Crisitina%20Treccagnoli.png"
+                         alt="Maria Cristina Treccagnoli" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Maria Cristina Treccagnoli</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">HR &amp; Compliance Manager</p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/Pallotta%20simone.jpeg"
+                         alt="Simone Pallotta" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Simone Pallotta</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">Coordinatore eventi</p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/Serena%20Conticelli.jpg"
+                         alt="Serena Conticelli" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Serena Conticelli</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">Consulente grafica e fotografia</p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/veronica-comple.jpg"
+                         alt="Veronica Comple" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Veronica Comple</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">Digital Media &amp; Website Coordinator</p>
+                </div>
+            </div>
+                        <h3 class="dynames-section-title">Senior Mentor</h3>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/crocco.jpg"
+                         alt="Massimo Crocco Barisano Colizza" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Gen. B. (ris) Massimo Crocco Barisano Colizza</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">Senior Mentor</p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/marco-diliddo.jpg"
+                         alt="Marco Di Liddo" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Marco Di Liddo</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">Senior Mentor</p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/ciro%20niglio.jpg"
+                         alt="Ciro Niglio" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Gen. D. CC (ris.) Ciro Niglio</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">Senior Mentor</p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/caterina-pino.jpg"
+                         alt="Caterina Pino" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Caterina Pino</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">Senior Mentor</p>
+                </div>
+            </div>
+
+
+            <h3 class="dynames-section-title">Junior Fellows</h3>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/nicola-barbesino.jpg"
+                         alt="Nicola Barbesino" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Nicola Barbesino</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">Difesa e Sicurezza</p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/chiara-caterina-gatti.jpg"
+                         alt="Chiara Caterina Gatti" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Chiara Caterina Gatti</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">Difesa e Sicurezza</p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/andrea-giacomazza.jpg"
+                         alt="Andrea Giacomazza" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Andrea Giacomazza</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">Diritto e Legittimità</p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/miriam-foti.jpg"
+                         alt="Miriam Foti" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Miriam Foti</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">Diritto e Legittimità</p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/francesco-cirigliano.jpg"
+                         alt="Francesco Cirigliano" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Francesco Cirigliano</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">Informazione e Dominio Cognitivo</p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/ivan-devita.jpg"
+                         alt="Ivan De Vita" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Ivan De Vita</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">Tecnologie e Sistemi Complessi</p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/giulia-caracuta.jpg"
+                         alt="Giulia Caracuta" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Giulia Caracuta</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">Economia e Industria</p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/francesco-perrone.jpg"
+                         alt="Francesco Perrone" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Francesco Perrone</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">Società ed Educazione</p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/francesco-bianchi.jpg"
+                         alt="Francesco Bianchi" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Francesco Bianchi</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">Salute e Welfare</p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/luca-oriani.JPG"
+                         alt="Luca Oriani" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Luca Oriani</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">Tecnologie e Sistemi Complessi</p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/matteo-bonetti.jpg"
+                         alt="Matteo Bonetti Pancher" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Matteo Bonetti Pancher</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">Diritto e Legittimità</p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/matteo-belle.jpg"
+                         alt="Matteo Bellè" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Matteo Bellè</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">Diritto e Legittimità</p>
+                </div>
+            </div>
+                        <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/giorgia-zanotel.jpg"
+                         alt="Giorgia Zanotel" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Giorgia Zanotel</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">Società ed Educazione</p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/aniello-inverso.jpg"
+                         alt="Aniello Inverso" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Aniello Inverso</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">Infrastrutture Strategiche</p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/luigi_piccione.jpg"
+                         alt="Luigi Piccione" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Luigi Piccione</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">Risorse ed Energia</p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/luciano_pastore.jpg"
+                         alt="Luciano Pastore" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Luciano Pastore</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">Infrastrutture Strategiche</p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/francesco-custureri.jpg"
+                         alt="Francesco Custureri" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Francesco Custureri</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">Tecnologie e Sistemi Complessi</p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/mattera_danilo.jpg"
+                         alt="Danilo Mattera Trimonti" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Danilo Mattera Trimonti</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">Difesa e Sicurezza</p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/guido-dello-ioio.jpg"
+                         alt="Guido Dello Ioio" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Guido Dello Ioio</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">Economia e Industria</p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/francesco-mitrangolo.jpg"
+                         alt="Francesco Mitrangolo" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Francesco Mitrangolo</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">Infrastrutture Strategiche</p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/marco-trevisan.jpg"
+                         alt="Francesco Trevisan" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Francesco Trevisan</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">Informazione e Dominio Cognitivo</p>
+                </div>
+            </div>
+
+
+            <h3 class="dynames-section-title">
+                Subject Matter Expert per Wargaming
+            </h3>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/fabio%20camillotti.jpg"
+                         alt="Fabio Camillotti" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Fabio Camillotti</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">
+                        Lawfare · Cooperazione Civile-Militare · Wargaming
+                    </p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/noe-sturaro.jpg"
+                         alt="Noé Sturaro" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Noé Sturaro</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">
+                        Lawfare · Militare · Wargaming
+                    </p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/francesca-ferro.jpg"
+                         alt="Francesca Ferro" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Francesca Ferro</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">
+                        Cooperazione Civile-Militare · Wargaming
+                    </p>
+                </div>
+            </div>
+
+
+            <h3 class="dynames-section-title">
+                Subject Matter Expert &amp; Contributors
+            </h3>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/rodolfo-belcastro.jpeg"
+                         alt="Rodolfo Belcastro" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Rodolfo Belcastro</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">
+                        Economia, Finanza e Industria della Difesa
+                    </p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/domenico-letizia.jfif"
+                         alt="Domenico Letizia" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Domenico Letizia</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">
+                        Geopolitica, Diritti Umani e Blue Economy
+                    </p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/Laura-laportella.jpg"
+                         alt="Laura Laportella" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Laura Laportella</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">
+                        Comunicazione Digitale e Narrazioni
+                    </p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/francesco-scordo.jpeg"
+                         alt="Francesco Scordo" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Francesco Scordo</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">
+                        Tecnologie e Sistemi Complessi
+                    </p>
+                </div>
+            </div>
+                        <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/piervito-tria.JPG"
+                         alt="Piervito Tria" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Piervito Tria</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">Tecnologie e Sistemi Complessi</p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/federico-bacchin.jpg"
+                         alt="Federico Bacchin" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Federico Bacchin</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">Tecnologie e Sistemi Complessi</p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; font-weight:700;">
+                        DB
+                    </div>
+                </div>
+                <div class="author-info">
+                    <h4>Daniele Battisti</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">
+                        IoT e connettività 5G/Satellitare · Sicurezza delle reti · Difesa e Sistemi Dual-Use
+                    </p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/filippo-martini.jpg"
+                         alt="Filippo Martini" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Filippo Martini</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">
+                        Governance Pubblica · Tecnologie e Sistemi Complessi
+                    </p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/fabio-marotta.jpg"
+                         alt="Fabio Marotta" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Fabio Marotta</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">
+                        Governance Pubblica · Difesa e Sicurezza
+                    </p>
+                </div>
+            </div>
+
+            <div class="author-box">
+                <div class="author-icon">
+                    <img src="https://www.dynames.it/assets/immagini-chi-siamo/silvia-volpe.jpg"
+                         alt="Silvia Volpe" loading="lazy">
+                </div>
+                <div class="author-info">
+                    <h4>Silvia Volpe</h4>
+                    <p class="dynames-badge">COLLABORATORE IN DYNAMES</p>
+                    <p class="dynames-role">
+                        Governance Pubblica · Economia e Industria
+                    </p>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- PARTNERS -->
-    <section id="partnership" style="background: var(--primary-dark); color: #ffffff;">
+
+    <!-- PARTNERSHIP -->
+    <section id="partnership"
+             style="background: var(--primary-dark); color: #ffffff;">
+
         <div class="container" style="text-align: center;">
-            <h2 class="section-title" style="color: #ffffff;">Partnership & Network</h2>
-            
+
+            <h2 class="section-title" style="color: #ffffff;">
+                Partnership &amp; Network
+            </h2>
+
             <div style="display: flex; justify-content: center; align-items: stretch; gap: 4rem; flex-wrap: wrap; margin-top: 3rem;">
-                
+
                 <div style="max-width: 200px; text-align: center;">
                     <div style="height: 80px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-                        <img src="assets/loghi partner/delpitte.png" alt="Deloitte Logo" style="max-height: 100%; max-width: 100%; filter: brightness(0) invert(1);">
+                        <img src="assets/loghi partner/delpitte.png"
+                             alt="Deloitte Logo"
+                             style="max-height: 100%; max-width: 100%; filter: brightness(0) invert(1);">
                     </div>
-                    <p style="font-size: 0.85rem; color: #fdfcf8; text-align: left; margin-top: 1rem;">Consulenza Strategica e Servizi Professionali</p>
+                    <p style="font-size: 0.85rem; color: #fdfcf8; text-align: left; margin-top: 1rem;">
+                        Consulenza Strategica e Servizi Professionali
+                    </p>
                 </div>
 
                 <div style="max-width: 200px; text-align: center;">
                     <div style="height: 80px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-                        <img src="assets/loghi partner/head logo.png" alt="HEAD UniMi Logo" style="max-height: 100%; max-width: 100%; filter: brightness(0) invert(1);">
+                        <img src="assets/loghi partner/head logo.png"
+                             alt="HEAD UniMi Logo"
+                             style="max-height: 100%; max-width: 100%; filter: brightness(0) invert(1);">
                     </div>
-                    <p style="font-size: 0.85rem; color: #fdfcf8; text-align: left; margin-top: 1rem;">HEAD: Centro di Ricerche e Alta Formazione dell'Univ. degli Studi di Milano.</p>
+                    <p style="font-size: 0.85rem; color: #fdfcf8; text-align: left; margin-top: 1rem;">
+                        HEAD: Centro di Ricerche e Alta Formazione dell'Univ. degli Studi di Milano.
+                    </p>
                 </div>
 
                 <div style="max-width: 200px; text-align: center;">
                     <div style="height: 80px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-                        <img src="assets/loghi partner/logo_luiss_master-giornalismo.svg" alt="LUISS Logo" style="max-height: 100%; max-width: 100%; filter: brightness(0) invert(1);">
+                        <img src="assets/loghi partner/logo_luiss_master-giornalismo.svg"
+                             alt="LUISS Logo"
+                             style="max-height: 100%; max-width: 100%; filter: brightness(0) invert(1);">
                     </div>
-                    <p style="font-size: 0.85rem; color: #fdfcf8; text-align: left; margin-top: 1rem;">Scuola di Giornalismo</p>
+                    <p style="font-size: 0.85rem; color: #fdfcf8; text-align: left; margin-top: 1rem;">
+                        Scuola di Giornalismo
+                    </p>
                 </div>
 
                 <div style="max-width: 200px; text-align: center;">
                     <div style="height: 80px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-                        <img src="assets/loghi partner/marte_logo.png" alt="Marte Studios Logo" style="max-height: 150%; max-width: 150%; transform: scale(1.6); filter: brightness(0) invert(1);">
+                        <img src="assets/loghi partner/marte_logo.png"
+                             alt="Marte Studios Logo"
+                             style="max-height: 150%; max-width: 150%; transform: scale(1.6); filter: brightness(0) invert(1);">
                     </div>
-                    <p style="font-size: 0.85rem; color: #fdfcf8; text-align: left; margin-top: 1rem;">Produzioni Multimediali e Comunicazione Scientifica</p>
+                    <p style="font-size: 0.85rem; color: #fdfcf8; text-align: left; margin-top: 1rem;">
+                        Produzioni Multimediali e Comunicazione Scientifica
+                    </p>
                 </div>
 
                 <div style="max-width: 200px; text-align: center;">
                     <div style="height: 80px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-                        <img src="assets/loghi partner/ferpi.jpeg" alt="FERPI" style="max-height: 75%; max-width: 75%; mix-blend-mode: screen; filter: grayscale(1) invert(1);">
+                        <img src="assets/loghi partner/ferpi.jpeg"
+                             alt="FERPI"
+                             style="max-height: 75%; max-width: 75%; mix-blend-mode: screen; filter: grayscale(1) invert(1);">
                     </div>
-                    <p style="font-size: 0.85rem; color: #fdfcf8; text-align: left; margin-top: 1rem;">Socio Professionista (Federazione Relazioni Pubbliche Italiana)</p>
+                    <p style="font-size: 0.85rem; color: #fdfcf8; text-align: left; margin-top: 1rem;">
+                        Socio Professionista (Federazione Relazioni Pubbliche Italiana)
+                    </p>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-logo"><img src="assets/logo_bianco.svg" alt="Fondazione Boscacci ETS" style="height: 120px;"></div>
-            <p>Fondazione Boscacci ETS</p>
-            <p style="color: var(--text-secondary); margin-top: 1rem; font-size: 0.8rem;">&copy; 2026 Fondazione Boscacci ETS. Tutti i diritti riservati.</p>
-        </div>
-    </footer>
+</main>
 
-    <script>
-        document.getElementById('menuToggle').addEventListener('click', function() {
-            document.getElementById('mainNav').classList.toggle('active');
-        });
-    </script>
+
+<footer>
+    <div class="container">
+
+        <div class="footer-logo">
+            <img src="assets/logo_bianco.svg"
+                 alt="Fondazione Boscacci ETS"
+                 style="height: 120px;">
+        </div>
+
+        <p>Fondazione Boscacci ETS</p>
+
+        <p style="color: var(--text-secondary); margin-top: 1rem; font-size: 0.8rem;">
+            &copy; 2026 Fondazione Boscacci ETS. Tutti i diritti riservati.
+        </p>
+
+    </div>
+</footer>
+
+
+<script>
+    document.getElementById('menuToggle').addEventListener('click', function() {
+        document.getElementById('mainNav').classList.toggle('active');
+    });
+</script>
+
 </body>
 </html>

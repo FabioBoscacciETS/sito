@@ -211,7 +211,15 @@ section { padding: 6rem 0; }
 .author-info h5 { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.8rem; font-weight: 400; text-transform: uppercase; letter-spacing: 1px; font-family: 'Lato', sans-serif;}
 .author-info p { font-size: 1rem; color: var(--text-body); margin: 0; line-height: 1.8; }
 
+.events-container {
+    max-width: 1600px;
+}
+
 /* EVENTS TIMELINE */
+.timeline {
+    border-left: 1px solid var(--border);
+    padding-left: 2.5rem;
+    margin-left: 1rem;
 /* EVENTS TIMELINE */
 
 .timeline {
@@ -221,7 +229,7 @@ section { padding: 6rem 0; }
 
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 4rem;
+    column-gap: 2rem;
     row-gap: 4rem;
 }
 

@@ -212,14 +212,67 @@ section { padding: 6rem 0; }
 .author-info p { font-size: 1rem; color: var(--text-body); margin: 0; line-height: 1.8; }
 
 /* EVENTS TIMELINE */
-.timeline { border-left: 1px solid var(--border); padding-left: 2.5rem; margin-left: 1rem; display: flex; flex-direction: column; gap: 3rem; }
-.timeline-item { position: relative; }
-.timeline-item::before { 
-    content: ''; position: absolute; left: -2.85rem; top: 0.3rem; 
-    width: 0.7rem; height: 0.7rem; background: var(--accent); border-radius: 50%; 
+/* EVENTS TIMELINE */
+
+.timeline {
+    border-left: 1px solid var(--border);
+    padding-left: 2.5rem;
+    margin-left: 1rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 4rem;
+    row-gap: 4rem;
 }
-.timeline-date { font-weight: 700; color: var(--accent); font-size: 0.85rem; text-transform: uppercase; margin-bottom: 0.8rem; letter-spacing: 1px; font-family: 'Lato', sans-serif; }
-.timeline-item h3 { font-size: 1.35rem; margin-bottom: 0.5rem; }
+
+.timeline-item {
+    position: relative;
+    min-width: 0;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2.85rem;
+    top: 0.3rem;
+    width: 0.7rem;
+    height: 0.7rem;
+    background: var(--accent);
+    border-radius: 50%;
+}
+
+.timeline-date {
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+}
+
+.timeline-item h3 {
+    font-size: 1.35rem;
+    margin-bottom: 0.8rem;
+}
+
+.timeline-item p {
+    margin-bottom: 1rem;
+}
+
+.timeline-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 1.5rem;
+}
+
+/* Smartphone: un evento per riga */
+@media (max-width: 700px) {
+    .timeline {
+        grid-template-columns: 1fr;
+        row-gap: 3rem;
+    }
+}
 
 /* FOOTER */
 footer { 

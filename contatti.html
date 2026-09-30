@@ -1,214 +1,23 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Contatti | Fondazione Boscacci ETS</title>
-    <!-- Fonts unified in style.css -->
-    <link rel="stylesheet" href="css/style.css?v=4">
-    <link rel="icon" href="assets/logo_grafico.png" type="image/png">
-    <style>
-        .contact-form {
-            background: var(--optical-white);
-            padding: 3rem;
-            border-radius: 8px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--accent);
-        }
-        .form-group { margin-bottom: 1.5rem; }
-        .form-group label { display: block; margin-bottom: 0.5rem; color: var(--night-blue); font-weight: 600; font-size: 0.9rem; }
-        .form-control {
-            width: 100%; padding: 0.8rem 1rem; border: 1px solid #cbd5e1; border-radius: 4px;
-            font-family: inherit; font-size: 1rem; color: var(--text-primary); transition: var(--transition);
-        }
-        .form-control:focus { outline: none; border-color: var(--gold-accent); box-shadow: 0 0 0 3px rgba(184, 147, 90, 0.2); }
-        textarea.form-control { resize: vertical; min-height: 150px; }
-    </style>
+
+    <meta http-equiv="refresh" content="0; url=collaborare.html#contatti">
+    <link rel="canonical" href="https://www.boscacci.it/collaborare.html#contatti">
+
+    <script>
+        window.location.replace("collaborare.html#contatti");
+    </script>
 </head>
 
 <body>
-    <header>
-        <div class="container header-inner">
-            <div class="brand">
-                <a href="index.html" style="display: flex; align-items: center;">
-                    <img src="assets/logo_boscacci_rosso.png" alt="Fondazione Boscacci ETS" style="height: 180px; width: auto;">
-                </a>
-            </div>
-            <div class="menu-toggle" id="menuToggle">
-                <span></span><span></span><span></span>
-            </div>
-          <nav class="desktop-nav" id="mainNav">
-    <a href="index.html">Home</a>
-    <a href="people.html">People</a>
-    <a href="aree-interesse.html">Focus</a>
-    <a href="eventi.html">Eventi</a>
-    <a href="progetti.html">Progetti</a>
-    <a href="pubblicazioni.html">Pubblicazioni</a>
-    <a href="accordi.html">Accordi</a>
-    <a href="collaborare.html">Collaborare</a>
-</nav>
-        </div>
-    </header>
-
-    <div class="page-header">
-        <div class="container">
-            <h1>Contattaci</h1>
-            <p>"Siamo aperti al dialogo e alla collaborazione tra enti, ricercatori e cittadini."</p>
-        </div>
-    </div>
-
-    <section class="container">
-        <div class="grid-2">
-            <div>
-                <h3 style="font-size: 1.8rem; color: var(--night-blue); margin-bottom: 1rem;">Sede Operativa</h3>
-                <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.1rem;">
-                    Per informazioni, proposte di partnership e adesione ai tavoli tecnici o per segnalare collaborazioni in ambito medico-ricercativo, non esitare a contattarci compilando il modulo.
-                </p>
-                
-                <h4 style="color: var(--gold-accent); font-size: 1.1rem; margin-bottom: 0.5rem; text-transform: uppercase;">Ufficio Stampa</h4>
-                <p style="color: var(--text-primary); margin-bottom: 1.5rem;">
-                    <strong>Dott.ssa Elisabetta Panico</strong><br>
-                    <a href="mailto:e.panico@boscacci.it" style="color: var(--accent); text-decoration: none; font-weight: 500;">e.panico@boscacci.it</a>
-                </p>
-
-
-
-                <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e2e8f0;">
-                    <p style="font-size: 0.85rem; color: var(--slate-grey); text-align: left;">
-                        Iscrizione Registro Unico Nazionale del Terzo Settore (RUNTS)<br>
-                        FONDAZIONE BOSCACCI ETS<br>
-                        Repertorio: 152268<br>
-                        DETERMINAZIONE DIRIGENZIALE N. 741/2025<br>
-                        PROVINCIA DI VARESE
-                    </p>
-                </div>
-            </div>
-
-            <div>
-                <form class="contact-form" action="#" method="get" onsubmit="event.preventDefault(); alert('Grazie per la preferenza! La Fondazione risponderà al più presto.');">
-                    <h3 style="font-size: 1.5rem; color: var(--night-blue); margin-bottom: 1.5rem;">Modulo di Contatto</h3>
-                    
-                    <div class="form-group">
-                        <label for="name">Nome / Ente di Riferimento</label>
-                        <input type="text" id="name" class="form-control" placeholder="Es. Mario Rossi / Università..." required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Indirizzo Email</label>
-                        <input type="email" id="email" class="form-control" placeholder="es. mario.rossi@email.it" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="subject">Oggetto</label>
-                        <select id="subject" class="form-control" required>
-                            <option value="">-- Seleziona il motivo --</option>
-                            <option value="press">Richiesta Stampa / Interviste</option>
-                            <option value="event">Invito o Organizzazione Eventi</option>
-                            <option value="research">Proposta di Ricerca Scientifica</option>
-                            <option value="partnership">Sviluppo Partnership / Sponsorship</option>
-                            <option value="other">Altro</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Messaggio</label>
-                        <textarea id="message" class="form-control" placeholder="Scrivi qui i dettagli della tua richiesta..." required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn" style="width: 100%;">Invia Richiesta</button>
-                    <p style="font-size: 0.75rem; color: var(--text-light); margin-top: 1rem; text-align: center;">Inviando il modulo acconsenti al trattamento dei dati personali in base alle normative europee (GDPR).</p>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 4rem 1.5rem 2rem;">
-
-    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 5rem; align-items: start; width: 100%;">
-
-        <!-- COLONNA 1 -->
-        <div style="text-align: left;">
-            <h3 style="font-family: 'Lato', sans-serif; color: white; font-size: 1.00rem; font-weight: 700; margin: 0 0 2rem 0; text-align: left;">
-                FONDAZIONE BOSCACCI ETS
-            </h3>
-
-            <p style="color: white; font-size: 0.75rem; line-height: 1.05; text-align: left; margin: 0;">
-                Sede legale Via Carlo Noè 45<br>
-                Gallarate (VA)<br><br>
-                C.F. 03800470126<br><br>
-                P.IVA 04096960127<br><br>
-                Repertorio RUNTS: 152268
-            </p>
-        </div>
-
-        <!-- COLONNA 2 -->
-        <div style="text-align: left;">
-            <h3 style="font-family: 'Lato', sans-serif; color: white; font-size: 1.00rem; font-weight: 700; margin: 0 0 1rem 0; text-align: left;">
-    Editore: Fondazione Boscacci ETS
-</h3>
-</p>
-            <h3 style="font-family: 'Lato', sans-serif; color: white; font-size: 1.00rem; font-weight: 700; margin: 0 0 2rem 0; text-align: left;">
-                Dati Registrazione
-            <p style="color: white; font-size: 0.75rem; line-height: 1.05; text-align: left; margin: 0;">
-                Reg. Trib. di Busto Arsizio<br>
-                N. 01/2026 del 25 febbraio 2026
-            <p style="color: white; font-size: 0.75rem; line-height: 1.05; text-align: left; margin-top: 0.4rem;">
-
-            <h3 style="font-family: 'Lato', sans-serif; color: white; font-size: 1.00rem; font-weight: 700; margin: 2rem 0 1.2rem 0; text-align: left;">
-                Contatti
-            <p style="font-size: 0.75rem; line-height: 1.05; text-align: left; margin: 0;">
-                <span style="color: #9b8f92; text-transform: uppercase; letter-spacing: 0.08em;">INFO</span><br>
-                <a href="mailto:info@boscacci.it" style="color: white; text-decoration: none;">
-                    info@boscacci.it
-                </a>
-
-            <p style="font-size: 0.75rem; line-height: 1.05; text-align: left; margin-top: 1rem;">
-                <span style="color: #9b8f92; text-transform: uppercase; letter-spacing: 0.08em;">UFFICIO STAMPA</span><br>
-                <a href="mailto:e.panico@boscacci.it" style="color: white; text-decoration: none;">
-                    e.panico@boscacci.it
-                </a>
-            </p>
-        </div>
-
-        <!-- COLONNA 3 -->
-        <div style="text-align: left;">
-            <h3 style="font-family: 'Lato', sans-serif; color: white; font-size: 1.00rem; font-weight: 700; margin: 0 0 2rem 0; text-align: left;">
-                Social
-            <a href="https://www.linkedin.com/company/fondazione-boscacci/posts/?viewAsMember=true"
-               target="_blank"
-               rel="noopener noreferrer"
-               aria-label="LinkedIn Fondazione Boscacci"
-               style="display: inline-block; text-decoration: none;">
-
-                <div style="width: 58px; height: 58px; background: #0A66C2; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: white; font-family: Arial, sans-serif; font-size: 40px; font-weight: bold;">
-                    in
-                </div>
-            </a>
-        </div>
-
-    </div>
-
-    <!-- LOGO FONDAZIONE -->
-    <div style="text-align: center; margin-top: 4rem;">
-        <img src="assets/logo_bianco.svg"
-             alt="Fondazione Boscacci ETS"
-             style="height: 90px; width: auto;">
-    </div>
-
-    <!-- COPYRIGHT -->
-    <p style="color: white; text-align: center; margin-top: 1.5rem; font-size: 0.8rem;">
-        &copy; 2026 Fondazione Boscacci ETS. Tutti i diritti riservati.
+    <p>
+        I contatti della Fondazione sono disponibili nella pagina
+        <a href="collaborare.html#contatti">Collaborare</a>.
     </p>
-
-</div>
-    </footer>
-
-    <script>
-        document.getElementById('menuToggle').addEventListener('click', function() {
-            document.getElementById('mainNav').classList.toggle('active');
-        });
-    </script>
 </body>
 </html>

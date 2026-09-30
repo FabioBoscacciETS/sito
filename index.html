@@ -705,11 +705,20 @@ fetch('televideo.json?t=' + Date.now())
         const container = document.getElementById('televideo-news');
 
         container.innerHTML = news.map(item => {
-            const match = item.title.match(/^(\d{2}\.\d{2})\s+(.*)$/);
+        const match = item.title.match(/^(\d{2}\.\d{2})\s+(.*)$/);
 
-            const ora = match ? match[1] : '';
-            const titolo = match ? match[2] : item.title;
+const dataNotizia = new Date(item.date);
 
+const oraDaData = !isNaN(dataNotizia)
+    ? dataNotizia.toLocaleTimeString('it-IT', {
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false
+      }).replace(':', '.')
+    : '';
+
+const ora = match ? match[1] : oraDaData;
+const titolo = match ? match[2] : item.title;
             return `
                 <div class="televideo-item">
                     <span class="televideo-time">${ora}</span>

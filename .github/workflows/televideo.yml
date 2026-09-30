@@ -21,72 +21,52 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Recupera notizie Televideo
+           - name: Recupera notizie Televideo
         run: |
+          python -m pip install beautifulsoup4
+
           python - <<'PY'
           import urllib.request
-          import urllib.parse
           import json
           import re
-          from html.parser import HTMLParser
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          from bs4 import BeautifulSoup
 
-          class TelevideoParser(HTMLParser):
-              def __init__(self):
-                  super().__init__()
-                  self.in_link = False
-                  self.href = ""
-                  self.text = []
-                  self.items = []
-
-              def handle_starttag(self, tag, attrs):
-                  if tag == "a":
-                      self.in_link = True
-                      self.href = dict(attrs).get("href", "")
-                      self.text = []
-
-              def handle_data(self, data):
-                  if self.in_link:
-                      self.text.append(data)
-
-              def handle_endtag(self, tag):
-                  if tag == "a" and self.in_link:
-                      testo = " ".join("".join(self.text).split())
-
-                      m = re.match(
-                          r"^(\d{2}\.\d{2})\s*\|\s*(.+)$",
-                          testo
-                      )
-
-                      if m:
-                          self.items.append(
-                              (m.group(1), m.group(2), self.href)
-                          )
-
-                      self.in_link = False
-                      self.href = ""
-                      self.text = []
-
-          url = "https://www.televideo.rai.it/televideo/pub/index.jsp"
+          url = "https://www.televideo.rai.it/televideo/pub/solotesto.jsp?pagina=101"
 
           req = urllib.request.Request(
               url,
-              headers={"User-Agent": "Mozilla/5.0"}
+              headers={
+                  "User-Agent": "Mozilla/5.0",
+                  "Cache-Control": "no-cache"
+              }
           )
 
           with urllib.request.urlopen(req, timeout=30) as response:
               charset = response.headers.get_content_charset() or "utf-8"
-              pagina = response.read().decode(
-                  charset,
-                  errors="replace"
-              )
+              pagina = response.read().decode(charset, errors="replace")
 
-          parser = TelevideoParser()
-          parser.feed(pagina)
+          soup = BeautifulSoup(pagina, "html.parser")
+          testo = soup.get_text(" ", strip=True)
+
+          pattern = re.compile(
+              r"(\d{2}/\d{2})\s+(\d{2}:\d{2})\s+(.+?)"
+              r"(?=\s+\d{2}/\d{2}\s+\d{2}:\d{2}\s+|$)"
+          )
+
+          oggi = datetime.now(ZoneInfo("Europe/Rome")).strftime("%d/%m")
 
           news = []
           visti = set()
 
-          for ora, titolo, href in parser.items:
+          for data, ora, titolo in pattern.findall(testo):
+
+              titolo = " ".join(titolo.split())
+
+              if data != oggi:
+                  continue
+
               chiave = (ora, titolo)
 
               if chiave in visti:
@@ -95,10 +75,12 @@ jobs:
               visti.add(chiave)
 
               news.append({
-                  "title": f"{ora} {titolo}",
-                  "link": urllib.parse.urljoin(url, href),
+                  "title": f"{ora.replace(':', '.')} {titolo}",
+                  "link": url,
                   "description": "",
-                  "date": ""
+                  "date": datetime.now(
+                      ZoneInfo("Europe/Rome")
+                  ).isoformat()
               })
 
               if len(news) == 6:
@@ -106,13 +88,13 @@ jobs:
 
           if not news:
               raise RuntimeError(
-                  "Nessuna notizia Ultim'ora trovata nella pagina Televideo"
+                  "Televideo non contiene notizie con la data odierna"
               )
 
           with open("televideo.json", "w", encoding="utf-8") as f:
               json.dump(news, f, ensure_ascii=False, indent=2)
 
-          print(f"Salvate {len(news)} notizie")
+          print(f"Salvate {len(news)} notizie Televideo di oggi")
           PY
 
       - name: Salva aggiornamento

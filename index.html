@@ -698,6 +698,30 @@
         document.getElementById('mainNav').classList.toggle('active');
     });
 </script>
+<script>
+fetch('televideo.json?t=' + Date.now())
+    .then(response => response.json())
+    .then(news => {
+        const container = document.getElementById('televideo-news');
 
+        container.innerHTML = news.map(item => {
+            const match = item.title.match(/^(\d{2}\.\d{2})\s+(.*)$/);
+
+            const ora = match ? match[1] : '';
+            const titolo = match ? match[2] : item.title;
+
+            return `
+                <div class="televideo-item">
+                    <span class="televideo-time">${ora}</span>
+                    <span class="televideo-title">${titolo}</span>
+                </div>
+            `;
+        }).join('');
+    })
+    .catch(error => {
+        document.getElementById('televideo-news').innerHTML =
+            '<p class="televideo-loading">Notizie momentaneamente non disponibili.</p>';
+    });
+</script>
 </body>
 </html>

@@ -887,3 +887,31 @@ footer {
     color: var(--text-muted);
     font-size: 0.66rem;
 }
+/* ===== FOCUS PAGE ===== */
+
+.focus-grid .card {
+    background: #fbfaf7;
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--primary);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.035);
+    transition: var(--transition);
+}
+
+.focus-grid .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.06);
+}
+
+.focus-grid .card h4 {
+    color: var(--text-primary) !important;
+}
+
+.focus-grid .card ul {
+    margin-bottom: 0;
+}
+
+@media (max-width: 800px) {
+    .focus-grid {
+        grid-template-columns: 1fr !important;
+    }
+}

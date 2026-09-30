@@ -25,35 +25,89 @@ jobs:
         run: |
           python - <<'PY'
           import urllib.request
-          import xml.etree.ElementTree as ET
+          import urllib.parse
           import json
-          import html
+          import re
+          from html.parser import HTMLParser
 
-          url = "https://www.televideo.rai.it/televideo/pub/rss101.xml"
+          class TelevideoParser(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.in_link = False
+                  self.href = ""
+                  self.text = []
+                  self.items = []
+
+              def handle_starttag(self, tag, attrs):
+                  if tag == "a":
+                      self.in_link = True
+                      self.href = dict(attrs).get("href", "")
+                      self.text = []
+
+              def handle_data(self, data):
+                  if self.in_link:
+                      self.text.append(data)
+
+              def handle_endtag(self, tag):
+                  if tag == "a" and self.in_link:
+                      testo = " ".join("".join(self.text).split())
+
+                      m = re.match(
+                          r"^(\d{2}\.\d{2})\s*\|\s*(.+)$",
+                          testo
+                      )
+
+                      if m:
+                          self.items.append(
+                              (m.group(1), m.group(2), self.href)
+                          )
+
+                      self.in_link = False
+                      self.href = ""
+                      self.text = []
+
+          url = "https://www.televideo.rai.it/televideo/pub/index.jsp"
+
           req = urllib.request.Request(
               url,
               headers={"User-Agent": "Mozilla/5.0"}
           )
 
           with urllib.request.urlopen(req, timeout=30) as response:
-              data = response.read()
+              charset = response.headers.get_content_charset() or "utf-8"
+              pagina = response.read().decode(
+                  charset,
+                  errors="replace"
+              )
 
-          root = ET.fromstring(data)
+          parser = TelevideoParser()
+          parser.feed(pagina)
 
           news = []
+          visti = set()
 
-          for item in root.findall(".//item")[:6]:
-              title = item.findtext("title", "").strip()
-              link = item.findtext("link", "").strip()
-              description = item.findtext("description", "").strip()
-              pubdate = item.findtext("pubDate", "").strip()
+          for ora, titolo, href in parser.items:
+              chiave = (ora, titolo)
+
+              if chiave in visti:
+                  continue
+
+              visti.add(chiave)
 
               news.append({
-                  "title": html.unescape(title),
-                  "link": link,
-                  "description": html.unescape(description),
-                  "date": pubdate
+                  "title": f"{ora} {titolo}",
+                  "link": urllib.parse.urljoin(url, href),
+                  "description": "",
+                  "date": ""
               })
+
+              if len(news) == 6:
+                  break
+
+          if not news:
+              raise RuntimeError(
+                  "Nessuna notizia Ultim'ora trovata nella pagina Televideo"
+              )
 
           with open("televideo.json", "w", encoding="utf-8") as f:
               json.dump(news, f, ensure_ascii=False, indent=2)

@@ -1020,3 +1020,54 @@ img {
         box-sizing: border-box;
     }
 }
+/* ===== MOBILE FIX PARTNER + FOOTER ===== */
+
+@media (max-width: 768px) {
+
+    /* PARTNERSHIP HOME */
+    #partnership .container > div[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+        column-gap: 0 !important;
+        row-gap: 2.5rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    #partnership .container > div[style*="grid-template-columns"] > div {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    #partnership img {
+        max-width: 220px !important;
+        width: auto !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+
+    /* FOOTER */
+    footer .container > div[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+        width: 100% !important;
+    }
+
+    footer .container > div[style*="grid-template-columns"] > div {
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: left !important;
+    }
+
+    footer a[aria-label="LinkedIn Fondazione Boscacci"] {
+        display: inline-block !important;
+        max-width: 58px !important;
+    }
+
+    footer a[aria-label="LinkedIn Fondazione Boscacci"] > div {
+        width: 48px !important;
+        height: 48px !important;
+        font-size: 32px !important;
+        flex: 0 0 48px !important;
+    }
+}

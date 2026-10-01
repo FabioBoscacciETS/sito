@@ -1134,3 +1134,25 @@ img {
         height: auto !important;
     }
 }
+/* ===== FORCE PUBBLICAZIONI MOBILE ===== */
+
+@media screen and (max-width: 768px) {
+
+    body .pubblicazioni-featured {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto auto !important;
+        gap: 1.5rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    body .pubblicazioni-featured > .card {
+        grid-column: 1 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        height: auto !important;
+    }
+
+}

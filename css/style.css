@@ -1119,3 +1119,18 @@ img {
         border-bottom: none;
     }
 }
+/* ===== PUBBLICAZIONI MOBILE ===== */
+
+@media (max-width: 768px) {
+    .pubblicazioni-featured {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        width: 100% !important;
+    }
+
+    .pubblicazioni-featured .card {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}

@@ -915,3 +915,108 @@ footer {
         grid-template-columns: 1fr !important;
     }
 }
+/* ===== MOBILE GLOBAL FIX ===== */
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* HEADER MOBILE */
+@media (max-width: 768px) {
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        box-sizing: border-box;
+    }
+
+    .header-inner {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .brand img {
+        max-width: 78vw;
+        height: auto !important;
+    }
+
+    .menu-toggle {
+        flex-shrink: 0;
+    }
+
+    /* TUTTE LE GRIGLIE PRINCIPALI */
+    .grid-2,
+    .grid-3,
+    .dynames-grid,
+    .focus-grid,
+    .pubblicazioni-grid,
+    .mission-grid {
+        grid-template-columns: 1fr !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* CARD */
+    .card,
+    .author-box,
+    .mission-box {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* FOOTER */
+    footer .container > div:first-child {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+    }
+
+    footer,
+    footer .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        overflow: hidden;
+    }
+
+    footer img {
+        max-width: 80%;
+        height: auto !important;
+    }
+
+    /* PARTNERSHIP / LOGHI */
+    .partnership-grid,
+    .partners-grid {
+        grid-template-columns: 1fr !important;
+        width: 100% !important;
+    }
+
+    .partnership-grid > *,
+    .partners-grid > * {
+        max-width: 100% !important;
+        overflow: hidden;
+    }
+
+    /* FORM COLLABORARE */
+    #contatti > div:last-child {
+        grid-template-columns: 1fr !important;
+    }
+
+    input,
+    select,
+    textarea {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}

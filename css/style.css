@@ -1071,3 +1071,51 @@ img {
         flex: 0 0 48px !important;
     }
 }
+/* ===== MOBILE MENU FIX ===== */
+
+@media (max-width: 900px) {
+
+    .header-inner {
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: flex !important;
+        position: relative;
+        z-index: 10002;
+        cursor: pointer;
+        pointer-events: auto;
+    }
+
+    .desktop-nav {
+        display: none !important;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: #ffffff;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 1rem 1.25rem;
+        border-top: 1px solid var(--border);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        z-index: 10001;
+    }
+
+    .desktop-nav.active {
+        display: flex !important;
+    }
+
+    .desktop-nav a {
+        display: block;
+        width: 100%;
+        padding: 0.9rem 0;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .desktop-nav a:last-child {
+        border-bottom: none;
+    }
+}

@@ -33,160 +33,463 @@
         </div>
     </header>
 
-    <div class="page-header">
-        <div class="container">
-<h1>Pubblicazioni</h1>
-<p style="display: block; width: 100%; text-align: center !important; margin: 0 auto !important;">
-    Analisi, policy brief, position paper, studi e report della Fondazione Boscacci ETS.
-</p>
-        </div>
+   <style>
+/* ===== PUBBLICAZIONI 2026 ===== */
+
+.pub-hero {
+    background: linear-gradient(135deg, #6f1020 0%, #3f0710 100%);
+    color: white;
+    padding: 4.5rem 0;
+}
+
+.pub-hero h1 {
+    color: white;
+    font-size: 4rem;
+    margin: 0 0 1rem;
+}
+
+.pub-hero p {
+    color: rgba(255,255,255,.9);
+    max-width: 720px;
+    font-size: 1.15rem;
+    line-height: 1.6;
+}
+
+.pub-label {
+    display: block;
+    color: #b28a45;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    margin-bottom: .7rem;
+}
+
+.pub-section {
+    padding: 4rem 0;
+}
+
+.pub-section.alt {
+    background: #f7f3ec;
+}
+
+.pub-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    margin-bottom: .8rem;
+}
+
+.pub-intro {
+    max-width: 850px;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.pub-featured {
+    display: grid;
+    grid-template-columns: 300px 1fr 230px;
+    gap: 3rem;
+    align-items: center;
+    background: #fbf8f2;
+    border: 1px solid var(--border);
+    padding: 2.5rem;
+}
+
+.pub-featured img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.pub-featured h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    margin: 0 0 .5rem;
+}
+
+.pub-featured .meta {
+    border-left: 1px solid #d9cdbb;
+    padding-left: 2rem;
+    font-size: .9rem;
+    line-height: 1.6;
+}
+
+.pub-featured .meta strong {
+    display: block;
+    color: var(--primary);
+}
+
+.pub-docs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 2rem;
+}
+
+.pub-doc {
+    background: white;
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--primary);
+    padding: 2rem;
+}
+
+.pub-doc h3 {
+    margin: .5rem 0 1rem;
+}
+
+.pub-doc p {
+    text-align: left;
+}
+
+.pub-external {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 2.5rem;
+    align-items: center;
+    background: white;
+    border: 1px solid var(--border);
+    padding: 2rem;
+}
+
+.pub-external img {
+    width: 100%;
+    height: auto;
+}
+
+.pub-areas {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0,1fr));
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.pub-area {
+    padding: 2rem;
+    border-right: 1px solid var(--border);
+}
+
+.pub-area:last-child {
+    border-right: none;
+}
+
+.pub-area h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: .5rem;
+}
+
+@media (max-width: 900px) {
+
+    .pub-hero h1 {
+        font-size: 2.7rem;
+    }
+
+    .pub-featured {
+        grid-template-columns: 1fr;
+    }
+
+    .pub-featured img {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .pub-featured .meta {
+        border-left: none;
+        border-top: 1px solid #d9cdbb;
+        padding: 1.5rem 0 0;
+    }
+
+    .pub-docs {
+        grid-template-columns: 1fr;
+    }
+
+    .pub-external {
+        grid-template-columns: 1fr;
+    }
+
+    .pub-external img {
+        max-width: 220px;
+        margin: 0 auto;
+    }
+
+    .pub-areas {
+        grid-template-columns: 1fr;
+    }
+
+    .pub-area {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+}
+</style>
+
+
+<!-- HERO -->
+<section class="pub-hero">
+    <div class="container">
+
+        <span class="pub-label" style="color:#d8b56d;">
+            PUBBLICAZIONI
+        </span>
+
+        <h1>Pubblicazioni</h1>
+
+        <p>
+            Analisi, position paper, studi, ricerche e contributi editoriali
+            per alimentare un confronto informato sui principali temi
+            di interesse pubblico.
+        </p>
+
     </div>
-<section class="container" style="padding-top: 3rem; padding-bottom: 1rem;">
-
-    <span style="display:block; color: var(--primary); font-family:'Lato', sans-serif;
-                 font-size:0.75rem; font-weight:700; letter-spacing:0.12em;
-                 text-transform:uppercase; margin-bottom:0.5rem;">
-        IN EVIDENZA
-    </span>
-
-    <h2 style="font-family:'Playfair Display', serif; font-size:2.2rem;
-               color:var(--text-primary); margin-bottom:2rem;">
-        Ultime pubblicazioni
-    </h2>
-
-<div class="pubblicazioni-featured"
-    <div class="card" style="padding:2.5rem;">
-
-    <img src="assets/cultura-della-difesa.png.png"
-         alt="Cultura della Difesa"
-         style="width:100%; height:auto; margin-bottom:1.5rem; display:block;">
-
-    <span style="display:block; color:var(--primary); font-size:0.7rem;
-                 font-weight:700; letter-spacing:0.1em; margin-bottom:0.7rem;">
-        VOLUME · MAGGIO 2026
-    </span>
-
-    <h3>Cultura della Difesa</h3>
-
-    <p style="text-align:left;">
-        Comunicazione, geopolitica e formazione per l’interesse nazionale.
-        Un volume dedicato al ruolo strategico della cultura della difesa,
-        a cura di Vincenzo D’Anna, con introduzione di Massimo Panizzi.
-    </p>
-
-    <a href="https://www.dynames.it/pubblicazioni/2026-report.html"
-       target="_blank"
-       rel="noopener noreferrer"
-       class="btn">
-        SCOPRI IL VOLUME →
-    </a>
-
-</div>
-        <div class="card" style="padding:2.5rem;">
-            <span style="display:block; color:var(--primary); font-size:0.7rem;
-                         font-weight:700; letter-spacing:0.1em; margin-bottom:0.7rem;">
-                WHITE PAPER 01 · SETTEMBRE 2026
-            </span>
-
-            <h3>Il contrabbando cambia pelle</h3>
-
-            <p style="text-align:left;">
-                Produzione clandestina di tabacco, criminalità organizzata
-                e sicurezza economica in Italia.
-            </p>
-
-            <a href="assets/White_Paper_01_Contrabbando_Fondazione_Boscacci_ETS.pdf"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="btn">
-                SCARICA PDF →
-            </a>
-        </div>
-
-        <div class="card" style="padding:2.5rem;">
-            <span style="display:block; color:var(--primary); font-size:0.7rem;
-                         font-weight:700; letter-spacing:0.1em; margin-bottom:0.7rem;">
-                POSITION PAPER 01 · MAGGIO 2026
-            </span>
-
-            <h3>Il farmaco come infrastruttura strategica</h3>
-
-            <p style="text-align:left;">
-                Industria farmaceutica, sicurezza sanitaria e autonomia europea.
-            </p>
-
-            <a href="assets/Position_Paper_01_Farmaco_Infrastruttura_Strategica_Fondazione_Boscacci_ETS.pdf"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="btn">
-                SCARICA PDF →
-            </a>
-        </div>
-
-    </div>
-
 </section>
-<section class="container">
-  <div class="pubblicazioni-grid"
-     style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem;">
 
-    <div class="card" style="height: 100%; padding: 2.5rem;">
-        <span style="display:block; color: var(--primary); font-family:'Lato', sans-serif;
-                     font-size:0.72rem; font-weight:700; letter-spacing:0.12em;
-                     text-transform:uppercase; margin-bottom:0.6rem;">
-            01 · POLICY
-        </span>
 
-        <h3>Policy Brief</h3>
+<!-- IN EVIDENZA -->
+<section class="pub-section">
+    <div class="container">
 
-        <p style="text-align:left;">
-            Documenti sintetici di analisi e indirizzo dedicati ai principali temi
-            di policy, pensati per offrire evidenze, scenari e indicazioni utili
-            al confronto istituzionale e ai processi decisionali.
-        </p>
-    </div>
+        <span class="pub-label">IN EVIDENZA</span>
 
-    <div class="card" style="height: 100%; padding: 2.5rem;">
-        <span style="display:block; color: var(--primary); font-family:'Lato', sans-serif;
-                     font-size:0.72rem; font-weight:700; letter-spacing:0.12em;
-                     text-transform:uppercase; margin-bottom:0.6rem;">
-            02 · POSIZIONI
-        </span>
+        <div class="pub-featured">
 
-        <h3>Position Paper</h3>
+            <div>
+                <img src="assets/cultura-della-difesa.png.png"
+                     alt="Cultura della Difesa">
+            </div>
 
-        <p style="text-align:left;">
-            Documenti di approfondimento attraverso i quali la Fondazione sviluppa
-            analisi, orientamenti e proposte sui temi di maggiore rilevanza
-            sanitaria, istituzionale, scientifica e strategica.
-        </p>
-    </div>
+            <div>
 
-    <div class="card" style="height: 100%; padding: 2.5rem;">
-        <span style="display:block; color: var(--primary); font-family:'Lato', sans-serif;
-                     font-size:0.72rem; font-weight:700; letter-spacing:0.12em;
-                     text-transform:uppercase; margin-bottom:0.6rem;">
-            03 · RICERCA
-        </span>
+                <span class="pub-label">
+                    VOLUME · MAGGIO 2026
+                </span>
 
-        <h3>Studi & Ricerche</h3>
+                <h2>Cultura della Difesa</h2>
 
-        <p style="text-align:left;">
-            Analisi, ricerche e contributi sviluppati dalla Fondazione in collaborazione
-            con esperti, università, centri di ricerca e stakeholder qualificati.
-        </p>
-    </div>
+                <h3 style="font-weight:400; margin-top:0;">
+                    Comunicazione, geopolitica e formazione per l’interesse nazionale
+                </h3>
 
-    <div class="card" style="height: 100%; padding: 2.5rem;">
-        <span style="display:block; color: var(--primary); font-family:'Lato', sans-serif;
-                     font-size:0.72rem; font-weight:700; letter-spacing:0.12em;
+                <p style="text-align:left; line-height:1.7;">
+                    Un volume dedicato al ruolo strategico della cultura della difesa,
+                    tra comunicazione, geopolitica e formazione.
                 </p>
-        <button disabled class="btn" style="width: 100%; background: var(--text-light); color: var(--text-secondary); cursor: not-allowed; opacity: 0.8;">In Sviluppo</button>
-                </div>
+
+                <a href="https://www.dynames.it/pubblicazioni/2026-report.html"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn">
+                    SCOPRI IL VOLUME →
+                </a>
+
+            </div>
+
+            <div class="meta">
+
+                <p>
+                    <strong>A cura di</strong>
+                    Vincenzo D’Anna
+                </p>
+
+                <p>
+                    <strong>Introduzione di</strong>
+                    Massimo Panizzi
+                </p>
+
+                <p>
+                    <strong>Editore</strong>
+                    LUISS University Press
+                </p>
+
+                <p>
+                    <strong>Pubblicazione</strong>
+                    Maggio 2026
+                </p>
+
             </div>
 
         </div>
-    </section>
+
+    </div>
+</section>
+
+
+<!-- PUBBLICAZIONI DELLA FONDAZIONE -->
+<section class="pub-section alt">
+    <div class="container">
+
+        <span class="pub-label">
+            PRODUZIONE EDITORIALE
+        </span>
+
+        <h2 class="pub-title">
+            Pubblicazioni della Fondazione Boscacci ETS
+        </h2>
+
+        <p class="pub-intro">
+            Documenti di analisi e approfondimento prodotti dalla Fondazione
+            per contribuire al dibattito sulle politiche sanitarie,
+            istituzionali, scientifiche e strategiche.
+        </p>
+
+        <div class="pub-docs">
+
+            <div class="pub-doc">
+
+                <span class="pub-label">
+                    WHITE PAPER 01 · SETTEMBRE 2026
+                </span>
+
+                <h3>Il contrabbando cambia pelle</h3>
+
+                <p>
+                    Produzione clandestina di tabacco, criminalità organizzata
+                    e sicurezza economica in Italia.
+                </p>
+
+                <a href="assets/White_Paper_01_Contrabbando_Fondazione_Boscacci_ETS.pdf"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn">
+                    SCARICA PDF →
+                </a>
+
+            </div>
+
+
+            <div class="pub-doc">
+
+                <span class="pub-label">
+                    POSITION PAPER 01 · MAGGIO 2026
+                </span>
+
+                <h3>Il farmaco come infrastruttura strategica</h3>
+
+                <p>
+                    Industria farmaceutica, sicurezza sanitaria
+                    e autonomia europea.
+                </p>
+
+                <a href="assets/Position_Paper_01_Farmaco_Infrastruttura_Strategica_Fondazione_Boscacci_ETS.pdf"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn">
+                    SCARICA PDF →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- EDITORI ESTERNI -->
+<section class="pub-section">
+    <div class="container">
+
+        <span class="pub-label">
+            LIBRI E CONTRIBUTI
+        </span>
+
+        <h2 class="pub-title">
+            Pubblicazioni e contributi su editori esterni
+        </h2>
+
+        <p class="pub-intro">
+            Libri, saggi e contributi editoriali realizzati nell’ambito
+            delle attività della Fondazione o firmati dai suoi membri
+            e pubblicati da editori, riviste e piattaforme esterne.
+        </p>
+
+        <div class="pub-external">
+
+            <img src="assets/cultura-della-difesa.png.png"
+                 alt="Cultura della Difesa">
+
+            <div>
+
+                <span class="pub-label">
+                    VOLUME · LUISS UNIVERSITY PRESS · 2026
+                </span>
+
+                <h2 class="pub-title" style="margin-bottom:.4rem;">
+                    Cultura della Difesa
+                </h2>
+
+                <p style="font-size:1.1rem; margin-top:0;">
+                    Comunicazione, geopolitica e formazione per l’interesse nazionale.
+                </p>
+
+                <p style="text-align:left;">
+                    A cura di Vincenzo D’Anna<br>
+                    Introduzione di Massimo Panizzi
+                </p>
+
+                <a href="https://www.dynames.it/pubblicazioni/2026-report.html"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn">
+                    SCOPRI IL VOLUME →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- AREE EDITORIALI -->
+<section class="pub-section alt">
+    <div class="container">
+
+        <span class="pub-label">
+            APPROFONDIMENTI
+        </span>
+
+        <h2 class="pub-title">
+            Le nostre aree editoriali
+        </h2>
+
+        <p class="pub-intro">
+            Formati diversi per analizzare temi complessi e contribuire
+            al dibattito pubblico con contenuti rigorosi e indipendenti.
+        </p>
+
+        <div class="pub-areas">
+
+            <div class="pub-area">
+                <h3>Policy Brief</h3>
+                <p>
+                    Analisi sintetiche sui principali temi di policy e attualità.
+                </p>
+            </div>
+
+            <div class="pub-area">
+                <h3>Position Paper</h3>
+                <p>
+                    Posizioni, analisi e proposte sviluppate dalla Fondazione.
+                </p>
+            </div>
+
+            <div class="pub-area">
+                <h3>Studi &amp; Ricerche</h3>
+                <p>
+                    Approfondimenti scientifici, accademici e istituzionali.
+                </p>
+            </div>
+
+            <div class="pub-area">
+                <h3>Report &amp; Dossier</h3>
+                <p>
+                    Documenti di analisi e ricerca su tematiche strategiche.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
 
     <footer>
  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 4rem 1.5rem 2rem;">

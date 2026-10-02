@@ -10,6 +10,7 @@
     <link rel="icon" href="assets/logo_grafico.png" type="image/png">
 
     <style>
+
         /* =========================================================
            SEZIONE COLLABORATORI DYNAMES
            ========================================================= */
@@ -103,21 +104,30 @@
                 grid-template-columns: 1fr;
             }
         }
+
     </style>
+
 </head>
 
 <body>
 
 <header>
+
     <div class="container header-inner">
 
         <div class="brand">
-            <a href="index.html" style="display: flex; align-items: center;">
-               <img src="assets/logo_boscacci_rosso.png"
-     alt="Fondazione Boscacci ETS"
-     style="height: 180px; width: auto;">
-</a>
+
+            <a href="index.html"
+               style="display:flex; align-items:center;">
+
+                <img src="assets/logo_boscacci_rosso.png"
+                     alt="Fondazione Boscacci ETS"
+                     style="height:180px; width:auto;">
+
+            </a>
+
         </div>
+
 
         <div class="menu-toggle" id="menuToggle">
             <span></span>
@@ -125,249 +135,340 @@
             <span></span>
         </div>
 
-    <nav class="desktop-nav" id="mainNav">
-    <a href="index.html" class="active">Home</a>
-    <a href="people.html">People</a>
-    <a href="aree-interesse.html">Focus</a>
-    <a href="eventi.html">Eventi</a>
-    <a href="progetti.html">Progetti</a>
-    <a href="pubblicazioni.html">Pubblicazioni</a>
-    <a href="accordi.html">Accordi</a>
-    <a href="collaborare.html">Collaborare</a>
-</nav>
+
+        <nav class="desktop-nav" id="mainNav">
+
+            <a href="index.html" class="active">Home</a>
+            <a href="people.html">People</a>
+            <a href="aree-interesse.html">Focus</a>
+            <a href="eventi.html">Eventi</a>
+            <a href="progetti.html">Progetti</a>
+            <a href="pubblicazioni.html">Pubblicazioni</a>
+            <a href="accordi.html">Accordi</a>
+            <a href="collaborare.html">Collaborare</a>
+
+        </nav>
 
     </div>
+
 </header>
+
 
 <main>
 
-<!-- HERO -->
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
 <section class="hero">
 
-    <style>
 
-        /* =========================================================
-           HERO HOME
-           ========================================================= */
+<style>
 
-        .hero {
-            padding: 3.2rem 0 3rem !important;
-        }
+    /* =========================================================
+       HERO HOME
+       ========================================================= */
 
-        .hero .container {
-            text-align: center;
-        }
+    .hero {
+        padding: 3.2rem 0 3rem !important;
+    }
 
-        .hero h1 {
-            color: #ffffff !important;
-            font-family: 'Playfair Display', serif !important;
-            font-size: 2.9rem !important;
-            font-weight: 600;
-            text-align: center;
-            margin: 0 0 0.7rem 0;
-        }
+    .hero .container {
+        text-align: center;
+    }
 
-        .hero p {
-            color: #ffffff !important;
-            font-family: 'Playfair Display', serif !important;
-            font-size: 1.3rem !important;
-            font-style: italic;
-            text-align: center !important;
-            margin: 0 auto !important;
-        }
+    .hero h1 {
+        color: #ffffff !important;
+        font-family: 'Playfair Display', serif !important;
+        font-size: 2.9rem !important;
+        font-weight: 600;
+        text-align: center;
+        margin: 0 0 0.7rem 0;
+    }
+
+    .hero p {
+        color: #ffffff !important;
+        font-family: 'Playfair Display', serif !important;
+        font-size: 1.3rem !important;
+        font-style: italic;
+        text-align: center !important;
+        margin: 0 auto !important;
+    }
 
 
-        /* =========================================================
-           NOVITÀ DALLA FONDAZIONE
-           ========================================================= */
-.home-main-news {
-    display: grid;
-    grid-template-columns: 44% 56%;
-    background: #ffffff;
-    border: 1px solid #e3ddd3;
-    border-top: 4px solid var(--primary);
-    margin-bottom: 1.5rem;
-    overflow: hidden;
-}
+    /* =========================================================
+       NOVITÀ DALLA FONDAZIONE
+       ========================================================= */
 
-.home-main-news-image img {
-    width: 100%;
-    height: 100%;
-    min-height: 360px;
-    object-fit: cover;
-    display: block;
-}
+    .home-updates {
+        background: #f7f3ec;
+        padding: 3.6rem 0 4rem;
+        border-bottom: 1px solid #e3ddd3;
+    }
 
-.home-main-news-content {
-    padding: 2.8rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+    .home-updates-head {
+        margin-bottom: 2rem;
+    }
 
-.home-main-news-content h3 {
-    font-family: 'Playfair Display', serif;
-    color: var(--primary);
-    font-size: 2.1rem;
-    line-height: 1.18;
-    margin: .4rem 0 1.2rem;
-}
+    .home-updates-kicker {
+        display: block;
+        color: #b58a3d;
+        font-size: .72rem;
+        font-weight: 800;
+        letter-spacing: .14em;
+        text-transform: uppercase;
+        margin-bottom: .55rem;
+    }
 
-.home-main-news-content p {
-    text-align: left;
-    font-size: 1rem;
-    line-height: 1.7;
-    margin: 0 0 1rem;
-}
+    .home-updates h2 {
+        font-family: 'Playfair Display', serif;
+        color: var(--primary);
+        font-size: 2.35rem;
+        line-height: 1.1;
+        margin: 0;
+    }
 
-.home-secondary-news {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-}
 
-.home-secondary-news .home-update-card {
-    min-height: 220px;
-}
-
-@media (max-width: 800px) {
+    /* NOTIZIA PRINCIPALE */
 
     .home-main-news {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: minmax(0, 44%) minmax(0, 56%);
+        background: #ffffff;
+        border: 1px solid #e3ddd3;
+        border-top: 4px solid var(--primary);
+        margin-bottom: 1.5rem;
+        overflow: hidden;
+    }
+
+    .home-main-news-image {
+        min-height: 360px;
+        background: #0f4277;
     }
 
     .home-main-news-image img {
-        min-height: 0;
-        height: auto;
+        width: 100%;
+        height: 100%;
+        min-height: 360px;
+        object-fit: cover;
+        display: block;
     }
 
     .home-main-news-content {
-        padding: 2rem;
+        padding: 2.8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
+
+    .home-main-news-content h3 {
+        font-family: 'Playfair Display', serif;
+        color: var(--primary);
+        font-size: 2.1rem;
+        line-height: 1.18;
+        margin: .4rem 0 1.2rem;
+    }
+
+    .home-main-news-content p {
+        color: var(--text-body);
+        text-align: left;
+        font-size: 1rem;
+        line-height: 1.7;
+        margin: 0 0 1rem;
+    }
+
+
+    /* ETICHETTE */
+
+    .home-update-type {
+        display: block;
+        color: #b58a3d;
+        font-size: .68rem;
+        font-weight: 800;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+
+
+    /* DUE CARD SOTTO */
 
     .home-secondary-news {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
     }
-}
+
+    .home-update-card {
+        display: flex;
+        flex-direction: column;
+        min-height: 220px;
+        padding: 1.8rem;
+        background: #ffffff;
+        border: 1px solid #e3ddd3;
+        border-top: 4px solid var(--primary);
+        text-decoration: none;
+        color: inherit;
+        transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .home-update-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 24px rgba(0,0,0,.07);
+    }
+
+    .home-update-card h3 {
+        font-family: 'Playfair Display', serif;
+        color: var(--primary);
+        font-size: 1.45rem;
+        line-height: 1.22;
+        margin: 0 0 .9rem;
+    }
+
+    .home-update-card p {
+        color: var(--text-body);
+        font-size: .95rem;
+        line-height: 1.6;
+        margin: 0 0 1.4rem;
+        text-align: left;
+    }
+
+    .home-update-link {
+        margin-top: auto;
+        color: var(--primary);
+        font-size: .76rem;
+        font-weight: 800;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+    }
 
 
-        /* =========================================================
-           BOX MISSIONE
-           ========================================================= */
+    /* =========================================================
+       BOX MISSIONE
+       ========================================================= */
+
+    .mission-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+        margin-top: 3rem;
+    }
+
+    .mission-box {
+        padding: 3rem;
+        background: #ffffff;
+        border: 1px solid #e6e2dc;
+        border-top: 4px solid var(--accent);
+        min-height: 260px;
+    }
+
+    .mission-box h3 {
+        font-family: 'Playfair Display', serif;
+        color: var(--primary);
+        font-size: 2rem;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 1.8rem;
+    }
+
+    .mission-box p {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.25rem;
+        font-style: italic;
+        line-height: 1.45;
+        text-align: center;
+        color: var(--text-body);
+        margin: 0;
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+       ========================================================= */
+
+    @media (max-width: 900px) {
+
+        .home-main-news {
+            grid-template-columns: 1fr;
+        }
+
+        .home-main-news-image {
+            min-height: 0;
+        }
+
+        .home-main-news-image img {
+            height: auto;
+            min-height: 0;
+        }
+
+        .home-main-news-content {
+            padding: 2rem;
+        }
+
+        .home-secondary-news {
+            grid-template-columns: 1fr;
+        }
+
+        .home-update-card {
+            min-height: auto;
+        }
+
+    }
+
+
+    @media (max-width: 700px) {
 
         .mission-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2.5rem;
-            margin-top: 3rem;
+            grid-template-columns: 1fr;
         }
 
         .mission-box {
-            padding: 3rem;
-            background: #ffffff;
-            border: 1px solid #e6e2dc;
-            border-top: 4px solid var(--accent);
-            min-height: 260px;
+            padding: 2rem;
+            min-height: auto;
         }
 
-        .mission-box h3 {
-            font-family: 'Playfair Display', serif;
-            color: var(--primary);
+    }
+
+
+    @media (max-width: 600px) {
+
+        .hero {
+            padding: 2.6rem 0 2.5rem !important;
+        }
+
+        .hero h1 {
+            font-size: 2.35rem !important;
+        }
+
+        .hero p {
+            font-size: 1.15rem !important;
+        }
+
+        .home-updates {
+            padding: 3rem 0;
+        }
+
+        .home-updates h2 {
             font-size: 2rem;
-            font-weight: 600;
-            text-align: center;
-            margin-bottom: 1.8rem;
         }
 
-        .mission-box p {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.25rem;
-            font-style: italic;
-            line-height: 1.45;
-            text-align: center;
-            color: var(--text-body);
-            margin: 0;
-        }
+    }
+
+</style>
 
 
-        /* =========================================================
-           RESPONSIVE
-           ========================================================= */
+<div class="container">
 
-        @media (max-width: 900px) {
+    <h1>
+        Fondazione Boscacci ETS
+    </h1>
 
-            .home-updates-grid {
-                grid-template-columns: 1fr;
-            }
+    <p>
+        Innovazione, Ricerca e Cultura Istituzionale
+    </p>
 
-            .home-update-card {
-                min-height: auto;
-            }
-
-        }
-
-
-        @media (max-width: 700px) {
-
-            .mission-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .mission-box {
-                padding: 2rem;
-                min-height: auto;
-            }
-
-        }
-
-
-        @media (max-width: 600px) {
-
-            .hero {
-                padding: 2.6rem 0 2.5rem !important;
-            }
-
-            .hero h1 {
-                font-size: 2.35rem !important;
-            }
-
-            .hero p {
-                font-size: 1.15rem !important;
-            }
-
-            .home-updates {
-                padding: 3rem 0;
-            }
-
-            .home-updates-head {
-                display: block;
-            }
-
-            .home-updates-all {
-                display: inline-block;
-                margin-top: 1rem;
-            }
-
-            .home-updates h2 {
-                font-size: 2rem;
-            }
-
-        }
-
-    </style>
-
-
-    <div class="container">
-
-        <h1>
-            Fondazione Boscacci ETS
-        </h1>
-
-        <p>
-            Innovazione, Ricerca e Cultura Istituzionale
-        </p>
-
-    </div>
+</div>
 
 </section>
 
@@ -383,71 +484,95 @@
 
         <div class="home-updates-head">
 
-            <div>
+            <span class="home-updates-kicker">
+                DALLA FONDAZIONE
+            </span>
 
-                <span class="home-updates-kicker">
-                    DALLA FONDAZIONE
-                </span>
-
-                <h2>
-                    Novità e attività
-                </h2>
-
-            </div>
-
-
-            <a href="pubblicazioni.html"
-               class="home-updates-all">
-
-                TUTTE LE PUBBLICAZIONI →
-
-            </a>
+            <h2>
+                Novità e attività
+            </h2>
 
         </div>
 
 
-        <div class="home-updates-grid">
+        <!-- ACCREDITAMENTO MINISTERO DELLA DIFESA -->
+
+        <div class="home-main-news">
 
 
-   <!-- NOVITÀ 1 — ACCREDITAMENTO MINISTERO DELLA DIFESA -->
+            <div class="home-main-news-image">
 
-<div class="home-update-card home-update-card-image">
+                <img
+                    src="assets/Annuncio istituzionale a Palazzo Baracchini(2).png"
+                    alt="Fondazione Boscacci ETS accreditata presso il Ministero della Difesa">
 
-    <img
-        src="assets/Annuncio istituzionale a Palazzo Baracchini(2).png"
-        alt="Fondazione Boscacci ETS accreditata presso il Ministero della Difesa"
-        class="home-update-image">
+            </div>
 
-    <span class="home-update-type">
-        ACCREDITAMENTO ISTITUZIONALE · 1 OTTOBRE 2026
-    </span>
 
-    <h3>
-        Fondazione Boscacci ETS accreditata presso il Ministero della Difesa
-    </h3>
+            <div class="home-main-news-content">
 
-    <p>
-        La Fondazione Boscacci ETS ha ricevuto la conferma
-        dell’accreditamento presso il Ministero della Difesa
-        come portatore di interessi.
-    </p>
+                <span class="home-update-type">
+                    ACCREDITAMENTO ISTITUZIONALE · 1 OTTOBRE 2026
+                </span>
 
-    <p>
-        Un nuovo passo nel nostro impegno sui temi della difesa
-        e della sicurezza, attraverso ricerca, confronto
-        e dialogo istituzionale.
-    </p>
+                <h3>
+                    Fondazione Boscacci ETS accreditata presso il Ministero della Difesa
+                </h3>
 
-    <p>
-        Proseguiamo questo percorso con trasparenza,
-        rigore e attenzione al bene comune.
-    </p>
+                <p>
+                    La Fondazione Boscacci ETS ha ricevuto la conferma
+                    dell’accreditamento presso il Ministero della Difesa
+                    come portatore di interessi.
+                </p>
 
-</div>
+                <p>
+                    Un nuovo passo nel nostro impegno sui temi della difesa
+                    e della sicurezza, attraverso ricerca, confronto
+                    e dialogo istituzionale.
+                </p>
 
-       </a>
-            
-            <!-- NOVITÀ 2 -->
+                <p>
+                    Proseguiamo questo percorso con trasparenza,
+                    rigore e attenzione al bene comune.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- ALTRE NOVITÀ -->
+
+        <div class="home-secondary-news">
+
+
+            <!-- WHITE PAPER -->
+
+            <a href="pubblicazioni.html"
+               class="home-update-card">
+
+                <span class="home-update-type">
+                    NUOVO WHITE PAPER · OTTOBRE 2026
+                </span>
+
+                <h3>
+                    Giustizia, diplomazia e interesse nazionale
+                </h3>
+
+                <p>
+                    Il rapporto Italia–Egitto dopo la sentenza
+                    sul caso Giulio Regeni.
+                </p>
+
+                <span class="home-update-link">
+                    SCOPRI IL WHITE PAPER →
+                </span>
+
+            </a>
+
+
+            <!-- BRUSSELS DIALOGUES -->
 
             <a href="eventi.html"
                class="home-update-card">
@@ -473,47 +598,24 @@
             </a>
 
 
-            <!-- NOVITÀ 3 -->
-
-            <a href="accordi.html"
-               class="home-update-card">
-
-                <span class="home-update-type">
-                    NETWORK E COLLABORAZIONI
-                </span>
-
-                <h3>
-                    Accordi e partnership della Fondazione
-                </h3>
-
-                <p>
-                    Università, istituzioni, associazioni e partner
-                    con cui la Fondazione sviluppa attività di ricerca,
-                    formazione e confronto.
-                </p>
-
-                <span class="home-update-link">
-                    SCOPRI GLI ACCORDI →
-                </span>
-
-            </a>
-
-
         </div>
+
 
     </div>
 
 </section>
 
 
-<!-- HOME EDITORIALE -->
+<!-- =====================================================
+     HOME EDITORIALE
+===================================================== -->
 
-   <!-- HOME EDITORIALE -->
 <section class="home-editorial">
 
     <div class="container">
 
         <div class="home-editorial-grid">
+
 
             <div class="home-intro">
 
@@ -533,118 +635,251 @@
                     settori della salute, della ricerca e della cultura istituzionale.
                 </p>
 
-                <a href="#chi-siamo" class="home-button">
+                <a href="#chi-siamo"
+                   class="home-button">
+
                     SCOPRI LA FONDAZIONE →
+
                 </a>
-<div class="home-focus-grid">
 
-    <a href="aree-interesse.html" class="home-focus-card">
-        <img src="assets/focus-salute.jpg" alt="Salute e politiche sanitarie">
-        <span></span>
-        <h3>Salute e politiche sanitarie</h3>
-        <p>Analisi, proposte e confronto per un sistema più equo e innovativo.</p>
-        <strong>APPROFONDISCI →</strong>
-    </a>
 
-    <a href="aree-interesse.html" class="home-focus-card">
-        <img src="assets/focus-istituzioni.jpg" alt="Relazioni istituzionali">
-        <span></span>
-        <h3>Relazioni istituzionali</h3>
-        <p>Dialogo con istituzioni nazionali ed europee per soluzioni condivise.</p>
-        <strong>APPROFONDISCI →</strong>
-    </a>
+                <div class="home-focus-grid">
 
-    <a href="aree-interesse.html" class="home-focus-card">
-        <img src="assets/focus-ricerca.jpg" alt="Ricerca e formazione">
-        <span></span>
-        <h3>Ricerca e formazione</h3>
-        <p>Studi, pubblicazioni ed eventi per diffondere conoscenza e competenze.</p>
-        <strong>APPROFONDISCI →</strong>
-    </a>
 
-    <a href="accordi.html" class="home-focus-card">
-        <img src="assets/focus-partnership.jpg" alt="Partnership e collaborazioni">
-        <span></span>
-        <h3>Partnership e collaborazioni</h3>
-        <p>Un network di esperti e stakeholder per progetti a impatto reale.</p>
-        <strong>APPROFONDISCI →</strong>
-    </a>
+                    <a href="aree-interesse.html"
+                       class="home-focus-card">
 
-</div>
+                        <img src="assets/focus-salute.jpg"
+                             alt="Salute e politiche sanitarie">
+
+                        <span></span>
+
+                        <h3>
+                            Salute e politiche sanitarie
+                        </h3>
+
+                        <p>
+                            Analisi, proposte e confronto
+                            per un sistema più equo e innovativo.
+                        </p>
+
+                        <strong>
+                            APPROFONDISCI →
+                        </strong>
+
+                    </a>
+
+
+                    <a href="aree-interesse.html"
+                       class="home-focus-card">
+
+                        <img src="assets/focus-istituzioni.jpg"
+                             alt="Relazioni istituzionali">
+
+                        <span></span>
+
+                        <h3>
+                            Relazioni istituzionali
+                        </h3>
+
+                        <p>
+                            Dialogo con istituzioni nazionali ed europee
+                            per soluzioni condivise.
+                        </p>
+
+                        <strong>
+                            APPROFONDISCI →
+                        </strong>
+
+                    </a>
+
+
+                    <a href="aree-interesse.html"
+                       class="home-focus-card">
+
+                        <img src="assets/focus-ricerca.jpg"
+                             alt="Ricerca e formazione">
+
+                        <span></span>
+
+                        <h3>
+                            Ricerca e formazione
+                        </h3>
+
+                        <p>
+                            Studi, pubblicazioni ed eventi
+                            per diffondere conoscenza e competenze.
+                        </p>
+
+                        <strong>
+                            APPROFONDISCI →
+                        </strong>
+
+                    </a>
+
+
+                    <a href="accordi.html"
+                       class="home-focus-card">
+
+                        <img src="assets/focus-partnership.jpg"
+                             alt="Partnership e collaborazioni">
+
+                        <span></span>
+
+                        <h3>
+                            Partnership e collaborazioni
+                        </h3>
+
+                        <p>
+                            Un network di esperti e stakeholder
+                            per progetti a impatto reale.
+                        </p>
+
+                        <strong>
+                            APPROFONDISCI →
+                        </strong>
+
+                    </a>
+
+
+                </div>
+
             </div>
+
 
             <div class="home-news">
 
+
                 <div class="news-heading">
+
                     <div>
-                        <span>NEWS</span>
-                        <h2>Ultime notizie</h2>
+
+                        <span>
+                            NEWS
+                        </span>
+
+                        <h2>
+                            Ultime notizie
+                        </h2>
+
                     </div>
+
                 </div>
 
-<div class="televideo-live">
 
-    <div class="televideo-screen">
+                <div class="televideo-live">
 
-        <div class="televideo-topbar">
-            <span class="televideo-brand">TELEVIDEO</span>
-            <span class="televideo-page">101</span>
-        </div>
 
-        <div class="televideo-subbar">
-            <span>RAI</span>
-            <span>ULTIM'ORA</span>
-        </div>
+                    <div class="televideo-screen">
 
-        <h3>ULTIM'ORA</h3>
 
-        <div id="televideo-news">
-            <p class="televideo-loading">
-                Caricamento delle ultime notizie...
-            </p>
-        </div>
+                        <div class="televideo-topbar">
 
-        <div class="televideo-footerbar">
-            <span>100 INDICE</span>
-            <span>102 24 ORE</span>
-        </div>
+                            <span class="televideo-brand">
+                                TELEVIDEO
+                            </span>
 
-    </div>
+                            <span class="televideo-page">
+                                101
+                            </span>
 
-    <a href="https://www.televideo.rai.it/"
-       target="_blank"
-       rel="noopener noreferrer"
-       class="televideo-link">
-        APRI TELEVIDEO RAI →
-    </a>
+                        </div>
 
-    <small>Fonte: Televideo Rai</small>
 
-</div>
-<div class="euronews-live">
+                        <div class="televideo-subbar">
 
-    <div class="euronews-live-title">
-        <span class="live-dot"></span>
-     FRANCE 24 LIVE
-    </div>
+                            <span>
+                                RAI
+                            </span>
 
-    <div class="live-video">
-        <iframe
-            src="https://www.youtube.com/embed/HvZt-nh9sGg?autoplay=1&mute=1"
-            title="Euronews Live"
-            allow="autoplay; encrypted-media; picture-in-picture"
-            allowfullscreen>
-        </iframe>
-    </div>
+                            <span>
+                                ULTIM'ORA
+                            </span>
 
-    <p class="live-source">
-        International News · Live 24/7
-    </p>
+                        </div>
 
-</div>
-</div>
+
+                        <h3>
+                            ULTIM'ORA
+                        </h3>
+
+
+                        <div id="televideo-news">
+
+                            <p class="televideo-loading">
+                                Caricamento delle ultime notizie...
+                            </p>
+
+                        </div>
+
+
+                        <div class="televideo-footerbar">
+
+                            <span>
+                                100 INDICE
+                            </span>
+
+                            <span>
+                                102 24 ORE
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <a href="https://www.televideo.rai.it/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="televideo-link">
+
+                        APRI TELEVIDEO RAI →
+
+                    </a>
+
+                    <small>
+                        Fonte: Televideo Rai
+                    </small>
+
+
+                </div>
+
+
+                <div class="euronews-live">
+
+
+                    <div class="euronews-live-title">
+
+                        <span class="live-dot"></span>
+
+                        FRANCE 24 LIVE
+
+                    </div>
+
+
+                    <div class="live-video">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/HvZt-nh9sGg?autoplay=1&mute=1"
+                            title="France 24 Live"
+                            allow="autoplay; encrypted-media; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+
+                    <p class="live-source">
+                        International News · Live 24/7
+                    </p>
+
+
+                </div>
+
 
             </div>
+
 
         </div>
 
@@ -652,405 +887,1072 @@
 
 </section>
 
-    <!-- CHI SIAMO -->
-    <section id="chi-siamo">
-        <div class="container">
 
-            <h2 class="section-title">Chi Siamo</h2>
-<div class="dynames-grid">
+<!-- =====================================================
+     CHI SIAMO
+===================================================== -->
+
+<section id="chi-siamo">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Chi Siamo
+        </h2>
+
+
+        <div class="dynames-grid">
+
+
             <div class="author-box">
+
                 <div class="author-icon">
-                    <img src="assets/Fabio Boscacci.jfif" alt="Fabio Boscacci">
+                    <img src="assets/Fabio Boscacci.jfif"
+                         alt="Fabio Boscacci">
                 </div>
+
                 <div class="author-info">
-                    <h4>Dott. Fabio Boscacci</h4>
+
+                    <h4>
+                        Dott. Fabio Boscacci
+                    </h4>
+
                     <p>
-                        Presidente della Fondazione Boscacci, Cofondatore
-                        e Direttore Responsabile di DYNAMES.
+                        Presidente della Fondazione Boscacci,
+                        Cofondatore e Direttore Responsabile di DYNAMES.
                     </p>
+
                 </div>
+
             </div>
 
+
             <div class="author-box">
+
                 <div class="author-icon">
-                    <img src="assets/Vinenzo D'ANNA.png" alt="Vincenzo D'Anna">
+
+                    <img src="assets/Vinenzo D'ANNA.png"
+                         alt="Vincenzo D'Anna">
+
                 </div>
+
                 <div class="author-info">
-                    <h4>Dott. Vincenzo D’Anna</h4>
+
+                    <h4>
+                        Dott. Vincenzo D’Anna
+                    </h4>
+
                     <p>
-                        Cofondatore e Consigliere editoriale e scientifico
-                        di DYNAMES.
+                        Cofondatore e Consigliere editoriale
+                        e scientifico di DYNAMES.
                     </p>
+
                 </div>
+
             </div>
 
+
             <div class="author-box">
+
                 <div class="author-icon">
-                    <img src="assets/Stefano De Lillo.jpeg" alt="Stefano De Lillo">
+
+                    <img src="assets/Stefano De Lillo.jpeg"
+                         alt="Stefano De Lillo">
+
                 </div>
+
                 <div class="author-info">
-                    <h4>Dott. Stefano De Lillo</h4>
+
+                    <h4>
+                        Dott. Stefano De Lillo
+                    </h4>
+
                     <p>
-    Medico cardiologo, specialista in Medicina dello Sport e già Senatore della Repubblica
-    nella XVII Legislatura. Presidente dell’Ordine dei Medici della Regione Lazio.
-</p>
+                        Medico cardiologo, specialista in Medicina dello Sport
+                        e già Senatore della Repubblica nella XVII Legislatura.
+                        Presidente dell’Ordine dei Medici della Regione Lazio.
+                    </p>
+
                 </div>
+
             </div>
 
+
             <div class="author-box">
+
                 <div class="author-icon">
-                    <img src="assets/Massimo Ciccozzi.jpeg" alt="Massimo Ciccozzi">
+
+                    <img src="assets/Massimo Ciccozzi.jpeg"
+                         alt="Massimo Ciccozzi">
+
                 </div>
+
                 <div class="author-info">
-                    <h4>Prof. Massimo Ciccozzi</h4>
+
+                    <h4>
+                        Prof. Massimo Ciccozzi
+                    </h4>
+
                     <p>
-    Professore Ordinario di Epidemiologia e Statistica Sanitaria presso l’Università
-    Campus Bio-Medico di Roma. La sua attività scientifica registra un H-Index di 66
-    e oltre 24.500 citazioni.
-</p>
+                        Professore Ordinario di Epidemiologia e Statistica Sanitaria
+                        presso l’Università Campus Bio-Medico di Roma.
+                        La sua attività scientifica registra un H-Index di 66
+                        e oltre 24.500 citazioni.
+                    </p>
+
                 </div>
+
             </div>
 
+
             <div class="author-box">
+
                 <div class="author-icon">
-                    <img src="assets/Gianna Zamaro.jpeg" alt="Gianna Zamaro">
+
+                    <img src="assets/Gianna Zamaro.jpeg"
+                         alt="Gianna Zamaro">
+
                 </div>
+
                 <div class="author-info">
-                    <h4>Dott.ssa Gianna Zamaro</h4>
+
+                    <h4>
+                        Dott.ssa Gianna Zamaro
+                    </h4>
+
                     <p>
-    Medico anestesista e rianimatore, Direttore Centrale Salute, Politiche Sociali
-    e Disabilità della Regione Autonoma Friuli Venezia Giulia. Docente al Master EMAS
-    dell’Università Ca’ Foscari Venezia e Professore a contratto presso il Corso di
-    Laurea in Medicina e Chirurgia dell’Università di Trieste.
-</p>
+                        Medico anestesista e rianimatore,
+                        Direttore Centrale Salute, Politiche Sociali
+                        e Disabilità della Regione Autonoma Friuli Venezia Giulia.
+                        Docente al Master EMAS dell’Università Ca’ Foscari Venezia
+                        e Professore a contratto presso il Corso di Laurea
+                        in Medicina e Chirurgia dell’Università di Trieste.
+                    </p>
+
                 </div>
+
             </div>
 
+
             <div class="author-box">
+
                 <div class="author-icon">
-                    <img src="assets/curtopassi.jpeg" alt="Elena Curtopassi">
+
+                    <img src="assets/curtopassi.jpeg"
+                         alt="Elena Curtopassi">
+
                 </div>
+
                 <div class="author-info">
-                    <h4>Dott.ssa Elena Curtopassi</h4>
+
+                    <h4>
+                        Dott.ssa Elena Curtopassi
+                    </h4>
+
                     <p>
-    Consulente in politiche socio-sanitarie, occupazionali, internazionali ed europee.
-    Vice Presidente del Comitato Territori Inclusivi, Ambiente e Sanità della Conferenza
-    OING del Consiglio d’Europa, Ambassador di SHAFE Foundation e membro del Comitato
-    Direttivo della rete europea ELISAN.
-</p>
+                        Consulente in politiche socio-sanitarie,
+                        occupazionali, internazionali ed europee.
+                        Vice Presidente del Comitato Territori Inclusivi,
+                        Ambiente e Sanità della Conferenza OING
+                        del Consiglio d’Europa, Ambassador di SHAFE Foundation
+                        e membro del Comitato Direttivo della rete europea ELISAN.
+                    </p>
+
                 </div>
+
             </div>
 
+
             <div class="author-box">
+
                 <div class="author-icon">
-                    <img src="assets/elisabetta_panico_nuova.jpeg" alt="Elisabetta Panico">
+
+                    <img src="assets/elisabetta_panico_nuova.jpeg"
+                         alt="Elisabetta Panico">
+
                 </div>
+
                 <div class="author-info">
-                    <h4>Dott.ssa Elisabetta Panico</h4>
+
+                    <h4>
+                        Dott.ssa Elisabetta Panico
+                    </h4>
+
                     <p>
-    Ufficio Stampa della Fondazione Boscacci ETS e Staff Manager del Luiss Data Lab
-    e della Scuola di Giornalismo Luiss. Laureata in Relazioni Internazionali e Politica
-    Globale presso The American University of Rome, ha conseguito un Master di II livello
-    in Sistemi e Tecnologie Elettroniche per la Sicurezza, la Difesa e l’Intelligence
-    presso l’Università di Roma Tor Vergata.
-</p>
+                        Ufficio Stampa della Fondazione Boscacci ETS
+                        e Staff Manager del Luiss Data Lab e della Scuola
+                        di Giornalismo Luiss. Laureata in Relazioni Internazionali
+                        e Politica Globale presso The American University of Rome,
+                        ha conseguito un Master di II livello in Sistemi
+                        e Tecnologie Elettroniche per la Sicurezza,
+                        la Difesa e l’Intelligence presso
+                        l’Università di Roma Tor Vergata.
+                    </p>
+
                 </div>
+
             </div>
 
+
             <div class="author-box">
+
                 <div class="author-icon">
-                    <img src="assets/brancato guglielmo.png" alt="Guglielmo Brancato">
+
+                    <img src="assets/brancato guglielmo.png"
+                         alt="Guglielmo Brancato">
+
                 </div>
+
                 <div class="author-info">
-                    <h4>Dott. Guglielmo Brancato</h4>
+
+                    <h4>
+                        Dott. Guglielmo Brancato
+                    </h4>
+
                     <p>
                         Produttore cinematografico per Marte Studios,
-                        Technology Advisor di DYNAMES. Ex Allievo della
-                        Scuola Militare Nunziatella.
+                        Technology Advisor di DYNAMES.
+                        Ex Allievo della Scuola Militare Nunziatella.
                     </p>
+
                 </div>
+
             </div>
+
 
             <div class="author-box">
+
                 <div class="author-icon">
-                    <img src="assets/antonio-brigandi.jpg" alt="Antonino Brigandì">
+
+                    <img src="assets/antonio-brigandi.jpg"
+                         alt="Antonino Brigandì">
+
                 </div>
+
                 <div class="author-info">
-                    <h4>Dott. Antonino Brigandì</h4>
-                    <p><strong>Governance Pubblica</strong></p>
+
+                    <h4>
+                        Dott. Antonino Brigandì
+                    </h4>
+
                     <p>
-                        Laureato magistrale in Relazioni internazionali e
-                        sicurezza globale presso La Sapienza, ha conseguito
-                        un master in Public Affairs e Lobbying alla Luiss
-                        Business School. Consulente di relazioni istituzionali,
-                        lavora con clienti nei settori difesa, cybersicurezza
-                        ed energia e scrive di geopolitica e politica italiana.
+                        <strong>
+                            Governance Pubblica
+                        </strong>
                     </p>
+
+                    <p>
+                        Laureato magistrale in Relazioni internazionali
+                        e sicurezza globale presso La Sapienza,
+                        ha conseguito un master in Public Affairs
+                        e Lobbying alla Luiss Business School.
+                        Consulente di relazioni istituzionali,
+                        lavora con clienti nei settori difesa,
+                        cybersicurezza ed energia e scrive
+                        di geopolitica e politica italiana.
+                    </p>
+
                 </div>
+
             </div>
+
+
         </div>
-    </section>
-        <!-- PARTNERSHIP -->
-    <section id="partnership"
-             style="background: var(--primary-dark); color: #ffffff;">
 
-        <div class="container" style="text-align: center;">
+    </div>
 
-         <h2 class="section-title" style="color: #ffffff;">
-    Partnership &amp; Network
-</h2>
+</section>
 
-<p style="text-align: center; color: #e7dfe0; font-size: 0.95rem; margin: -1rem auto 3.5rem; max-width: 700px;">
-    Collaborazioni accademiche, scientifiche e professionali della Fondazione
-</p>
 
-<div style="
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 4rem;
-    row-gap: 4rem;
-    align-items: start;
-">
+<!-- =====================================================
+     PARTNERSHIP
+===================================================== -->
 
-    <!-- DELOITTE -->
-    <div style="text-align: center;">
-        <div style="height: 75px; display: flex; align-items: center; justify-content: center;">
-            <img src="assets/loghi partner/delpitte.png"
-                 alt="Deloitte"
-                 style="max-height: 55px; max-width: 180px; filter: brightness(0) invert(1);">
-        </div>
-        <p style="color: #fdfcf8; font-size: 0.85rem; margin: 1rem auto 0; text-align: center; line-height: 1.4;">
-            Consulenza strategica
+<section id="partnership"
+         style="background:var(--primary-dark); color:#ffffff;">
+
+
+    <div class="container"
+         style="text-align:center;">
+
+
+        <h2 class="section-title"
+            style="color:#ffffff;">
+
+            Partnership &amp; Network
+
+        </h2>
+
+
+        <p style="
+            text-align:center;
+            color:#e7dfe0;
+            font-size:.95rem;
+            margin:-1rem auto 3.5rem;
+            max-width:700px;
+        ">
+
+            Collaborazioni accademiche,
+            scientifiche e professionali della Fondazione
+
         </p>
-    </div>
 
-    <!-- HEAD -->
-    <div style="text-align: center;">
-        <div style="height: 75px; display: flex; align-items: center; justify-content: center;">
-            <img src="assets/loghi partner/head logo.png"
-                 alt="HEAD"
-                 style="max-height: 55px; max-width: 190px; filter: brightness(0) invert(1);">
+
+        <div style="
+            max-width:1200px;
+            margin:0 auto;
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            column-gap:4rem;
+            row-gap:4rem;
+            align-items:start;
+        ">
+
+
+            <!-- DELOITTE -->
+
+            <div style="text-align:center;">
+
+                <div style="
+                    height:75px;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                ">
+
+                    <img src="assets/loghi partner/delpitte.png"
+                         alt="Deloitte"
+                         style="
+                            max-height:55px;
+                            max-width:180px;
+                            filter:brightness(0) invert(1);
+                         ">
+
+                </div>
+
+                <p style="
+                    color:#fdfcf8;
+                    font-size:.85rem;
+                    margin:1rem auto 0;
+                    text-align:center;
+                    line-height:1.4;
+                ">
+                    Consulenza strategica
+                </p>
+
+            </div>
+
+
+            <!-- HEAD -->
+
+            <div style="text-align:center;">
+
+                <div style="
+                    height:75px;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                ">
+
+                    <img src="assets/loghi partner/head logo.png"
+                         alt="HEAD"
+                         style="
+                            max-height:55px;
+                            max-width:190px;
+                            filter:brightness(0) invert(1);
+                         ">
+
+                </div>
+
+                <p style="
+                    color:#fdfcf8;
+                    font-size:.85rem;
+                    margin:1rem auto 0;
+                    text-align:center;
+                    line-height:1.4;
+                ">
+                    Ricerca e formazione
+                </p>
+
+            </div>
+
+
+            <!-- LUISS -->
+
+            <div style="text-align:center;">
+
+                <div style="
+                    height:75px;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                ">
+
+                    <img src="assets/loghi partner/logo_luiss_master-giornalismo.svg"
+                         alt="LUISS"
+                         style="
+                            max-height:55px;
+                            max-width:180px;
+                            filter:brightness(0) invert(1);
+                         ">
+
+                </div>
+
+                <p style="
+                    color:#fdfcf8;
+                    font-size:.85rem;
+                    margin:1rem auto 0;
+                    text-align:center;
+                    line-height:1.4;
+                ">
+                    Formazione accademica
+                </p>
+
+            </div>
+
+
+            <!-- MARTE STUDIOS -->
+
+            <div style="text-align:center;">
+
+                <div style="
+                    height:75px;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                ">
+
+                    <img src="assets/loghi partner/marte_logo.png"
+                         alt="Marte Studios"
+                         style="
+                            max-height:90px;
+                            max-width:240px;
+                            filter:brightness(0) invert(1);
+                         ">
+
+                </div>
+
+                <p style="
+                    color:#fdfcf8;
+                    font-size:.85rem;
+                    margin:1rem auto 0;
+                    text-align:center;
+                    line-height:1.4;
+                ">
+                    Produzione Cinematografica
+                </p>
+
+            </div>
+
+
+            <!-- FERPI -->
+
+            <div style="
+                text-align:center;
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+            ">
+
+                <div style="
+                    height:80px;
+                    width:100%;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                ">
+
+                    <img src="assets/loghi partner/ferpi.jpeg"
+                         alt="FERPI"
+                         style="
+                            max-height:55px;
+                            max-width:170px;
+                            object-fit:contain;
+                         ">
+
+                </div>
+
+                <p style="
+                    color:#fdfcf8;
+                    font-size:.85rem;
+                    margin:1rem 0 0;
+                    text-align:center;
+                    line-height:1.4;
+                ">
+                    Socio Professionista
+                </p>
+
+            </div>
+
+
+            <!-- SOCINT -->
+
+            <div style="
+                text-align:center;
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+            ">
+
+                <div style="
+                    height:80px;
+                    width:100%;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                ">
+
+                    <img src="assets/loghi partner/logo_socint-1-1.png"
+                         alt="SOCINT – Società Italiana di Intelligence"
+                         style="
+                            max-height:65px;
+                            max-width:190px;
+                            object-fit:contain;
+                         ">
+
+                </div>
+
+                <p style="
+                    color:#fdfcf8;
+                    font-size:.85rem;
+                    margin:1rem 0 0;
+                    text-align:center;
+                    line-height:1.4;
+                ">
+                    Intelligence e sicurezza
+                </p>
+
+            </div>
+
+
+            <!-- TOR VERGATA -->
+
+            <div style="
+                text-align:center;
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+            ">
+
+                <div style="
+                    height:80px;
+                    width:100%;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                ">
+
+                    <img src="assets/loghi partner/Logo-Universita-Roma-Tor-Vergata.png"
+                         alt="Università degli Studi di Roma Tor Vergata"
+                         style="
+                            max-height:65px;
+                            max-width:190px;
+                            object-fit:contain;
+                         ">
+
+                </div>
+
+                <p style="
+                    color:#fdfcf8;
+                    font-size:.85rem;
+                    margin:1rem 0 0;
+                    text-align:center;
+                    line-height:1.4;
+                ">
+                    Ricerca e formazione universitaria
+                </p>
+
+            </div>
+
+
+            <!-- IIHL -->
+
+            <div style="
+                text-align:center;
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+            ">
+
+                <div style="
+                    height:80px;
+                    width:100%;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                ">
+
+                    <img src="assets/loghi partner/logo_iihl.png"
+                         alt="IIHL – International Institute of Humanitarian Law"
+                         style="
+                            max-height:65px;
+                            max-width:230px;
+                            object-fit:contain;
+                         ">
+
+                </div>
+
+                <p style="
+                    color:#fdfcf8;
+                    font-size:.85rem;
+                    margin:1rem 0 0;
+                    text-align:center;
+                    line-height:1.4;
+                ">
+                    Diritto internazionale umanitario
+                </p>
+
+            </div>
+
+
         </div>
-       <p style="color: #fdfcf8; font-size: 0.85rem; margin: 1rem auto 0; text-align: center; line-height: 1.4;">
-            Ricerca e formazione
-        </p>
+
     </div>
 
-    <!-- LUISS -->
-    <div style="text-align: center;">
-        <div style="height: 75px; display: flex; align-items: center; justify-content: center;">
-            <img src="assets/loghi partner/logo_luiss_master-giornalismo.svg"
-                 alt="LUISS"
-                 style="max-height: 55px; max-width: 180px; filter: brightness(0) invert(1);">
-        </div>
-        <p style="color: #fdfcf8; font-size: 0.85rem; margin: 1rem auto 0; text-align: center; line-height: 1.4;">
-            Formazione accademica
-        </p>
-    </div>
+</section>
 
-    <!-- MARTE STUDIOS -->
-    <div style="text-align: center;">
-        <div style="height: 75px; display: flex; align-items: center; justify-content: center;">
-            <img src="assets/loghi partner/marte_logo.png"
-                 alt="Marte Studios"
-                 style="max-height: 90px; max-width: 240px; filter: brightness(0) invert(1);">
-        </div>
-       <p style="color: #fdfcf8; font-size: 0.85rem; margin: 1rem auto 0; text-align: center; line-height: 1.4;">
-            Produzione Cinematografica
-        </p>
-    </div>
-    
-   <!-- FERPI -->
-<div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
-    <div style="height: 80px; width: 100%; display: flex; align-items: center; justify-content: center;">
-        <img src="assets/loghi partner/ferpi.jpeg"
-             alt="FERPI"
-             style="max-height: 55px; max-width: 170px; object-fit: contain;">
-    </div>
-    <p style="color: #fdfcf8; font-size: 0.85rem; margin: 1rem 0 0; text-align: center; line-height: 1.4;">
-        Socio Professionista
-    </p>
-</div>
-
-<!-- SOCINT -->
-<div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
-    <div style="height: 80px; width: 100%; display: flex; align-items: center; justify-content: center;">
-        <img src="assets/loghi partner/logo_socint-1-1.png"
-             alt="SOCINT – Società Italiana di Intelligence"
-             style="max-height: 65px; max-width: 190px; object-fit: contain;">
-    </div>
-    <p style="color: #fdfcf8; font-size: 0.85rem; margin: 1rem 0 0; text-align: center; line-height: 1.4;">
-        Intelligence e sicurezza
-    </p>
-</div>
-
-<!-- TOR VERGATA -->
-<div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
-    <div style="height: 80px; width: 100%; display: flex; align-items: center; justify-content: center;">
-        <img src="assets/loghi partner/Logo-Universita-Roma-Tor-Vergata.png"
-             alt="Università degli Studi di Roma Tor Vergata"
-             style="max-height: 65px; max-width: 190px; object-fit: contain;">
-    </div>
-    <p style="color: #fdfcf8; font-size: 0.85rem; margin: 1rem 0 0; text-align: center; line-height: 1.4;">
-        Ricerca e formazione universitaria
-    </p>
-</div>
-
-<!-- IIHL -->
-<div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
-    <div style="height: 80px; width: 100%; display: flex; align-items: center; justify-content: center;">
-        <img src="assets/loghi partner/logo_iihl.png"
-             alt="IIHL – International Institute of Humanitarian Law"
-             style="max-height: 65px; max-width: 230px; object-fit: contain;">
-    </div>
-    <p style="color: #fdfcf8; font-size: 0.85rem; margin: 1rem 0 0; text-align: center; line-height: 1.4;">
-        Diritto internazionale umanitario
-    </p>
-</div>
-
-</div>
-    </section>
 
 </main>
 
-<footer>
-<div class="container" style="max-width: 1200px; margin: 0 auto; padding: 4rem 1.5rem 2rem;">
 
-    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 5rem; align-items: start; width: 100%;">
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+
+<div class="container"
+     style="
+        max-width:1200px;
+        margin:0 auto;
+        padding:4rem 1.5rem 2rem;
+     ">
+
+
+    <div style="
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        gap:5rem;
+        align-items:start;
+        width:100%;
+    ">
+
 
         <!-- COLONNA 1 -->
-        <div style="text-align: left;">
-            <h3 style="font-family: 'Lato', sans-serif; color: white; font-size: 1.00rem; font-weight: 700; margin: 0 0 2rem 0; text-align: left;">
+
+        <div style="text-align:left;">
+
+
+            <h3 style="
+                font-family:'Lato',sans-serif;
+                color:white;
+                font-size:1rem;
+                font-weight:700;
+                margin:0 0 2rem 0;
+                text-align:left;
+            ">
+
                 FONDAZIONE BOSCACCI ETS
+
             </h3>
 
-            <p style="color: white; font-size: 0.75rem; line-height: 1.05; text-align: left; margin: 0;">
+
+            <p style="
+                color:white;
+                font-size:.75rem;
+                line-height:1.05;
+                text-align:left;
+                margin:0;
+            ">
+
                 Sede legale Via Carlo Noè 45<br>
                 Gallarate (VA)<br><br>
+
                 C.F. 03800470126<br>
                 P.IVA 04096960127<br><br>
+
                 Repertorio RUNTS: 152268<br><br>
+
                 R.O.C. n° 44335<br><br>
+
                 Accreditamento Min.Difesa n° PDI-2026-000070
-</p>
+
             </p>
-<p style="margin-top:1rem; font-size:0.75rem;">
-    <a href="privacy.html" style="color:white; text-decoration:none;">
-        Privacy Policy
-    </a>
-    <span style="color:white;"> · </span>
-    <a href="cookie-policy.html" style="color:white; text-decoration:none;">
-        Cookie Policy
-    </a>
-</p>
+
+
+            <p style="
+                margin-top:1rem;
+                font-size:.75rem;
+            ">
+
+                <a href="privacy.html"
+                   style="
+                        color:white;
+                        text-decoration:none;
+                   ">
+
+                    Privacy Policy
+
+                </a>
+
+                <span style="color:white;">
+                    ·
+                </span>
+
+                <a href="cookie-policy.html"
+                   style="
+                        color:white;
+                        text-decoration:none;
+                   ">
+
+                    Cookie Policy
+
+                </a>
+
+            </p>
+
+
         </div>
+
 
         <!-- COLONNA 2 -->
-        <div style="text-align: left;">
-            <h3 style="font-family: 'Lato', sans-serif; color: white; font-size: 1.00rem; font-weight: 700; margin: 0 0 1rem 0; text-align: left;">
-    Editore di DYNAMES
-</h3>
-</p>
-            <h3 style="font-family: 'Lato', sans-serif; color: white; font-size: 1.00rem; font-weight: 700; margin: 0 0 2rem 0; text-align: left;">
+
+        <div style="text-align:left;">
+
+
+            <h3 style="
+                font-family:'Lato',sans-serif;
+                color:white;
+                font-size:1rem;
+                font-weight:700;
+                margin:0 0 1rem 0;
+                text-align:left;
+            ">
+
+                Editore di DYNAMES
+
+            </h3>
+
+
+            <h3 style="
+                font-family:'Lato',sans-serif;
+                color:white;
+                font-size:1rem;
+                font-weight:700;
+                margin:0 0 1rem 0;
+                text-align:left;
+            ">
+
                 Dati Registrazione
-            <p style="color: white; font-size: 0.75rem; line-height: 1.05; text-align: left; margin: 0;">
+
+            </h3>
+
+
+            <p style="
+                color:white;
+                font-size:.75rem;
+                line-height:1.05;
+                text-align:left;
+                margin:0;
+            ">
+
                 Reg. Trib. di Busto Arsizio<br>
                 N. 01/2026 del 25 febbraio 2026
-            <p style="color: white; font-size: 0.75rem; line-height: 1.05; text-align: left; margin-top: 0.4rem;">
 
-            <h3 style="font-family: 'Lato', sans-serif; color: white; font-size: 1.00rem; font-weight: 700; margin: 2rem 0 1.2rem 0; text-align: left;">
-                Contatti
-            <p style="font-size: 0.75rem; line-height: 1.05; text-align: left; margin: 0;">
-                <span style="color: #9b8f92; text-transform: uppercase; letter-spacing: 0.08em;">INFO</span><br>
-                <a href="mailto:info@boscacci.it" style="color: white; text-decoration: none;">
-                    info@boscacci.it
-                </a>
-
-            <p style="font-size: 0.75rem; line-height: 1.05; text-align: left; margin-top: 1rem;">
-                <span style="color: #9b8f92; text-transform: uppercase; letter-spacing: 0.08em;">UFFICIO STAMPA</span><br>
-                <a href="mailto:e.panico@boscacci.it" style="color: white; text-decoration: none;">
-                    e.panico@boscacci.it
-                </a>
             </p>
+
+
+            <h3 style="
+                font-family:'Lato',sans-serif;
+                color:white;
+                font-size:1rem;
+                font-weight:700;
+                margin:2rem 0 1.2rem 0;
+                text-align:left;
+            ">
+
+                Contatti
+
+            </h3>
+
+
+            <p style="
+                font-size:.75rem;
+                line-height:1.05;
+                text-align:left;
+                margin:0;
+            ">
+
+                <span style="
+                    color:#9b8f92;
+                    text-transform:uppercase;
+                    letter-spacing:.08em;
+                ">
+
+                    INFO
+
+                </span>
+
+                <br>
+
+                <a href="mailto:info@boscacci.it"
+                   style="
+                        color:white;
+                        text-decoration:none;
+                   ">
+
+                    info@boscacci.it
+
+                </a>
+
+            </p>
+
+
+            <p style="
+                font-size:.75rem;
+                line-height:1.05;
+                text-align:left;
+                margin-top:1rem;
+            ">
+
+                <span style="
+                    color:#9b8f92;
+                    text-transform:uppercase;
+                    letter-spacing:.08em;
+                ">
+
+                    UFFICIO STAMPA
+
+                </span>
+
+                <br>
+
+                <a href="mailto:e.panico@boscacci.it"
+                   style="
+                        color:white;
+                        text-decoration:none;
+                   ">
+
+                    e.panico@boscacci.it
+
+                </a>
+
+            </p>
+
+
         </div>
 
+
         <!-- COLONNA 3 -->
-        <div style="text-align: left;">
-            <h3 style="font-family: 'Lato', sans-serif; color: white; font-size: 1.00rem; font-weight: 700; margin: 0 0 2rem 0; text-align: left;">
+
+        <div style="text-align:left;">
+
+
+            <h3 style="
+                font-family:'Lato',sans-serif;
+                color:white;
+                font-size:1rem;
+                font-weight:700;
+                margin:0 0 2rem 0;
+                text-align:left;
+            ">
+
                 Social
+
+            </h3>
+
+
             <a href="https://www.linkedin.com/company/fondazione-boscacci/posts/?viewAsMember=true"
                target="_blank"
                rel="noopener noreferrer"
                aria-label="LinkedIn Fondazione Boscacci"
-               style="display: inline-block; text-decoration: none;">
+               style="
+                    display:inline-block;
+                    text-decoration:none;
+               ">
 
-                <div style="width: 58px; height: 58px; background: #0A66C2; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: white; font-family: Arial, sans-serif; font-size: 40px; font-weight: bold;">
+                <div style="
+                    width:58px;
+                    height:58px;
+                    background:#0A66C2;
+                    border-radius:6px;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    color:white;
+                    font-family:Arial,sans-serif;
+                    font-size:40px;
+                    font-weight:bold;
+                ">
+
                     in
+
                 </div>
+
             </a>
+
+
         </div>
 
+
     </div>
+
 
     <!-- LOGO FONDAZIONE -->
-    <div style="text-align: center; margin-top: 4rem;">
+
+    <div style="
+        text-align:center;
+        margin-top:4rem;
+    ">
+
         <img src="assets/logo_bianco.svg"
              alt="Fondazione Boscacci ETS"
-             style="height: 90px; width: auto;">
+             style="
+                height:90px;
+                width:auto;
+             ">
+
     </div>
 
+
     <!-- COPYRIGHT -->
-    <p style="color: white; text-align: center; margin-top: 1.5rem; font-size: 0.8rem;">
-        &copy; 2026 Fondazione Boscacci ETS. Tutti i diritti riservati.
+
+    <p style="
+        color:white;
+        text-align:center;
+        margin-top:1.5rem;
+        font-size:.8rem;
+    ">
+
+        &copy; 2026 Fondazione Boscacci ETS.
+        Tutti i diritti riservati.
+
     </p>
 
+
 </div>
+
+
 </footer>
 
+
+<!-- =====================================================
+     SCRIPT MENU
+===================================================== -->
+
 <script>
-    document.getElementById('menuToggle').addEventListener('click', function() {
-        document.getElementById('mainNav').classList.toggle('active');
-    });
+
+    document
+        .getElementById('menuToggle')
+        .addEventListener('click', function() {
+
+            document
+                .getElementById('mainNav')
+                .classList
+                .toggle('active');
+
+        });
+
 </script>
+
+
+<!-- =====================================================
+     TELEVIDEO
+===================================================== -->
+
 <script>
+
 fetch('televideo.json?t=' + Date.now())
+
     .then(response => response.json())
+
     .then(news => {
-        const container = document.getElementById('televideo-news');
+
+        const container =
+            document.getElementById('televideo-news');
+
 
         container.innerHTML = news.map(item => {
-        const match = item.title.match(/^(\d{2}\.\d{2})\s+(.*)$/);
 
-const dataNotizia = new Date(item.date);
 
-const oraDaData = !isNaN(dataNotizia)
-    ? dataNotizia.toLocaleTimeString('it-IT', {
-        hour: '2-digit',
-        minute: '2-digit',
-        hour12: false
-      }).replace(':', '.')
-    : '';
+            const match =
+                item.title.match(/^(\d{2}\.\d{2})\s+(.*)$/);
 
-const ora = match ? match[1] : oraDaData;
-const titolo = match ? match[2] : item.title;
+
+            const dataNotizia =
+                new Date(item.date);
+
+
+            const oraDaData = !isNaN(dataNotizia)
+
+                ? dataNotizia
+                    .toLocaleTimeString(
+                        'it-IT',
+                        {
+                            hour: '2-digit',
+                            minute: '2-digit',
+                            hour12: false
+                        }
+                    )
+                    .replace(':', '.')
+
+                : '';
+
+
+            const ora =
+                match ? match[1] : oraDaData;
+
+
+            const titolo =
+                match ? match[2] : item.title;
+
+
             return `
+
                 <div class="televideo-item">
-                    <span class="televideo-time">${ora}</span>
-                    <span class="televideo-title">${titolo}</span>
+
+                    <span class="televideo-time">
+                        ${ora}
+                    </span>
+
+                    <span class="televideo-title">
+                        ${titolo}
+                    </span>
+
                 </div>
+
             `;
+
+
         }).join('');
+
+
     })
+
+
     .catch(error => {
-        document.getElementById('televideo-news').innerHTML =
+
+        document
+            .getElementById('televideo-news')
+            .innerHTML =
             '<p class="televideo-loading">Notizie momentaneamente non disponibili.</p>';
+
     });
+
+
 </script>
 
-<script data-goatcounter="https://fabioboscacci.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+
+<!-- GOATCOUNTER -->
+
+<script
+    data-goatcounter="https://fabioboscacci.goatcounter.com/count"
+    async
+    src="//gc.zgo.at/count.js">
+</script>
+
 
 </body>
+
 </html>

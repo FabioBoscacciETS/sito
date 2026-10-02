@@ -192,6 +192,7 @@
     display: flex;
     flex-direction: column;
 }
+    
 
 .pub-item-number {
     position: absolute;
@@ -238,7 +239,17 @@
     line-height: 1.65;
     margin-bottom: 1.5rem;
 }
-
+.pub-cover {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    background: #f7f5f1;
+    border: 1px solid var(--pub-line);
+    padding: 0.7rem;
+    box-sizing: border-box;
+    margin-bottom: 1.4rem;
+    display: block;
+}
 .pub-item .pub-action {
     position: relative;
     z-index: 1;
@@ -576,177 +587,168 @@
             scientifici e strategici.
         </p>
 
+<div class="pub-library">
 
-        <div class="pub-library">
+    <!-- POLICY REPORT 01 -->
+    <article class="pub-item">
 
+        <img src="assets/cover-costo-salute.png"
+             alt="Il costo della salute"
+             class="pub-cover">
 
-            <!-- POLICY REPORT 01 -->
+        <div class="pub-item-number">01</div>
 
-            <article class="pub-item">
-
-                <div class="pub-item-number">01</div>
-
-                <div class="pub-item-type">
-                    POLICY REPORT · 2026
-                </div>
-
-                <h3>
-                    Il costo della salute
-                </h3>
-
-                <p>
-                    Dal costo all’investimento: una nuova prospettiva
-                    per il SSN e la filiera Life Science.
-                </p>
-
-                <div class="pub-action">
-
-                    <a class="pub-btn"
-                       href="assets/Policy_Report_01_Il_Costo_della_Salute_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        Scarica PDF →
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <!-- POLICY REPORT 02 -->
-
-            <article class="pub-item">
-
-                <div class="pub-item-number">02</div>
-
-                <div class="pub-item-type">
-                    POLICY REPORT · 2026
-                </div>
-
-                <h3>
-                    FVG Smoke-Free
-                </h3>
-
-                <p>
-                    Scienza, riduzione del danno e politiche pubbliche
-                    per un Friuli Venezia Giulia smoke-free.
-                </p>
-
-                <div class="pub-action">
-
-                    <a class="pub-btn"
-                       href="assets/Policy_Report_02_FVG_Smoke_Free_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        Scarica PDF →
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <!-- POLICY BRIEF -->
-
-            <article class="pub-item">
-
-                <div class="pub-item-number">01</div>
-
-                <div class="pub-item-type">
-                    POLICY BRIEF · 2026
-                </div>
-
-                <h3>
-                    Scuola ed Epilessia
-                </h3>
-
-                <p>
-                    Dall’emergenza alla piena inclusione:
-                    proposte operative per costruire una scuola
-                    più consapevole e preparata.
-                </p>
-
-                <div class="pub-action">
-
-                    <a class="pub-btn"
-                       href="assets/Policy_Brief_01_Scuola_ed_Epilessia_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        Scarica PDF →
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <!-- WHITE PAPER -->
-
-            <article class="pub-item">
-
-                <div class="pub-item-number">01</div>
-
-                <div class="pub-item-type">
-                    WHITE PAPER · SETTEMBRE 2026
-                </div>
-
-                <h3>
-                    Il contrabbando cambia pelle
-                </h3>
-
-                <p>
-                    Produzione clandestina di tabacco,
-                    criminalità organizzata e sicurezza economica in Italia.
-                </p>
-
-                <div class="pub-action">
-
-                    <a class="pub-btn"
-                       href="assets/White_Paper_01_Contrabbando_Fondazione_Boscacci_ETS.pdf"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        Scarica PDF →
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <!-- POSITION PAPER -->
-
-            <article class="pub-item">
-
-                <div class="pub-item-number">01</div>
-
-                <div class="pub-item-type">
-                    POSITION PAPER · MAGGIO 2026
-                </div>
-
-                <h3>
-                    Il farmaco come infrastruttura strategica
-                </h3>
-
-                <p>
-                    Industria farmaceutica, sicurezza sanitaria
-                    e autonomia europea.
-                </p>
-
-                <div class="pub-action">
-
-                    <a class="pub-btn"
-                       href="assets/Position_Paper_01_Farmaco_Infrastruttura_Strategica_Fondazione_Boscacci_ETS.pdf"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        Scarica PDF →
-                    </a>
-
-                </div>
-
-            </article>
-
-
+        <div class="pub-item-type">
+            POLICY REPORT · 2026
         </div>
+
+        <h3>Il costo della salute</h3>
+
+        <p>
+            Dal costo all’investimento: una nuova prospettiva
+            per il SSN e la filiera Life Science.
+        </p>
+
+        <div class="pub-action">
+            <a class="pub-btn"
+               href="assets/Policy_Report_01_Il_Costo_della_Salute_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
+               target="_blank"
+               rel="noopener noreferrer">
+                Scarica PDF →
+            </a>
+        </div>
+
+    </article>
+
+
+    <!-- POLICY REPORT 02 -->
+    <article class="pub-item">
+
+        <img src="assets/cover-fvg-smoke-free.png"
+             alt="FVG Smoke-Free"
+             class="pub-cover">
+
+        <div class="pub-item-number">02</div>
+
+        <div class="pub-item-type">
+            POLICY REPORT · 2026
+        </div>
+
+        <h3>FVG Smoke-Free</h3>
+
+        <p>
+            Scienza, riduzione del danno e politiche pubbliche
+            per un Friuli Venezia Giulia smoke-free.
+        </p>
+
+        <div class="pub-action">
+            <a class="pub-btn"
+               href="assets/Policy_Report_02_FVG_Smoke_Free_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
+               target="_blank"
+               rel="noopener noreferrer">
+                Scarica PDF →
+            </a>
+        </div>
+
+    </article>
+
+
+    <!-- POLICY BRIEF 01 -->
+    <article class="pub-item">
+
+        <img src="assets/cover-scuola-epilessia.png"
+             alt="Scuola ed Epilessia"
+             class="pub-cover">
+
+        <div class="pub-item-number">01</div>
+
+        <div class="pub-item-type">
+            POLICY BRIEF · 2026
+        </div>
+
+        <h3>Scuola ed Epilessia</h3>
+
+        <p>
+            Dall’emergenza alla piena inclusione:
+            scuola, salute e diritto allo studio.
+        </p>
+
+        <div class="pub-action">
+            <a class="pub-btn"
+               href="assets/Policy_Brief_01_Scuola_ed_Epilessia_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
+               target="_blank"
+               rel="noopener noreferrer">
+                Scarica PDF →
+            </a>
+        </div>
+
+    </article>
+
+
+    <!-- WHITE PAPER 01 -->
+    <article class="pub-item">
+
+        <img src="assets/cover-contrabbando.png"
+             alt="Il contrabbando cambia pelle"
+             class="pub-cover">
+
+        <div class="pub-item-number">01</div>
+
+        <div class="pub-item-type">
+            WHITE PAPER · SETTEMBRE 2026
+        </div>
+
+        <h3>Il contrabbando cambia pelle</h3>
+
+        <p>
+            Produzione clandestina di tabacco,
+            criminalità organizzata e sicurezza economica in Italia.
+        </p>
+
+        <div class="pub-action">
+            <a class="pub-btn"
+               href="assets/White_Paper_01_Contrabbando_Fondazione_Boscacci_ETS.pdf"
+               target="_blank"
+               rel="noopener noreferrer">
+                Scarica PDF →
+            </a>
+        </div>
+
+    </article>
+
+
+    <!-- POSITION PAPER 01 -->
+    <article class="pub-item">
+
+        <img src="assets/cover-farmaco-infrastruttura.png"
+             alt="Il farmaco come infrastruttura strategica"
+             class="pub-cover">
+
+        <div class="pub-item-number">01</div>
+
+        <div class="pub-item-type">
+            POSITION PAPER · MAGGIO 2026
+        </div>
+
+        <h3>Il farmaco come infrastruttura strategica</h3>
+
+        <p>
+            Industria farmaceutica, sicurezza sanitaria
+            e autonomia europea.
+        </p>
+
+        <div class="pub-action">
+            <a class="pub-btn"
+               href="assets/Position_Paper_01_Farmaco_Infrastruttura_Strategica_Fondazione_Boscacci_ETS.pdf"
+               target="_blank"
+               rel="noopener noreferrer">
+                Scarica PDF →
+            </a>
+        </div>
+
+    </article>
+
+</div>
 
     </div>
 </section>

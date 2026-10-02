@@ -4,35 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pubblicazioni | Fondazione Boscacci ETS</title>    <!-- Fonts unified in style.css -->
+
+    <title>Pubblicazioni | Fondazione Boscacci ETS</title>
+
     <link rel="stylesheet" href="css/style.css?v=5">
     <link rel="icon" href="assets/logo_grafico.png" type="image/png">
 </head>
 
 <body>
-    <header>
-        <div class="container header-inner">
-            <div class="brand">
-                <a href="index.html" style="display: flex; align-items: center;">
-                    <img src="assets/logo_boscacci_rosso.png" alt="Fondazione Boscacci ETS" style="height: 180px; width: auto;">
-                </a>
-            </div>
-            <div class="menu-toggle" id="menuToggle">
-                <span></span><span></span><span></span>
-            </div>
-          <nav class="desktop-nav" id="mainNav">
-    <a href="index.html">Home</a>
-    <a href="people.html">People</a>
-    <a href="aree-interesse.html">Focus</a>
-    <a href="eventi.html">Eventi</a>
-    <a href="progetti.html">Progetti</a>
-    <a href="pubblicazioni.html" class="active">Pubblicazioni</a>
-    <a href="accordi.html">Accordi</a>
-    <a href="collaborare.html">Collaborare</a>
-</nav>
+
+<header>
+    <div class="container header-inner">
+
+        <div class="brand">
+            <a href="index.html" style="display:flex; align-items:center;">
+                <img src="assets/logo_boscacci_rosso.png"
+                     alt="Fondazione Boscacci ETS"
+                     style="height:180px; width:auto;">
+            </a>
         </div>
-    </header>
+
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="desktop-nav" id="mainNav">
+            <a href="index.html">Home</a>
+            <a href="people.html">People</a>
+            <a href="aree-interesse.html">Focus</a>
+            <a href="eventi.html">Eventi</a>
+            <a href="progetti.html">Progetti</a>
+            <a href="pubblicazioni.html" class="active">Pubblicazioni</a>
+            <a href="accordi.html">Accordi</a>
+            <a href="collaborare.html">Collaborare</a>
+        </nav>
+
+    </div>
+</header>
+
+
 <style>
+
 /* =========================================================
    PUBBLICAZIONI — LAYOUT EDITORIALE
    ========================================================= */
@@ -43,11 +57,16 @@
     --pub-line: #e3ddd3;
 }
 
+
 /* HERO */
 
 .pub-hero {
     background:
-        linear-gradient(90deg, rgba(112,10,27,.97), rgba(74,4,16,.94));
+        linear-gradient(
+            90deg,
+            rgba(112,10,27,.97),
+            rgba(74,4,16,.94)
+        );
     padding: 5.5rem 0 5rem;
     color: white;
 }
@@ -172,6 +191,16 @@
 }
 
 
+/* LAYOUT PUBBLICAZIONI + CULTURA DELLA DIFESA */
+
+.pub-content-layout {
+    display: grid;
+    grid-template-columns: minmax(0,3fr) minmax(270px,1fr);
+    gap: 2.5rem;
+    align-items: start;
+}
+
+
 /* DOCUMENTI FONDAZIONE */
 
 .pub-library {
@@ -183,16 +212,17 @@
 .pub-item {
     position: relative;
     overflow: hidden;
+
     background: white;
     border: 1px solid var(--pub-line);
     border-top: 4px solid var(--primary);
+
     padding: 2rem;
     min-height: 310px;
 
     display: flex;
     flex-direction: column;
 }
-    
 
 .pub-item-number {
     position: absolute;
@@ -202,6 +232,7 @@
     font-family: 'Playfair Display', serif;
     font-size: 4.8rem;
     line-height: 1;
+
     color: rgba(112,10,27,.055);
     pointer-events: none;
 }
@@ -211,6 +242,7 @@
     z-index: 1;
 
     color: var(--pub-gold);
+
     font-size: .69rem;
     font-weight: 700;
     letter-spacing: .12em;
@@ -225,6 +257,7 @@
 
     font-family: 'Playfair Display', serif;
     color: var(--primary);
+
     font-size: 1.45rem;
     line-height: 1.2;
 
@@ -237,27 +270,36 @@
 
     text-align: left;
     line-height: 1.65;
+
     margin-bottom: 1.5rem;
 }
+
 .pub-cover {
     width: 100%;
     aspect-ratio: 4 / 3;
+
     object-fit: contain;
+
     background: #f7f5f1;
     border: 1px solid var(--pub-line);
-    padding: 0.7rem;
+
+    padding: .7rem;
     box-sizing: border-box;
+
     margin-bottom: 1.4rem;
+
     display: block;
 }
+
 .pub-item .pub-action {
     position: relative;
     z-index: 1;
+
     margin-top: auto;
 }
 
 
-/* LINK / BUTTON */
+/* BUTTON */
 
 .pub-btn {
     display: inline-block;
@@ -268,6 +310,7 @@
     padding: .95rem 1.5rem;
 
     text-decoration: none;
+
     font-size: .78rem;
     font-weight: 700;
     letter-spacing: .10em;
@@ -282,46 +325,46 @@
 }
 
 
-/* EDITORI ESTERNI */
+/* CULTURA DELLA DIFESA */
 
-.pub-external {
-    display: grid;
-    grid-template-columns: 210px minmax(0,1fr) 210px;
-    gap: 2.5rem;
-    align-items: center;
-
+.pub-sidebar {
     background: white;
+
     border: 1px solid var(--pub-line);
-    padding: 2.5rem;
+    border-top: 4px solid var(--primary);
+
+    padding: 1.5rem;
 }
 
-.pub-external img {
+.pub-sidebar img {
     width: 100%;
     height: auto;
+
     display: block;
+
+    margin-bottom: 1.4rem;
 }
 
-.pub-external h3 {
+.pub-sidebar h3 {
     font-family: 'Playfair Display', serif;
     color: var(--primary);
-    font-size: 2rem;
-    margin: 0 0 .5rem;
+
+    font-size: 1.7rem;
+    line-height: 1.2;
+
+    margin: 0 0 .7rem;
 }
 
-.pub-external p {
+.pub-sidebar p {
     text-align: left;
-    line-height: 1.7;
+    line-height: 1.6;
 }
 
-.pub-external-meta {
-    border-left: 1px solid var(--pub-line);
-    padding-left: 2rem;
+.pub-sidebar-meta {
     font-size: .85rem;
-}
+    color: #5f585a;
 
-.pub-external-meta strong {
-    display: block;
-    color: var(--primary);
+    margin: 1rem 0 1.4rem;
 }
 
 
@@ -329,7 +372,7 @@
 
 .pub-areas {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0,1fr));
+    grid-template-columns: repeat(4,minmax(0,1fr));
 
     border-top: 1px solid var(--pub-line);
     border-bottom: 1px solid var(--pub-line);
@@ -337,6 +380,7 @@
 
 .pub-area {
     padding: 2rem;
+
     border-right: 1px solid var(--pub-line);
 }
 
@@ -346,23 +390,29 @@
 
 .pub-area-index {
     display: block;
+
     color: var(--pub-gold);
+
     font-size: .7rem;
     font-weight: 700;
     letter-spacing: .12em;
+
     margin-bottom: .8rem;
 }
 
 .pub-area h3 {
     font-family: 'Playfair Display', serif;
     color: var(--primary);
+
     font-size: 1.25rem;
+
     margin: 0 0 .7rem;
 }
 
 .pub-area p {
     text-align: left;
     line-height: 1.6;
+
     margin: 0;
 }
 
@@ -371,8 +421,12 @@
 
 @media (max-width: 1000px) {
 
+    .pub-content-layout {
+        grid-template-columns: 1fr;
+    }
+
     .pub-library {
-        grid-template-columns: repeat(2, minmax(0,1fr));
+        grid-template-columns: repeat(2,minmax(0,1fr));
     }
 
     .pub-feature {
@@ -381,25 +435,18 @@
 
     .pub-feature-meta {
         grid-column: 1 / -1;
+
         border-left: 0;
         border-top: 1px solid #d8cdbd;
+
         padding: 1.5rem 0 0;
+
         display: grid;
         grid-template-columns: repeat(4,1fr);
         gap: 1rem;
     }
-
-    .pub-external {
-        grid-template-columns: 180px 1fr;
-    }
-
-    .pub-external-meta {
-        grid-column: 1 / -1;
-        border-left: 0;
-        border-top: 1px solid var(--pub-line);
-        padding: 1.5rem 0 0;
-    }
 }
+
 
 @media (max-width: 768px) {
 
@@ -415,10 +462,11 @@
         padding: 3.5rem 0;
     }
 
-    .pub-feature,
-    .pub-external {
+    .pub-feature {
         grid-template-columns: 1fr;
+
         gap: 1.7rem;
+
         padding: 1.5rem;
     }
 
@@ -443,11 +491,6 @@
         min-height: 0;
     }
 
-    .pub-external img {
-        max-width: 240px;
-        margin: 0 auto;
-    }
-
     .pub-areas {
         grid-template-columns: 1fr;
     }
@@ -461,6 +504,7 @@
         border-bottom: 0;
     }
 }
+
 </style>
 
 
@@ -472,11 +516,16 @@
 ===================================================== -->
 
 <section class="pub-hero">
+
     <div class="container">
 
-        <span class="eyebrow">PUBBLICAZIONI</span>
+        <span class="eyebrow">
+            PUBBLICAZIONI
+        </span>
 
-        <h1>Pubblicazioni</h1>
+        <h1>
+            Pubblicazioni
+        </h1>
 
         <p>
             Analisi, position paper, policy report, studi e contributi editoriali
@@ -485,6 +534,7 @@
         </p>
 
     </div>
+
 </section>
 
 
@@ -493,16 +543,22 @@
 ===================================================== -->
 
 <section class="pub-section">
+
     <div class="container">
 
-        <span class="pub-eyebrow">IN EVIDENZA</span>
+        <span class="pub-eyebrow">
+            IN EVIDENZA
+        </span>
+
 
         <div class="pub-feature">
 
+
             <div class="pub-feature-cover">
 
-                <img src="assets/cultura-della-difesa.png.png"
-                     alt="Cultura della Difesa">
+                <img
+                    src="assets/cover-italia-egitto-regeni.png"
+                    alt="Giustizia, diplomazia e interesse nazionale">
 
             </div>
 
@@ -510,26 +566,32 @@
             <div class="pub-feature-main">
 
                 <span class="pub-eyebrow">
-                    VOLUME · MAGGIO 2026
+                    WHITE PAPER 02 · OTTOBRE 2026
                 </span>
 
-                <h2>Cultura della Difesa</h2>
+                <h2>
+                    Giustizia, diplomazia e interesse nazionale
+                </h2>
 
                 <div class="pub-feature-subtitle">
-                    Comunicazione, geopolitica e formazione
-                    per l’interesse nazionale
+                    Il rapporto Italia–Egitto dopo la sentenza
+                    sul caso Giulio Regeni
                 </div>
 
                 <p>
-                    Un volume dedicato al ruolo strategico della cultura della difesa,
-                    tra comunicazione, geopolitica e formazione.
+                    Un’analisi del rapporto tra giustizia,
+                    diplomazia e interesse nazionale,
+                    nel quadro delle relazioni strategiche
+                    tra Italia ed Egitto.
                 </p>
 
                 <a class="pub-btn"
-                   href="https://www.dynames.it/pubblicazioni/2026-report.html"
+                   href="assets/White_Paper_02_Giustizia_Diplomazia_Interesse_Nazionale_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
                    target="_blank"
                    rel="noopener noreferrer">
-                    Scopri il volume →
+
+                    Scarica il White Paper →
+
                 </a>
 
             </div>
@@ -538,30 +600,32 @@
             <div class="pub-feature-meta">
 
                 <p>
-                    <strong>A cura di</strong>
-                    Vincenzo D’Anna
+                    <strong>Tipologia</strong>
+                    White Paper
                 </p>
 
                 <p>
-                    <strong>Introduzione di</strong>
-                    Massimo Panizzi
-                </p>
-
-                <p>
-                    <strong>Editore</strong>
-                    LUISS University Press
+                    <strong>Numero</strong>
+                    02
                 </p>
 
                 <p>
                     <strong>Pubblicazione</strong>
-                    Maggio 2026
+                    Ottobre 2026
+                </p>
+
+                <p>
+                    <strong>Editore</strong>
+                    Fondazione Boscacci ETS
                 </p>
 
             </div>
 
+
         </div>
 
     </div>
+
 </section>
 
 
@@ -571,293 +635,361 @@
 
 <section class="pub-section alt">
 
-    <div class="container">
-
-        <span class="pub-eyebrow">
-            PRODUZIONE EDITORIALE
-        </span>
-
-        <h2 class="pub-heading">
-            Pubblicazioni della Fondazione Boscacci ETS
-        </h2>
-
-        <p class="pub-intro">
-            Documenti di analisi, ricerca e approfondimento prodotti dalla Fondazione
-            per contribuire al dibattito sui temi sanitari, istituzionali,
-            scientifici e strategici.
-        </p>
-
-<div class="pub-library">
-
-    <!-- POLICY REPORT 01 -->
-    <article class="pub-item">
-
-        <img src="assets/cover-costo-salute.png"
-             alt="Il costo della salute"
-             class="pub-cover">
-
-        <div class="pub-item-number">01</div>
-
-        <div class="pub-item-type">
-            POLICY REPORT · 2026
-        </div>
-
-        <h3>Il costo della salute</h3>
-
-        <p>
-            Dal costo all’investimento: una nuova prospettiva
-            per il SSN e la filiera Life Science.
-        </p>
-
-        <div class="pub-action">
-            <a class="pub-btn"
-               href="assets/Policy_Report_01_Il_Costo_della_Salute_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
-               target="_blank"
-               rel="noopener noreferrer">
-                Scarica PDF →
-            </a>
-        </div>
-
-    </article>
+<div class="container">
 
 
-    <!-- POLICY REPORT 02 -->
-    <article class="pub-item">
-
-        <img src="assets/cover-fvg-smoke-free.png"
-             alt="FVG Smoke-Free"
-             class="pub-cover">
-
-        <div class="pub-item-number">02</div>
-
-        <div class="pub-item-type">
-            POLICY REPORT · 2026
-        </div>
-
-        <h3>FVG Smoke-Free</h3>
-
-        <p>
-            Scienza, riduzione del danno e politiche pubbliche
-            per un Friuli Venezia Giulia smoke-free.
-        </p>
-
-        <div class="pub-action">
-            <a class="pub-btn"
-               href="assets/Policy_Report_02_FVG_Smoke_Free_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
-               target="_blank"
-               rel="noopener noreferrer">
-                Scarica PDF →
-            </a>
-        </div>
-
-    </article>
+    <span class="pub-eyebrow">
+        PRODUZIONE EDITORIALE
+    </span>
 
 
-    <!-- POLICY BRIEF 01 -->
-    <article class="pub-item">
-
-        <img src="assets/cover-scuola-epilessia.png"
-             alt="Scuola ed Epilessia"
-             class="pub-cover">
-
-        <div class="pub-item-number">01</div>
-
-        <div class="pub-item-type">
-            POLICY BRIEF · 2026
-        </div>
-
-        <h3>Scuola ed Epilessia</h3>
-
-        <p>
-            Dall’emergenza alla piena inclusione:
-            scuola, salute e diritto allo studio.
-        </p>
-
-        <div class="pub-action">
-            <a class="pub-btn"
-               href="assets/Policy_Brief_01_Scuola_ed_Epilessia_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
-               target="_blank"
-               rel="noopener noreferrer">
-                Scarica PDF →
-            </a>
-        </div>
-
-    </article>
+    <h2 class="pub-heading">
+        Pubblicazioni della Fondazione Boscacci ETS
+    </h2>
 
 
-    <!-- WHITE PAPER 01 -->
-    <article class="pub-item">
-
-        <img src="assets/cover-contrabbando.png"
-             alt="Il contrabbando cambia pelle"
-             class="pub-cover">
-
-        <div class="pub-item-number">01</div>
-
-        <div class="pub-item-type">
-            WHITE PAPER · SETTEMBRE 2026
-        </div>
-
-        <h3>Il contrabbando cambia pelle</h3>
-
-        <p>
-            Produzione clandestina di tabacco,
-            criminalità organizzata e sicurezza economica in Italia.
-        </p>
-
-        <div class="pub-action">
-            <a class="pub-btn"
-               href="assets/White_Paper_01_Contrabbando_Fondazione_Boscacci_ETS.pdf"
-               target="_blank"
-               rel="noopener noreferrer">
-                Scarica PDF →
-            </a>
-        </div>
-
-    </article>
-<article class="pub-item">
-
-    <img src="assets/cover-italia-egitto-regeni.png"
-         alt="Giustizia, diplomazia e interesse nazionale"
-         class="pub-cover">
-
-    <div class="pub-item-number">02</div>
-
-    <div class="pub-item-type">
-        WHITE PAPER · OTTOBRE 2026
-    </div>
-
-    <h3>Giustizia, diplomazia e interesse nazionale</h3>
-
-    <p>
-        Il rapporto Italia–Egitto dopo la sentenza
-        sul caso Giulio Regeni.
+    <p class="pub-intro">
+        Documenti di analisi, ricerca e approfondimento prodotti
+        dalla Fondazione per contribuire al dibattito sui temi
+        sanitari, istituzionali, scientifici e strategici.
     </p>
 
-    <div class="pub-action">
-        <a class="pub-btn"
-           href="assets/White_Paper_02_Giustizia_Diplomazia_Interesse_Nazionale_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
-           target="_blank"
-           rel="noopener noreferrer">
-            Scarica PDF →
-        </a>
-    </div>
 
-</article>
+    <div class="pub-content-layout">
 
-    <!-- POSITION PAPER 01 -->
-    <article class="pub-item">
 
-        <img src="assets/cover-farmaco-infrastruttura.png"
-             alt="Il farmaco come infrastruttura strategica"
-             class="pub-cover">
+        <!-- =====================================================
+             COLONNA SINISTRA
+        ====================================================== -->
 
-        <div class="pub-item-number">01</div>
+        <div>
 
-        <div class="pub-item-type">
-            POSITION PAPER · MAGGIO 2026
+
+            <div class="pub-library">
+
+
+                <!-- POLICY REPORT 01 -->
+
+                <article class="pub-item">
+
+                    <img
+                        src="assets/cover-costo-salute.png"
+                        alt="Il costo della salute"
+                        class="pub-cover">
+
+                    <div class="pub-item-number">
+                        01
+                    </div>
+
+                    <div class="pub-item-type">
+                        POLICY REPORT · 2026
+                    </div>
+
+                    <h3>
+                        Il costo della salute
+                    </h3>
+
+                    <p>
+                        Dal costo all’investimento:
+                        una nuova prospettiva per il SSN
+                        e la filiera Life Science.
+                    </p>
+
+                    <div class="pub-action">
+
+                        <a class="pub-btn"
+                           href="assets/Policy_Report_01_Il_Costo_della_Salute_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            Scarica PDF →
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- POLICY REPORT 02 -->
+
+                <article class="pub-item">
+
+                    <img
+                        src="assets/cover-fvg-smoke-free.png"
+                        alt="FVG Smoke-Free"
+                        class="pub-cover">
+
+                    <div class="pub-item-number">
+                        02
+                    </div>
+
+                    <div class="pub-item-type">
+                        POLICY REPORT · 2026
+                    </div>
+
+                    <h3>
+                        FVG Smoke-Free
+                    </h3>
+
+                    <p>
+                        Scienza, riduzione del danno
+                        e politiche pubbliche per un
+                        Friuli Venezia Giulia smoke-free.
+                    </p>
+
+                    <div class="pub-action">
+
+                        <a class="pub-btn"
+                           href="assets/Policy_Report_02_FVG_Smoke_Free_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            Scarica PDF →
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- POLICY BRIEF 01 -->
+
+                <article class="pub-item">
+
+                    <img
+                        src="assets/cover-scuola-epilessia.png"
+                        alt="Scuola ed Epilessia"
+                        class="pub-cover">
+
+                    <div class="pub-item-number">
+                        01
+                    </div>
+
+                    <div class="pub-item-type">
+                        POLICY BRIEF · 2026
+                    </div>
+
+                    <h3>
+                        Scuola ed Epilessia
+                    </h3>
+
+                    <p>
+                        Dall’emergenza alla piena inclusione:
+                        scuola, salute e diritto allo studio.
+                    </p>
+
+                    <div class="pub-action">
+
+                        <a class="pub-btn"
+                           href="assets/Policy_Brief_01_Scuola_ed_Epilessia_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            Scarica PDF →
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- WHITE PAPER 01 -->
+
+                <article class="pub-item">
+
+                    <img
+                        src="assets/cover-contrabbando.png"
+                        alt="Il contrabbando cambia pelle"
+                        class="pub-cover">
+
+                    <div class="pub-item-number">
+                        01
+                    </div>
+
+                    <div class="pub-item-type">
+                        WHITE PAPER · SETTEMBRE 2026
+                    </div>
+
+                    <h3>
+                        Il contrabbando cambia pelle
+                    </h3>
+
+                    <p>
+                        Produzione clandestina di tabacco,
+                        criminalità organizzata
+                        e sicurezza economica in Italia.
+                    </p>
+
+                    <div class="pub-action">
+
+                        <a class="pub-btn"
+                           href="assets/White_Paper_01_Contrabbando_Fondazione_Boscacci_ETS.pdf"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            Scarica PDF →
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- WHITE PAPER 02 -->
+
+                <article class="pub-item">
+
+                    <img
+                        src="assets/cover-italia-egitto-regeni.png"
+                        alt="Giustizia, diplomazia e interesse nazionale"
+                        class="pub-cover">
+
+                    <div class="pub-item-number">
+                        02
+                    </div>
+
+                    <div class="pub-item-type">
+                        WHITE PAPER · OTTOBRE 2026
+                    </div>
+
+                    <h3>
+                        Giustizia, diplomazia e interesse nazionale
+                    </h3>
+
+                    <p>
+                        Il rapporto Italia–Egitto
+                        dopo la sentenza sul caso Giulio Regeni.
+                    </p>
+
+                    <div class="pub-action">
+
+                        <a class="pub-btn"
+                           href="assets/White_Paper_02_Giustizia_Diplomazia_Interesse_Nazionale_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            Scarica PDF →
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- POSITION PAPER 01 -->
+
+                <article class="pub-item">
+
+                    <img
+                        src="assets/cover-farmaco-infrastruttura.png"
+                        alt="Il farmaco come infrastruttura strategica"
+                        class="pub-cover">
+
+                    <div class="pub-item-number">
+                        01
+                    </div>
+
+                    <div class="pub-item-type">
+                        POSITION PAPER · MAGGIO 2026
+                    </div>
+
+                    <h3>
+                        Il farmaco come infrastruttura strategica
+                    </h3>
+
+                    <p>
+                        Industria farmaceutica,
+                        sicurezza sanitaria
+                        e autonomia europea.
+                    </p>
+
+                    <div class="pub-action">
+
+                        <a class="pub-btn"
+                           href="assets/Position_Paper_01_Farmaco_Infrastruttura_Strategica_Fondazione_Boscacci_ETS.pdf"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            Scarica PDF →
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
         </div>
 
-        <h3>Il farmaco come infrastruttura strategica</h3>
 
-        <p>
-            Industria farmaceutica, sicurezza sanitaria
-            e autonomia europea.
-        </p>
+        <!-- =====================================================
+             COLONNA DESTRA — CULTURA DELLA DIFESA
+        ====================================================== -->
 
-        <div class="pub-action">
+        <aside class="pub-sidebar">
+
+            <span class="pub-eyebrow">
+                VOLUME
+            </span>
+
+            <img
+                src="assets/cultura-della-difesa.png.png"
+                alt="Cultura della Difesa">
+
+            <h3>
+                Cultura della Difesa
+            </h3>
+
+            <p>
+                Comunicazione, geopolitica e formazione
+                per l’interesse nazionale.
+            </p>
+
+            <p class="pub-sidebar-meta">
+
+                <strong>
+                    A cura di Vincenzo D’Anna
+                </strong>
+
+                <br>
+
+                Introduzione di Massimo Panizzi
+
+                <br>
+
+                LUISS University Press · 2026
+
+            </p>
+
+
             <a class="pub-btn"
-               href="assets/Position_Paper_01_Farmaco_Infrastruttura_Strategica_Fondazione_Boscacci_ETS.pdf"
+               href="https://www.dynames.it/pubblicazioni/2026-report.html"
                target="_blank"
                rel="noopener noreferrer">
-                Scarica PDF →
-            </a>
-        </div>
 
-    </article>
+                Scopri il volume →
+
+            </a>
+
+        </aside>
+
+
+    </div>
 
 </div>
 
-    </div>
-</section>
-
-
-<!-- =====================================================
-     EDITORI ESTERNI
-===================================================== -->
-
-<section class="pub-section">
-
-    <div class="container">
-
-        <span class="pub-eyebrow">
-            PUBBLICAZIONI E CONTRIBUTI
-        </span>
-
-        <h2 class="pub-heading">
-            Pubblicazioni e contributi su editori esterni
-        </h2>
-
-        <p class="pub-intro">
-            Pubblicazioni, saggi e contributi realizzati nell’ambito
-            delle attività della Fondazione o firmati dai suoi membri
-            e pubblicati da editori e istituzioni esterne.
-        </p>
-
-
-        <div class="pub-external">
-
-            <img src="assets/cultura-della-difesa.png.png"
-                 alt="Cultura della Difesa">
-
-
-            <div>
-
-                <span class="pub-eyebrow">
-                    LUISS UNIVERSITY PRESS · 2026
-                </span>
-
-                <h3>
-                    Cultura della Difesa
-                </h3>
-
-                <p>
-                    Comunicazione, geopolitica e formazione
-                    per l’interesse nazionale.
-                </p>
-
-                <a class="pub-btn"
-                   href="https://www.dynames.it/pubblicazioni/2026-report.html"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    Scopri il volume →
-                </a>
-
-            </div>
-
-
-            <div class="pub-external-meta">
-
-                <p>
-                    <strong>A cura di</strong><br>
-                    Vincenzo D’Anna
-                </p>
-
-                <p>
-                    <strong>Introduzione di</strong><br>
-                    Massimo Panizzi
-                </p>
-
-                <p>
-                    <strong>Editore</strong><br>
-                    LUISS University Press
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
 </section>
 
 
@@ -867,190 +999,425 @@
 
 <section class="pub-section alt">
 
-    <div class="container">
+<div class="container">
 
-        <span class="pub-eyebrow">
-            APPROFONDIMENTI
-        </span>
+    <span class="pub-eyebrow">
+        APPROFONDIMENTI
+    </span>
 
-        <h2 class="pub-heading">
-            Le nostre aree editoriali
-        </h2>
+    <h2 class="pub-heading">
+        Le nostre aree editoriali
+    </h2>
 
-        <p class="pub-intro">
-            Formati differenti per analizzare temi complessi
-            e contribuire al dibattito pubblico con contenuti
-            rigorosi e indipendenti.
-        </p>
-
-
-        <div class="pub-areas">
-
-            <div class="pub-area">
-
-                <span class="pub-area-index">01</span>
-
-                <h3>Policy Brief</h3>
-
-                <p>
-                    Analisi sintetiche e proposte operative
-                    sui principali temi di policy.
-                </p>
-
-            </div>
+    <p class="pub-intro">
+        Formati differenti per analizzare temi complessi
+        e contribuire al dibattito pubblico
+        con contenuti rigorosi e indipendenti.
+    </p>
 
 
-            <div class="pub-area">
-
-                <span class="pub-area-index">02</span>
-
-                <h3>Position Paper</h3>
-
-                <p>
-                    Posizioni, analisi e proposte
-                    sviluppate dalla Fondazione.
-                </p>
-
-            </div>
+    <div class="pub-areas">
 
 
-            <div class="pub-area">
+        <div class="pub-area">
 
-                <span class="pub-area-index">03</span>
+            <span class="pub-area-index">
+                01
+            </span>
 
-                <h3>Studi &amp; Ricerche</h3>
+            <h3>
+                Policy Brief
+            </h3>
 
-                <p>
-                    Approfondimenti scientifici,
-                    accademici e istituzionali.
-                </p>
-
-            </div>
-
-
-            <div class="pub-area">
-
-                <span class="pub-area-index">04</span>
-
-                <h3>Report &amp; Dossier</h3>
-
-                <p>
-                    Documenti di analisi e ricerca
-                    dedicati a tematiche strategiche.
-                </p>
-
-            </div>
+            <p>
+                Analisi sintetiche e proposte operative
+                sui principali temi di policy.
+            </p>
 
         </div>
 
+
+        <div class="pub-area">
+
+            <span class="pub-area-index">
+                02
+            </span>
+
+            <h3>
+                Position Paper
+            </h3>
+
+            <p>
+                Posizioni, analisi e proposte
+                sviluppate dalla Fondazione.
+            </p>
+
+        </div>
+
+
+        <div class="pub-area">
+
+            <span class="pub-area-index">
+                03
+            </span>
+
+            <h3>
+                Studi &amp; Ricerche
+            </h3>
+
+            <p>
+                Approfondimenti scientifici,
+                accademici e istituzionali.
+            </p>
+
+        </div>
+
+
+        <div class="pub-area">
+
+            <span class="pub-area-index">
+                04
+            </span>
+
+            <h3>
+                Report &amp; Dossier
+            </h3>
+
+            <p>
+                Documenti di analisi e ricerca
+                dedicati a tematiche strategiche.
+            </p>
+
+        </div>
+
+
     </div>
+
+</div>
+
 </section>
 
 
 </div>
-    <footer>
- <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 4rem 1.5rem 2rem;">
 
-    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 5rem; align-items: start; width: 100%;">
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<div class="container"
+     style="max-width:1200px; margin:0 auto; padding:4rem 1.5rem 2rem;">
+
+
+    <div style="
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        gap:5rem;
+        align-items:start;
+        width:100%;
+    ">
+
 
         <!-- COLONNA 1 -->
-        <div style="text-align: left;">
-            <h3 style="font-family: 'Lato', sans-serif; color: white; font-size: 1.00rem; font-weight: 700; margin: 0 0 2rem 0; text-align: left;">
+
+        <div style="text-align:left;">
+
+            <h3 style="
+                font-family:'Lato',sans-serif;
+                color:white;
+                font-size:1rem;
+                font-weight:700;
+                margin:0 0 2rem 0;
+            ">
                 FONDAZIONE BOSCACCI ETS
             </h3>
 
-            <p style="color: white; font-size: 0.75rem; line-height: 1.05; text-align: left; margin: 0;">
-                Sede legale Via Carlo Noè 45<br>
-                Gallarate (VA)<br><br>
-                C.F. 03800470126<br>
-                P.IVA 04096960127<br><br>
-                Repertorio RUNTS: 152268<br><br>
-                R.O.C. n° 44335<br><br>
-                Accreditamento Min.Difesa n° PDI-2026-000070
-</p>
-     <p style="margin-top:1rem; font-size:0.75rem;">
-    <a href="privacy.html" style="color:white; text-decoration:none;">
-        Privacy Policy
-    </a>
-    <span style="color:white;"> · </span>
-    <a href="cookie-policy.html" style="color:white; text-decoration:none;">
-        Cookie Policy
-    </a>
-</p>
+
+            <p style="
+                color:white;
+                font-size:.75rem;
+                line-height:1.05;
+                text-align:left;
+                margin:0;
+            ">
+
+                Sede legale Via Carlo Noè 45
+
+                <br>
+
+                Gallarate (VA)
+
+                <br><br>
+
+                C.F. 03800470126
+
+                <br>
+
+                P.IVA 04096960127
+
+                <br><br>
+
+                Repertorio RUNTS: 152268
+
+                <br><br>
+
+                R.O.C. n° 44335
+
+                <br><br>
+
+                Accreditamento Min.Difesa
+                n° PDI-2026-000070
+
+            </p>
+
+
+            <p style="
+                margin-top:1rem;
+                font-size:.75rem;
+            ">
+
+                <a href="privacy.html"
+                   style="color:white; text-decoration:none;">
+
+                    Privacy Policy
+
+                </a>
+
+                <span style="color:white;">
+                    ·
+                </span>
+
+                <a href="cookie-policy.html"
+                   style="color:white; text-decoration:none;">
+
+                    Cookie Policy
+
+                </a>
+
+            </p>
+
         </div>
+
 
         <!-- COLONNA 2 -->
-        <div style="text-align: left;">
-            <h3 style="font-family: 'Lato', sans-serif; color: white; font-size: 1.00rem; font-weight: 700; margin: 0 0 1rem 0; text-align: left;">
-    Editore di DYNAMES
-</h3>
-</p>
-            <h3 style="font-family: 'Lato', sans-serif; color: white; font-size: 1.00rem; font-weight: 700; margin: 0 0 2rem 0; text-align: left;">
+
+        <div style="text-align:left;">
+
+
+            <h3 style="
+                font-family:'Lato',sans-serif;
+                color:white;
+                font-size:1rem;
+                font-weight:700;
+                margin:0 0 1rem 0;
+            ">
+                Editore di DYNAMES
+            </h3>
+
+
+            <h3 style="
+                font-family:'Lato',sans-serif;
+                color:white;
+                font-size:1rem;
+                font-weight:700;
+                margin:0 0 1rem 0;
+            ">
                 Dati Registrazione
-            <p style="color: white; font-size: 0.75rem; line-height: 1.05; text-align: left; margin: 0;">
-                Reg. Trib. di Busto Arsizio<br>
+            </h3>
+
+
+            <p style="
+                color:white;
+                font-size:.75rem;
+                line-height:1.05;
+                margin:0;
+            ">
+
+                Reg. Trib. di Busto Arsizio
+
+                <br>
+
                 N. 01/2026 del 25 febbraio 2026
-            <p style="color: white; font-size: 0.75rem; line-height: 1.05; text-align: left; margin-top: 0.4rem;">
 
-            <h3 style="font-family: 'Lato', sans-serif; color: white; font-size: 1.00rem; font-weight: 700; margin: 2rem 0 1.2rem 0; text-align: left;">
-                Contatti
-            <p style="font-size: 0.75rem; line-height: 1.05; text-align: left; margin: 0;">
-                <span style="color: #9b8f92; text-transform: uppercase; letter-spacing: 0.08em;">INFO</span><br>
-                <a href="mailto:info@boscacci.it" style="color: white; text-decoration: none;">
-                    info@boscacci.it
-                </a>
-
-            <p style="font-size: 0.75rem; line-height: 1.05; text-align: left; margin-top: 1rem;">
-                <span style="color: #9b8f92; text-transform: uppercase; letter-spacing: 0.08em;">UFFICIO STAMPA</span><br>
-                <a href="mailto:e.panico@boscacci.it" style="color: white; text-decoration: none;">
-                    e.panico@boscacci.it
-                </a>
             </p>
+
+
+            <h3 style="
+                font-family:'Lato',sans-serif;
+                color:white;
+                font-size:1rem;
+                font-weight:700;
+                margin:2rem 0 1.2rem 0;
+            ">
+                Contatti
+            </h3>
+
+
+            <p style="
+                font-size:.75rem;
+                line-height:1.05;
+                margin:0;
+            ">
+
+                <span style="
+                    color:#9b8f92;
+                    text-transform:uppercase;
+                    letter-spacing:.08em;
+                ">
+                    INFO
+                </span>
+
+                <br>
+
+                <a href="mailto:info@boscacci.it"
+                   style="color:white; text-decoration:none;">
+
+                    info@boscacci.it
+
+                </a>
+
+            </p>
+
+
+            <p style="
+                font-size:.75rem;
+                line-height:1.05;
+                margin-top:1rem;
+            ">
+
+                <span style="
+                    color:#9b8f92;
+                    text-transform:uppercase;
+                    letter-spacing:.08em;
+                ">
+                    UFFICIO STAMPA
+                </span>
+
+                <br>
+
+                <a href="mailto:e.panico@boscacci.it"
+                   style="color:white; text-decoration:none;">
+
+                    e.panico@boscacci.it
+
+                </a>
+
+            </p>
+
+
         </div>
 
-      <!-- COLONNA 3 -->
-        <div style="text-align: left;">
-            <h3 style="font-family: 'Lato', sans-serif; color: white; font-size: 1.00rem; font-weight: 700; margin: 0 0 2rem 0; text-align: left;">
-                Social
-            <a href="https://www.linkedin.com/company/fondazione-boscacci/posts/?viewAsMember=true"
-               target="_blank"
-               rel="noopener noreferrer"
-               aria-label="LinkedIn Fondazione Boscacci"
-               style="display: inline-block; text-decoration: none;">
 
-                <div style="width: 58px; height: 58px; background: #0A66C2; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: white; font-family: Arial, sans-serif; font-size: 40px; font-weight: bold;">
+        <!-- COLONNA 3 -->
+
+        <div style="text-align:left;">
+
+            <h3 style="
+                font-family:'Lato',sans-serif;
+                color:white;
+                font-size:1rem;
+                font-weight:700;
+                margin:0 0 2rem 0;
+            ">
+                Social
+            </h3>
+
+
+            <a
+                href="https://www.linkedin.com/company/fondazione-boscacci/posts/?viewAsMember=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn Fondazione Boscacci"
+                style="display:inline-block; text-decoration:none;"
+            >
+
+                <div style="
+                    width:58px;
+                    height:58px;
+                    background:#0A66C2;
+                    border-radius:6px;
+
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+
+                    color:white;
+                    font-family:Arial,sans-serif;
+                    font-size:40px;
+                    font-weight:bold;
+                ">
                     in
                 </div>
+
             </a>
-        </div>
-</div>
 
-            </div>
-
-        <!-- LOGO FONDAZIONE -->
-        <div style="text-align: center; margin-top: 4rem;">
-            <img src="assets/logo_bianco.svg"
-                 alt="Fondazione Boscacci ETS"
-                 style="height: 90px; width: auto;">
         </div>
 
-        <!-- COPYRIGHT -->
-        <p style="color: white; text-align: center; margin-top: 1.5rem; font-size: 0.8rem;">
-            &copy; 2026 Fondazione Boscacci ETS. Tutti i diritti riservati.
-        </p>
 
     </div>
-</footer>
-    
-    <script>
-        document.getElementById('menuToggle').addEventListener('click', function() {
-            document.getElementById('mainNav').classList.toggle('active');
-        });
-  </script>
 
-<script data-goatcounter="https://fabioboscacci.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+
+    <!-- LOGO -->
+
+    <div style="
+        text-align:center;
+        margin-top:4rem;
+    ">
+
+        <img
+            src="assets/logo_bianco.svg"
+            alt="Fondazione Boscacci ETS"
+            style="height:90px; width:auto;"
+        >
+
+    </div>
+
+
+    <!-- COPYRIGHT -->
+
+    <p style="
+        color:white;
+        text-align:center;
+        margin-top:1.5rem;
+        font-size:.8rem;
+    ">
+
+        &copy; 2026 Fondazione Boscacci ETS.
+        Tutti i diritti riservati.
+
+    </p>
+
+
+</div>
+
+</footer>
+
+
+<script>
+
+document
+    .getElementById('menuToggle')
+    .addEventListener('click', function() {
+
+        document
+            .getElementById('mainNav')
+            .classList
+            .toggle('active');
+
+    });
+
+</script>
+
+
+<script
+    data-goatcounter="https://fabioboscacci.goatcounter.com/count"
+    async
+    src="//gc.zgo.at/count.js">
+</script>
+
 
 </body>
-</html>
 
+</html>

@@ -1,1423 +1,2026 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Pubblicazioni | Fondazione Boscacci ETS</title>
 
-    <link rel="stylesheet" href="css/style.css?v=5">
-    <link rel="icon" href="assets/logo_grafico.png" type="image/png">
+    <meta name="description"
+          content="White paper, policy report, policy brief e position paper della Fondazione Boscacci ETS su salute, istituzioni, ricerca, difesa e sicurezza.">
+
+    <link rel="canonical" href="https://www.boscacci.it/pubblicazioni.html">
+    <link rel="icon" href="assets/logo_grafico.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:site_name" content="Fondazione Boscacci ETS">
+    <meta property="og:title" content="Pubblicazioni | Fondazione Boscacci ETS">
+
+    <meta property="og:description"
+          content="Analisi, policy e ricerca: consulta e scarica le pubblicazioni della Fondazione Boscacci ETS.">
+
+    <meta property="og:url" content="https://www.boscacci.it/pubblicazioni.html">
+    <meta property="og:image"
+          content="https://www.boscacci.it/assets/cover-italia-egitto-regeni.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Pubblicazioni | Fondazione Boscacci ETS",
+        "url": "https://www.boscacci.it/pubblicazioni.html",
+        "description": "White paper, policy report, policy brief e position paper della Fondazione Boscacci ETS.",
+        "inLanguage": "it",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Fondazione Boscacci ETS",
+            "url": "https://www.boscacci.it/",
+            "logo": "https://www.boscacci.it/assets/logo_boscacci_rosso.png"
+        },
+        "hasPart": [
+            {
+                "@type": "CreativeWork",
+                "name": "Il costo della salute",
+                "url": "https://www.boscacci.it/pubblicazioni.html#costo-salute"
+            },
+            {
+                "@type": "CreativeWork",
+                "name": "FVG Smoke-Free",
+                "url": "https://www.boscacci.it/pubblicazioni.html#fvg-smoke-free"
+            },
+            {
+                "@type": "CreativeWork",
+                "name": "Scuola ed Epilessia",
+                "url": "https://www.boscacci.it/pubblicazioni.html#scuola-epilessia"
+            },
+            {
+                "@type": "CreativeWork",
+                "name": "Il contrabbando cambia pelle",
+                "url": "https://www.boscacci.it/pubblicazioni.html#contrabbando"
+            },
+            {
+                "@type": "CreativeWork",
+                "name": "Giustizia, diplomazia e interesse nazionale",
+                "url": "https://www.boscacci.it/pubblicazioni.html#italia-egitto"
+            },
+            {
+                "@type": "CreativeWork",
+                "name": "Il farmaco come infrastruttura strategica",
+                "url": "https://www.boscacci.it/pubblicazioni.html#farmaco-strategico"
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        /* =====================================================
+           IDENTITÀ VISIVA
+        ===================================================== */
+
+        :root {
+            --primary: #7d1c2b;
+            --dark: #4a0d17;
+            --accent: #cfa861;
+            --paper: #fdfcf8;
+            --ink: #2a2825;
+            --body: #514b49;
+            --line: #e6e2d8;
+            --muted: #69605d;
+            --serif: Georgia, "Times New Roman", serif;
+            --sans: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 2rem;
+        }
+
+        body {
+            margin: 0;
+            background: #ffffff;
+            color: var(--body);
+            font-family: var(--sans);
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration-thickness: 1px;
+            text-underline-offset: 4px;
+        }
+
+        button,
+        select {
+            font: inherit;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin: 0 0 1.1rem;
+            color: var(--primary);
+            font-family: var(--serif);
+            font-weight: 400;
+            line-height: 1.2;
+        }
+
+        h1 {
+            font-size: clamp(2.3rem, 4.3vw, 4.2rem);
+        }
+
+        h2 {
+            font-size: clamp(1.9rem, 3.2vw, 2.9rem);
+        }
+
+        h3 {
+            font-size: 1.45rem;
+        }
+
+        p {
+            margin: 0 0 1.1rem;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        :focus-visible {
+            outline: 3px solid var(--accent);
+            outline-offset: 5px;
+        }
+
+        [hidden] {
+            display: none !important;
+        }
+
+        .container {
+            width: min(1380px, calc(100% - 96px));
+            margin-inline: auto;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 1rem;
+            z-index: 100;
+            padding: 0.6rem 1rem;
+            background: #ffffff;
+        }
+
+        .skip-link:focus {
+            top: 1rem;
+        }
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        .site-header {
+            background: #ffffff;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            min-height: 116px;
+        }
+
+        .brand {
+            display: block;
+            flex: 0 0 225px;
+        }
+
+        .brand-logo {
+            width: 225px;
+            height: 105px;
+            object-fit: contain;
+        }
+
+        #main-nav {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            gap: clamp(0.7rem, 1.5vw, 1.5rem);
+        }
+
+        #main-nav a {
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+            color: var(--ink);
+            font-size: 0.84rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        #main-nav a:hover,
+        #main-nav a[aria-current="page"] {
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .menu-toggle {
+            display: none;
+            padding: 0.5rem 0.85rem;
+            border: 1px solid var(--line);
+            border-radius: 2px;
+            background: #ffffff;
+            color: var(--primary);
+        }
+
+        /* =====================================================
+           HERO E SEZIONI
+        ===================================================== */
+
+        .page-hero {
+            padding: 55px 0 58px;
+            border-bottom: 5px solid var(--accent);
+            background: var(--primary);
+            color: #ffffff;
+        }
+
+        .page-hero h1 {
+            color: #ffffff;
+        }
+
+        .page-hero .eyebrow {
+            color: #f2d5a2;
+        }
+
+        .page-hero .lead {
+            max-width: 850px;
+            color: #fff5f2;
+            font-family: var(--serif);
+            font-size: 1.15rem;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        .eyebrow {
+            margin: 0 0 0.85rem;
+            color: var(--primary);
+            font-size: 0.73rem;
+            font-weight: bold;
+            line-height: 1.6;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+
+        .section {
+            padding: 70px 0;
+        }
+
+        .section.alt {
+            border-block: 1px solid var(--line);
+            background: var(--paper);
+        }
+
+        .section h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .section-intro {
+            max-width: 950px;
+            margin-bottom: 2rem;
+            font-size: 1.04rem;
+        }
+
+        .text-link {
+            display: inline-block;
+            font-size: 0.86rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .text-link:hover {
+            text-decoration: underline;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.8rem 1.25rem;
+            background: var(--primary);
+            color: #ffffff;
+            font-size: 0.87rem;
+            font-weight: bold;
+            line-height: 1.5;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background: var(--dark);
+        }
+
+        .button.light {
+            background: #ffffff;
+            color: var(--primary);
+        }
+
+        .button.light:hover {
+            background: #f4ece7;
+        }
+
+        /* =====================================================
+           PUBBLICAZIONE IN EVIDENZA
+        ===================================================== */
+
+        .featured-publication {
+            display: grid;
+            grid-template-columns:
+                minmax(0, 0.75fr)
+                minmax(0, 1.25fr);
+            align-items: center;
+            gap: 60px;
+        }
+
+        .featured-cover {
+            width: 100%;
+            height: 430px;
+            padding: 22px;
+            border: 1px solid var(--line);
+            background: #f7f5f1;
+            object-fit: contain;
+        }
+
+        .featured-content h2 {
+            margin-bottom: 1.2rem;
+            font-size: clamp(2rem, 3vw, 3rem);
+        }
+
+        .featured-subtitle {
+            color: var(--ink);
+            font-family: var(--serif);
+            font-size: 1.25rem;
+            line-height: 1.6;
+        }
+
+        .featured-description {
+            font-size: 0.98rem;
+            line-height: 1.85;
+        }
+
+        .featured-metadata {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 15px 25px;
+            margin: 1.8rem 0;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--line);
+        }
+
+        .featured-metadata dt {
+            margin-bottom: 0.25rem;
+            color: var(--muted);
+            font-size: 0.69rem;
+            font-weight: bold;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .featured-metadata dd {
+            margin: 0;
+            color: var(--ink);
+            font-size: 0.88rem;
+        }
+
+        .featured-actions {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px 22px;
+        }
+
+        /* =====================================================
+           CATALOGO E FILTRI
+        ===================================================== */
+
+        .editorial-layout {
+            display: grid;
+            grid-template-columns:
+                minmax(0, 1fr)
+                290px;
+            align-items: start;
+            gap: 35px;
+        }
+
+        .publication-tools {
+            margin-bottom: 1.25rem;
+            padding: 20px;
+            border: 1px solid var(--line);
+            background: var(--paper);
+        }
+
+        .format-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .format-filters button {
+            padding: 0.5rem 0.75rem;
+            border: 1px solid var(--line);
+            background: #ffffff;
+            color: var(--primary);
+            font-size: 0.77rem;
+        }
+
+        .format-filters button[aria-pressed="true"] {
+            border-color: var(--primary);
+            background: var(--primary);
+            color: #ffffff;
+        }
+
+        .topic-filter {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .topic-filter label {
+            color: var(--primary);
+            font-size: 0.77rem;
+            font-weight: bold;
+        }
+
+        .topic-filter select {
+            min-width: 190px;
+            padding: 0.5rem 0.75rem;
+            border: 1px solid var(--line);
+            border-radius: 0;
+            background: #ffffff;
+            color: var(--ink);
+            font-size: 0.82rem;
+        }
+
+        .filter-status {
+            margin-bottom: 1.5rem;
+            color: var(--muted);
+            font-size: 0.8rem;
+        }
+
+        .publication-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            align-items: stretch;
+            gap: 25px;
+        }
+
+        .publication-card {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            padding: 25px;
+            border: 1px solid var(--line);
+            background: #ffffff;
+            scroll-margin-top: 2rem;
+        }
+
+        .cover-link {
+            display: block;
+            margin-bottom: 1.4rem;
+            text-decoration: none;
+        }
+
+        .cover-frame {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            background: #f7f5f1;
+        }
+
+        .pub-cover {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            padding: 0.7rem;
+            object-fit: contain;
+        }
+
+        .publication-card .eyebrow {
+            font-size: 0.67rem;
+        }
+
+        .publication-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.55rem;
+            line-height: 1.3;
+        }
+
+        .publication-card h3 a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .publication-card h3 a:hover {
+            text-decoration: underline;
+        }
+
+        .publication-description {
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        .publication-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin: 0.4rem 0 1.3rem;
+            padding: 0;
+            list-style: none;
+        }
+
+        .publication-tags li {
+            padding: 0.25rem 0.55rem;
+            border: 1px solid var(--line);
+            background: var(--paper);
+            color: var(--body);
+            font-size: 0.67rem;
+            line-height: 1.5;
+        }
+
+        .publication-actions {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px 18px;
+            margin-top: auto;
+            padding-top: 1.1rem;
+            border-top: 1px solid var(--line);
+        }
+
+        .publication-actions .text-link {
+            font-size: 0.78rem;
+        }
+
+        .empty-message {
+            padding: 25px;
+            border: 1px solid var(--line);
+            background: var(--paper);
+        }
+
+        /* =====================================================
+           VOLUME IN SIDEBAR
+        ===================================================== */
+
+        .book-aside {
+            padding: 25px;
+            border: 1px solid var(--line);
+            border-top: 3px solid var(--accent);
+            background: var(--paper);
+        }
+
+        .book-cover {
+            width: 100%;
+            height: 285px;
+            margin-bottom: 25px;
+            object-fit: contain;
+        }
+
+        .book-aside h3 {
+            font-size: 1.65rem;
+        }
+
+        .book-description {
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        .book-credits {
+            margin: 1.25rem 0;
+            padding: 1rem 0;
+            border-block: 1px solid var(--line);
+            font-size: 0.79rem;
+            line-height: 1.8;
+        }
+
+        .book-credits strong {
+            color: var(--ink);
+        }
+
+        .book-aside .text-link {
+            font-size: 0.82rem;
+        }
+
+        /* =====================================================
+           AREE EDITORIALI
+        ===================================================== */
+
+        .format-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .format-card {
+            min-width: 0;
+            padding: 25px;
+            border: 1px solid var(--line);
+            background: #ffffff;
+        }
+
+        .format-card h3 {
+            font-size: 1.45rem;
+        }
+
+        .format-card p {
+            font-size: 0.9rem;
+        }
+
+        /* =====================================================
+           COLLABORARE
+        ===================================================== */
+
+        .cta-band {
+            padding: 45px 0;
+            background: var(--primary);
+            color: #ffffff;
+        }
+
+        .cta-band .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 32px;
+        }
+
+        .cta-band h2 {
+            color: #ffffff;
+            font-size: 2.1rem;
+        }
+
+        .cta-band .eyebrow {
+            color: #f2d5a2;
+        }
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        .site-footer {
+            padding: 48px 0 20px;
+            background: var(--dark);
+            color: #f4e8e8;
+            font-size: 0.8rem;
+            line-height: 1.65;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 1.15fr 1fr 0.8fr;
+            gap: 35px;
+        }
+
+        .site-footer h2 {
+            margin-bottom: 1rem;
+            color: #ffffff;
+            font-family: var(--sans);
+            font-size: 0.83rem;
+            font-weight: bold;
+            line-height: 1.4;
+        }
+
+        .site-footer p {
+            margin-bottom: 1rem;
+        }
+
+        .site-footer a {
+            color: #f4e8e8;
+            font-size: 0.8rem;
+        }
+
+        .footer-logo {
+            width: 125px;
+            height: 80px;
+            margin-top: 1rem;
+            object-fit: contain;
+        }
+
+        .footer-bottom {
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 1px solid #89535a;
+            font-size: 0.72rem;
+        }
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (min-width: 1700px) {
+            .container {
+                width: min(1460px, calc(100% - 120px));
+            }
+        }
+
+        @media (max-width: 1100px) {
+            .container {
+                width: calc(100% - 56px);
+            }
+
+            .header-inner {
+                gap: 20px;
+            }
+
+            .brand {
+                flex-basis: 180px;
+            }
+
+            .brand-logo {
+                width: 180px;
+                height: 95px;
+            }
+
+            #main-nav {
+                gap: 14px;
+            }
+
+            #main-nav a {
+                font-size: 0.77rem;
+            }
+
+            .featured-publication {
+                gap: 35px;
+            }
+
+            .editorial-layout {
+                grid-template-columns: minmax(0, 1fr) 250px;
+                gap: 25px;
+            }
+
+            .publication-card {
+                padding: 20px;
+            }
+
+            .format-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .footer-grid {
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 850px) {
+            .editorial-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .book-aside {
+                max-width: 500px;
+            }
+        }
+
+        @media (max-width: 800px) {
+            .container {
+                width: calc(100% - 36px);
+            }
+
+            .header-inner {
+                flex-wrap: wrap;
+                min-height: 95px;
+                padding-block: 8px;
+            }
+
+            .brand {
+                flex-basis: 170px;
+            }
+
+            .brand-logo {
+                width: 170px;
+                height: 80px;
+            }
+
+            .menu-toggle:not([hidden]) {
+                display: block;
+            }
+
+            .js #main-nav {
+                display: none;
+                flex-basis: 100%;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                padding-bottom: 12px;
+            }
+
+            .js #main-nav.open {
+                display: flex;
+            }
+
+            #main-nav {
+                flex-basis: 100%;
+                justify-content: flex-start;
+            }
+
+            #main-nav a {
+                padding: 10px 4px;
+                font-size: 0.9rem;
+            }
+
+            .page-hero {
+                padding: 38px 0 42px;
+            }
+
+            .page-hero .lead {
+                font-size: 1.05rem;
+            }
+
+            .section {
+                padding: 45px 0;
+            }
+
+            .featured-publication {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .featured-cover {
+                height: 350px;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 28px;
+            }
+
+            .cta-band .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .page-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .section h2 {
+                font-size: 1.9rem;
+            }
+
+            .publication-grid,
+            .format-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .publication-card {
+                padding: 24px;
+            }
+
+            .featured-cover {
+                height: 310px;
+            }
+
+            .featured-content h2 {
+                font-size: 2rem;
+            }
+
+            .featured-metadata {
+                grid-template-columns: 1fr;
+            }
+
+            .topic-filter {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .topic-filter select {
+                width: 100%;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-band h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-    <div class="container header-inner">
+    <a class="skip-link" href="#contenuto">
+        Vai al contenuto
+    </a>
 
-        <div class="brand">
-            <a href="index.html" style="display:flex; align-items:center;">
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-inner">
+
+            <a class="brand"
+               href="index.html"
+               aria-label="Fondazione Boscacci ETS, Home">
                 <img src="assets/logo_boscacci_rosso.png"
                      alt="Fondazione Boscacci ETS"
-                     style="height:180px; width:auto;">
+                     class="brand-logo"
+                     loading="eager"
+                     decoding="async">
             </a>
+
+            <button class="menu-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="main-nav"
+                    hidden>
+                Menu <span aria-hidden="true">☰</span>
+            </button>
+
+            <nav id="main-nav" aria-label="Navigazione principale">
+                <a href="index.html">Home</a>
+                <a href="people.html">People</a>
+                <a href="aree-interesse.html">Focus</a>
+                <a href="eventi.html">Eventi</a>
+                <a href="progetti.html">Progetti</a>
+                <a href="pubblicazioni.html"
+                   aria-current="page">Pubblicazioni</a>
+                <a href="accordi.html">Accordi</a>
+                <a href="collaborare.html">Collaborare</a>
+            </nav>
+
         </div>
+    </header>
 
-        <div class="menu-toggle" id="menuToggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+    <main id="contenuto">
 
-        <nav class="desktop-nav" id="mainNav">
-            <a href="index.html">Home</a>
-            <a href="people.html">People</a>
-            <a href="aree-interesse.html">Focus</a>
-            <a href="eventi.html">Eventi</a>
-            <a href="progetti.html">Progetti</a>
-            <a href="pubblicazioni.html" class="active">Pubblicazioni</a>
-            <a href="accordi.html">Accordi</a>
-            <a href="collaborare.html">Collaborare</a>
-        </nav>
+        <!-- HERO -->
+        <section class="page-hero">
+            <div class="container">
 
-    </div>
-</header>
+                <p class="eyebrow">Analisi, policy e ricerca</p>
+                <h1>Pubblicazioni</h1>
 
-
-<style>
-
-/* =========================================================
-   PUBBLICAZIONI — LAYOUT EDITORIALE
-   ========================================================= */
-
-.pub-page {
-    --pub-gold: #b58a3d;
-    --pub-cream: #f7f3ec;
-    --pub-line: #e3ddd3;
-}
-
-
-/* HERO */
-
-.pub-hero {
-    background:
-        linear-gradient(
-            90deg,
-            rgba(112,10,27,.97),
-            rgba(74,4,16,.94)
-        );
-    padding: 5.5rem 0 5rem;
-    color: white;
-}
-
-.pub-hero .eyebrow {
-    display: block;
-    color: #d6b76f;
-    font-size: .72rem;
-    font-weight: 700;
-    letter-spacing: .16em;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-}
-
-.pub-hero h1 {
-    font-family: 'Playfair Display', serif;
-    color: white;
-    font-size: 4rem;
-    line-height: 1;
-    margin: 0 0 1.5rem;
-}
-
-.pub-hero p {
-    max-width: 720px;
-    margin: 0;
-    color: rgba(255,255,255,.9);
-    font-size: 1.12rem;
-    line-height: 1.7;
-}
-
-
-/* GENERALE */
-
-.pub-section {
-    padding: 5rem 0;
-}
-
-.pub-section.alt {
-    background: var(--pub-cream);
-}
-
-.pub-eyebrow {
-    display: block;
-    color: var(--pub-gold);
-    font-size: .72rem;
-    font-weight: 700;
-    letter-spacing: .14em;
-    text-transform: uppercase;
-    margin-bottom: .7rem;
-}
-
-.pub-heading {
-    font-family: 'Playfair Display', serif;
-    color: var(--primary);
-    font-size: 2.3rem;
-    line-height: 1.15;
-    margin: 0 0 1rem;
-}
-
-.pub-intro {
-    max-width: 850px;
-    font-size: 1rem;
-    line-height: 1.75;
-    margin: 0 0 2.5rem;
-}
-
-
-/* IN EVIDENZA */
-
-.pub-feature {
-    display: grid;
-    grid-template-columns: 300px minmax(0,1fr) 220px;
-    gap: 3rem;
-    align-items: center;
-
-    background: #fbf8f2;
-    border: 1px solid var(--pub-line);
-    padding: 2.8rem;
-}
-
-.pub-feature-cover img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.pub-feature-main h2 {
-    font-family: 'Playfair Display', serif;
-    color: var(--primary);
-    font-size: 2.7rem;
-    line-height: 1.1;
-    margin: 0 0 .8rem;
-}
-
-.pub-feature-subtitle {
-    font-family: 'Playfair Display', serif;
-    color: var(--primary);
-    font-size: 1.35rem;
-    line-height: 1.35;
-    margin-bottom: 1.2rem;
-}
-
-.pub-feature-main p {
-    text-align: left;
-    line-height: 1.7;
-}
-
-.pub-feature-meta {
-    border-left: 1px solid #d8cdbd;
-    padding-left: 2rem;
-}
-
-.pub-feature-meta p {
-    margin: 0 0 1rem;
-    font-size: .88rem;
-    line-height: 1.5;
-}
-
-.pub-feature-meta strong {
-    display: block;
-    color: var(--primary);
-}
-
-
-/* LAYOUT PUBBLICAZIONI + CULTURA DELLA DIFESA */
-
-.pub-content-layout {
-    display: grid;
-    grid-template-columns: minmax(0,3fr) minmax(270px,1fr);
-    gap: 2.5rem;
-    align-items: start;
-}
-
-
-/* DOCUMENTI FONDAZIONE */
-
-.pub-library {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0,1fr));
-    gap: 1.5rem;
-}
-
-.pub-item {
-    position: relative;
-    overflow: hidden;
-
-    background: white;
-    border: 1px solid var(--pub-line);
-    border-top: 4px solid var(--primary);
-
-    padding: 2rem;
-    min-height: 310px;
-
-    display: flex;
-    flex-direction: column;
-}
-
-.pub-item-number {
-    position: absolute;
-    right: 1.3rem;
-    top: .5rem;
-
-    font-family: 'Playfair Display', serif;
-    font-size: 4.8rem;
-    line-height: 1;
-
-    color: rgba(112,10,27,.055);
-    pointer-events: none;
-}
-
-.pub-item-type {
-    position: relative;
-    z-index: 1;
-
-    color: var(--pub-gold);
-
-    font-size: .69rem;
-    font-weight: 700;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-
-    margin-bottom: 1.4rem;
-}
-
-.pub-item h3 {
-    position: relative;
-    z-index: 1;
-
-    font-family: 'Playfair Display', serif;
-    color: var(--primary);
-
-    font-size: 1.45rem;
-    line-height: 1.2;
-
-    margin: 0 0 1rem;
-}
-
-.pub-item p {
-    position: relative;
-    z-index: 1;
-
-    text-align: left;
-    line-height: 1.65;
-
-    margin-bottom: 1.5rem;
-}
-
-.pub-cover {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-
-    object-fit: contain;
-
-    background: #f7f5f1;
-    border: 1px solid var(--pub-line);
-
-    padding: .7rem;
-    box-sizing: border-box;
-
-    margin-bottom: 1.4rem;
-
-    display: block;
-}
-
-.pub-item .pub-action {
-    position: relative;
-    z-index: 1;
-
-    margin-top: auto;
-}
-
-
-/* BUTTON */
-
-.pub-btn {
-    display: inline-block;
-
-    background: var(--primary);
-    color: white !important;
-
-    padding: .95rem 1.5rem;
-
-    text-decoration: none;
-
-    font-size: .78rem;
-    font-weight: 700;
-    letter-spacing: .10em;
-    text-transform: uppercase;
-
-    transition: .2s ease;
-}
-
-.pub-btn:hover {
-    transform: translateY(-2px);
-    opacity: .92;
-}
-
-
-/* CULTURA DELLA DIFESA */
-
-.pub-sidebar {
-    background: white;
-
-    border: 1px solid var(--pub-line);
-    border-top: 4px solid var(--primary);
-
-    padding: 1.5rem;
-}
-
-.pub-sidebar img {
-    width: 100%;
-    height: auto;
-
-    display: block;
-
-    margin-bottom: 1.4rem;
-}
-
-.pub-sidebar h3 {
-    font-family: 'Playfair Display', serif;
-    color: var(--primary);
-
-    font-size: 1.7rem;
-    line-height: 1.2;
-
-    margin: 0 0 .7rem;
-}
-
-.pub-sidebar p {
-    text-align: left;
-    line-height: 1.6;
-}
-
-.pub-sidebar-meta {
-    font-size: .85rem;
-    color: #5f585a;
-
-    margin: 1rem 0 1.4rem;
-}
-
-
-/* AREE EDITORIALI */
-
-.pub-areas {
-    display: grid;
-    grid-template-columns: repeat(4,minmax(0,1fr));
-
-    border-top: 1px solid var(--pub-line);
-    border-bottom: 1px solid var(--pub-line);
-}
-
-.pub-area {
-    padding: 2rem;
-
-    border-right: 1px solid var(--pub-line);
-}
-
-.pub-area:last-child {
-    border-right: none;
-}
-
-.pub-area-index {
-    display: block;
-
-    color: var(--pub-gold);
-
-    font-size: .7rem;
-    font-weight: 700;
-    letter-spacing: .12em;
-
-    margin-bottom: .8rem;
-}
-
-.pub-area h3 {
-    font-family: 'Playfair Display', serif;
-    color: var(--primary);
-
-    font-size: 1.25rem;
-
-    margin: 0 0 .7rem;
-}
-
-.pub-area p {
-    text-align: left;
-    line-height: 1.6;
-
-    margin: 0;
-}
-
-
-/* RESPONSIVE */
-
-@media (max-width: 1000px) {
-
-    .pub-content-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .pub-library {
-        grid-template-columns: repeat(2,minmax(0,1fr));
-    }
-
-    .pub-feature {
-        grid-template-columns: 240px 1fr;
-    }
-
-    .pub-feature-meta {
-        grid-column: 1 / -1;
-
-        border-left: 0;
-        border-top: 1px solid #d8cdbd;
-
-        padding: 1.5rem 0 0;
-
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-        gap: 1rem;
-    }
-}
-
-
-@media (max-width: 768px) {
-
-    .pub-hero {
-        padding: 4rem 0;
-    }
-
-    .pub-hero h1 {
-        font-size: 2.7rem;
-    }
-
-    .pub-section {
-        padding: 3.5rem 0;
-    }
-
-    .pub-feature {
-        grid-template-columns: 1fr;
-
-        gap: 1.7rem;
-
-        padding: 1.5rem;
-    }
-
-    .pub-feature-cover img {
-        max-width: 300px;
-        margin: 0 auto;
-    }
-
-    .pub-feature-main h2 {
-        font-size: 2.1rem;
-    }
-
-    .pub-feature-meta {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .pub-library {
-        grid-template-columns: 1fr;
-    }
-
-    .pub-item {
-        min-height: 0;
-    }
-
-    .pub-areas {
-        grid-template-columns: 1fr;
-    }
-
-    .pub-area {
-        border-right: 0;
-        border-bottom: 1px solid var(--pub-line);
-    }
-
-    .pub-area:last-child {
-        border-bottom: 0;
-    }
-}
-
-</style>
-
-
-<div class="pub-page">
-
-
-<!-- =====================================================
-     HERO
-===================================================== -->
-
-<section class="pub-hero">
-
-    <div class="container">
-
-        <span class="eyebrow">
-            PUBBLICAZIONI
-        </span>
-
-        <h1>
-            Pubblicazioni
-        </h1>
-
-        <p>
-            Analisi, position paper, policy report, studi e contributi editoriali
-            per alimentare un confronto informato sui principali temi
-            di interesse pubblico.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     IN EVIDENZA
-===================================================== -->
-
-<section class="pub-section">
-
-    <div class="container">
-
-        <span class="pub-eyebrow">
-            IN EVIDENZA
-        </span>
-
-
-        <div class="pub-feature">
-
-
-            <div class="pub-feature-cover">
-
-                <img
-                    src="assets/cover-italia-egitto-regeni.png"
-                    alt="Giustizia, diplomazia e interesse nazionale">
+                <p class="lead">
+                    Documenti di analisi e approfondimento
+                    per alimentare un confronto informato
+                    sui principali temi di interesse pubblico.
+                </p>
 
             </div>
+        </section>
 
+        <!-- IN EVIDENZA -->
+        <section class="section alt"
+                 aria-labelledby="titolo-evidenza">
 
-            <div class="pub-feature-main">
+            <div class="container">
 
-                <span class="pub-eyebrow">
-                    WHITE PAPER 02 · OTTOBRE 2026
-                </span>
+                <p class="eyebrow">In evidenza · Ottobre 2026</p>
+
+                <div class="featured-publication">
+
+                    <a href="assets/White_Paper_02_Giustizia_Diplomazia_Interesse_Nazionale_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="Apri il White Paper Giustizia, diplomazia e interesse nazionale">
+
+                        <img src="assets/cover-italia-egitto-regeni.png"
+                             alt="Copertina Giustizia, diplomazia e interesse nazionale"
+                             class="featured-cover"
+                             loading="eager"
+                             decoding="async">
+                    </a>
+
+                    <div class="featured-content">
+
+                        <p class="eyebrow">White Paper 02</p>
+
+                        <h2 id="titolo-evidenza">
+                            Giustizia, diplomazia
+                            e interesse nazionale
+                        </h2>
+
+                        <p class="featured-subtitle">
+                            Il rapporto Italia–Egitto dopo la sentenza
+                            sul caso Giulio Regeni
+                        </p>
+
+                        <p class="featured-description">
+                            Un’analisi del rapporto tra giustizia,
+                            diplomazia e interesse nazionale,
+                            nel quadro delle relazioni strategiche
+                            tra Italia ed Egitto.
+                        </p>
+
+                        <dl class="featured-metadata">
+
+                            <div>
+                                <dt>Tipologia</dt>
+                                <dd>White Paper</dd>
+                            </div>
+
+                            <div>
+                                <dt>Numero</dt>
+                                <dd>02</dd>
+                            </div>
+
+                            <div>
+                                <dt>Pubblicazione</dt>
+                                <dd>Ottobre 2026</dd>
+                            </div>
+
+                            <div>
+                                <dt>Editore</dt>
+                                <dd>Fondazione Boscacci ETS</dd>
+                            </div>
+
+                        </dl>
+
+                        <div class="featured-actions">
+
+                            <a class="button"
+                               href="assets/White_Paper_02_Giustizia_Diplomazia_Interesse_Nazionale_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Apri il White Paper ↗
+                            </a>
+
+                            <a class="text-link"
+                               href="assets/White_Paper_02_Giustizia_Diplomazia_Interesse_Nazionale_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
+                               download>
+                                Scarica PDF ↓
+                            </a>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATALOGO -->
+        <section class="section">
+            <div class="container">
+
+                <p class="eyebrow">Produzione editoriale</p>
 
                 <h2>
-                    Giustizia, diplomazia e interesse nazionale
+                    Pubblicazioni della Fondazione Boscacci ETS
                 </h2>
 
-                <div class="pub-feature-subtitle">
-                    Il rapporto Italia–Egitto dopo la sentenza
-                    sul caso Giulio Regeni
-                </div>
-
-                <p>
-                    Un’analisi del rapporto tra giustizia,
-                    diplomazia e interesse nazionale,
-                    nel quadro delle relazioni strategiche
-                    tra Italia ed Egitto.
+                <p class="section-intro">
+                    White paper, policy report, policy brief
+                    e position paper prodotti dalla Fondazione
+                    per contribuire al dibattito sui temi
+                    sanitari, istituzionali e strategici.
                 </p>
 
-                <a class="pub-btn"
-                   href="assets/White_Paper_02_Giustizia_Diplomazia_Interesse_Nazionale_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
+                <div class="editorial-layout">
+
+                    <div>
+
+                        <!-- FILTRI -->
+                        <div class="publication-tools"
+                             id="publication-tools"
+                             hidden>
+
+                            <div class="format-filters"
+                                 role="group"
+                                 aria-label="Filtra per formato">
+
+                                <button type="button"
+                                        data-format-filter="all"
+                                        aria-pressed="true"
+                                        aria-controls="publication-grid">
+                                    Tutte
+                                </button>
+
+                                <button type="button"
+                                        data-format-filter="white-paper"
+                                        aria-pressed="false"
+                                        aria-controls="publication-grid">
+                                    White Paper
+                                </button>
+
+                                <button type="button"
+                                        data-format-filter="policy-report"
+                                        aria-pressed="false"
+                                        aria-controls="publication-grid">
+                                    Policy Report
+                                </button>
+
+                                <button type="button"
+                                        data-format-filter="policy-brief"
+                                        aria-pressed="false"
+                                        aria-controls="publication-grid">
+                                    Policy Brief
+                                </button>
+
+                                <button type="button"
+                                        data-format-filter="position-paper"
+                                        aria-pressed="false"
+                                        aria-controls="publication-grid">
+                                    Position Paper
+                                </button>
+
+                            </div>
+
+                            <div class="topic-filter">
+
+                                <label for="publication-topic">
+                                    Area di interesse
+                                </label>
+
+                                <select id="publication-topic"
+                                        aria-controls="publication-grid">
+                                    <option value="all">Tutti i temi</option>
+                                    <option value="salute">Salute</option>
+                                    <option value="istituzioni">Istituzioni</option>
+                                    <option value="ricerca">Ricerca e innovazione</option>
+                                    <option value="difesa">Difesa e sicurezza</option>
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                        <p class="filter-status"
+                           id="filter-status"
+                           role="status"
+                           aria-live="polite"
+                           aria-atomic="true">
+                            6 pubblicazioni
+                        </p>
+
+                        <div class="publication-grid"
+                             id="publication-grid">
+
+                            <!-- 01 · COSTO DELLA SALUTE -->
+                            <article class="publication-card"
+                                     id="costo-salute"
+                                     data-publication
+                                     data-format="policy-report"
+                                     data-topics="salute istituzioni">
+
+                                <a class="cover-link"
+                                   href="assets/Policy_Report_01_Il_Costo_della_Salute_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   aria-label="Apri Il costo della salute">
+
+                                    <div class="cover-frame">
+                                        <img src="assets/cover-costo-salute.png"
+                                             alt="Copertina Il costo della salute"
+                                             class="pub-cover"
+                                             loading="lazy"
+                                             decoding="async">
+                                    </div>
+                                </a>
+
+                                <p class="eyebrow">
+                                    Policy Report 01 · 2026
+                                </p>
+
+                                <h3>
+                                    <a href="assets/Policy_Report_01_Il_Costo_della_Salute_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
+                                       target="_blank"
+                                       rel="noopener noreferrer">
+                                        Il costo della salute
+                                    </a>
+                                </h3>
+
+                                <p class="publication-description">
+                                    Dal costo all’investimento:
+                                    una nuova prospettiva per il SSN
+                                    e la filiera Life Science.
+                                </p>
+
+                                <ul class="publication-tags"
+                                    aria-label="Temi">
+                                    <li>Salute</li>
+                                    <li>Politiche pubbliche</li>
+                                </ul>
+
+                                <div class="publication-actions">
+
+                                    <a class="text-link"
+                                       href="assets/Policy_Report_01_Il_Costo_della_Salute_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
+                                       target="_blank"
+                                       rel="noopener noreferrer">
+                                        Apri PDF ↗
+                                    </a>
+
+                                    <a class="text-link"
+                                       href="assets/Policy_Report_01_Il_Costo_della_Salute_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
+                                       download>
+                                        Scarica ↓
+                                    </a>
+
+                                    <a class="text-link"
+                                       href="aree-interesse.html#salute">
+                                        Focus →
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+                            <!-- 02 · FVG SMOKE-FREE -->
+                            <article class="publication-card"
+                                     id="fvg-smoke-free"
+                                     data-publication
+                                     data-format="policy-report"
+                                     data-topics="salute">
+
+                                <a class="cover-link"
+                                   href="assets/Policy_Report_02_FVG_Smoke_Free_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   aria-label="Apri FVG Smoke-Free">
+
+                                    <div class="cover-frame">
+                                        <img src="assets/cover-fvg-smoke-free.png"
+                                             alt="Copertina FVG Smoke-Free"
+                                             class="pub-cover"
+                                             loading="lazy"
+                                             decoding="async">
+                                    </div>
+                                </a>
+
+                                <p class="eyebrow">
+                                    Policy Report 02 · 2026
+                                </p>
+
+                                <h3>
+                                    <a href="assets/Policy_Report_02_FVG_Smoke_Free_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
+                                       target="_blank"
+                                       rel="noopener noreferrer">
+                                        FVG Smoke-Free
+                                    </a>
+                                </h3>
+
+                                <p class="publication-description">
+                                    Scienza, riduzione del danno
+                                    e politiche pubbliche per un
+                                    Friuli Venezia Giulia smoke-free.
+                                </p>
+
+                                <ul class="publication-tags"
+                                    aria-label="Temi">
+                                    <li>Salute</li>
+                                    <li>Prevenzione</li>
+                                </ul>
+
+                                <div class="publication-actions">
+
+                                    <a class="text-link"
+                                       href="assets/Policy_Report_02_FVG_Smoke_Free_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
+                                       target="_blank"
+                                       rel="noopener noreferrer">
+                                        Apri PDF ↗
+                                    </a>
+
+                                    <a class="text-link"
+                                       href="assets/Policy_Report_02_FVG_Smoke_Free_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
+                                       download>
+                                        Scarica ↓
+                                    </a>
+
+                                    <a class="text-link"
+                                       href="eventi.html#fvg-smoke-free">
+                                        Evento →
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+                            <!-- 03 · SCUOLA ED EPILESSIA -->
+                            <article class="publication-card"
+                                     id="scuola-epilessia"
+                                     data-publication
+                                     data-format="policy-brief"
+                                     data-topics="salute">
+
+                                <a class="cover-link"
+                                   href="assets/Policy_Brief_01_Scuola_ed_Epilessia_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   aria-label="Apri Scuola ed Epilessia">
+
+                                    <div class="cover-frame">
+                                        <img src="assets/cover-scuola-epilessia.png"
+                                             alt="Copertina Scuola ed Epilessia"
+                                             class="pub-cover"
+                                             loading="lazy"
+                                             decoding="async">
+                                    </div>
+                                </a>
+
+                                <p class="eyebrow">
+                                    Policy Brief 01 · 2026
+                                </p>
+
+                                <h3>
+                                    <a href="assets/Policy_Brief_01_Scuola_ed_Epilessia_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
+                                       target="_blank"
+                                       rel="noopener noreferrer">
+                                        Scuola ed Epilessia
+                                    </a>
+                                </h3>
+
+                                <p class="publication-description">
+                                    Dall’emergenza alla piena inclusione:
+                                    scuola, salute e diritto allo studio.
+                                </p>
+
+                                <ul class="publication-tags"
+                                    aria-label="Temi">
+                                    <li>Salute</li>
+                                    <li>Inclusione</li>
+                                </ul>
+
+                                <div class="publication-actions">
+
+                                    <a class="text-link"
+                                       href="assets/Policy_Brief_01_Scuola_ed_Epilessia_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
+                                       target="_blank"
+                                       rel="noopener noreferrer">
+                                        Apri PDF ↗
+                                    </a>
+
+                                    <a class="text-link"
+                                       href="assets/Policy_Brief_01_Scuola_ed_Epilessia_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
+                                       download>
+                                        Scarica ↓
+                                    </a>
+
+                                    <a class="text-link"
+                                       href="eventi.html#scuola-epilessia">
+                                        Evento →
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+                            <!-- 04 · CONTRABBANDO -->
+                            <article class="publication-card"
+                                     id="contrabbando"
+                                     data-publication
+                                     data-format="white-paper"
+                                     data-topics="difesa">
+
+                                <a class="cover-link"
+                                   href="assets/White_Paper_01_Contrabbando_Fondazione_Boscacci_ETS.pdf"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   aria-label="Apri Il contrabbando cambia pelle">
+
+                                    <div class="cover-frame">
+                                        <img src="assets/cover-contrabbando.png"
+                                             alt="Copertina Il contrabbando cambia pelle"
+                                             class="pub-cover"
+                                             loading="lazy"
+                                             decoding="async">
+                                    </div>
+                                </a>
+
+                                <p class="eyebrow">
+                                    White Paper 01 · Settembre 2026
+                                </p>
+
+                                <h3>
+                                    <a href="assets/White_Paper_01_Contrabbando_Fondazione_Boscacci_ETS.pdf"
+                                       target="_blank"
+                                       rel="noopener noreferrer">
+                                        Il contrabbando cambia pelle
+                                    </a>
+                                </h3>
+
+                                <p class="publication-description">
+                                    Produzione clandestina di tabacco,
+                                    criminalità organizzata e sicurezza
+                                    economica in Italia.
+                                </p>
+
+                                <ul class="publication-tags"
+                                    aria-label="Temi">
+                                    <li>Sicurezza</li>
+                                    <li>Economia</li>
+                                </ul>
+
+                                <div class="publication-actions">
+
+                                    <a class="text-link"
+                                       href="assets/White_Paper_01_Contrabbando_Fondazione_Boscacci_ETS.pdf"
+                                       target="_blank"
+                                       rel="noopener noreferrer">
+                                        Apri PDF ↗
+                                    </a>
+
+                                    <a class="text-link"
+                                       href="assets/White_Paper_01_Contrabbando_Fondazione_Boscacci_ETS.pdf"
+                                       download>
+                                        Scarica ↓
+                                    </a>
+
+                                    <a class="text-link"
+                                       href="aree-interesse.html#difesa">
+                                        Focus →
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+                            <!-- 05 · ITALIA–EGITTO -->
+                            <article class="publication-card"
+                                     id="italia-egitto"
+                                     data-publication
+                                     data-format="white-paper"
+                                     data-topics="istituzioni difesa">
+
+                                <a class="cover-link"
+                                   href="assets/White_Paper_02_Giustizia_Diplomazia_Interesse_Nazionale_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   aria-label="Apri Giustizia, diplomazia e interesse nazionale">
+
+                                    <div class="cover-frame">
+                                        <img src="assets/cover-italia-egitto-regeni.png"
+                                             alt="Copertina Giustizia, diplomazia e interesse nazionale"
+                                             class="pub-cover"
+                                             loading="lazy"
+                                             decoding="async">
+                                    </div>
+                                </a>
+
+                                <p class="eyebrow">
+                                    White Paper 02 · Ottobre 2026
+                                </p>
+
+                                <h3>
+                                    <a href="assets/White_Paper_02_Giustizia_Diplomazia_Interesse_Nazionale_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
+                                       target="_blank"
+                                       rel="noopener noreferrer">
+                                        Giustizia, diplomazia
+                                        e interesse nazionale
+                                    </a>
+                                </h3>
+
+                                <p class="publication-description">
+                                    Il rapporto Italia–Egitto dopo
+                                    la sentenza sul caso Giulio Regeni.
+                                </p>
+
+                                <ul class="publication-tags"
+                                    aria-label="Temi">
+                                    <li>Istituzioni</li>
+                                    <li>Geopolitica</li>
+                                </ul>
+
+                                <div class="publication-actions">
+
+                                    <a class="text-link"
+                                       href="assets/White_Paper_02_Giustizia_Diplomazia_Interesse_Nazionale_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
+                                       target="_blank"
+                                       rel="noopener noreferrer">
+                                        Apri PDF ↗
+                                    </a>
+
+                                    <a class="text-link"
+                                       href="assets/White_Paper_02_Giustizia_Diplomazia_Interesse_Nazionale_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
+                                       download>
+                                        Scarica ↓
+                                    </a>
+
+                                    <a class="text-link"
+                                       href="aree-interesse.html#istituzioni">
+                                        Focus →
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+                            <!-- 06 · FARMACO STRATEGICO -->
+                            <article class="publication-card"
+                                     id="farmaco-strategico"
+                                     data-publication
+                                     data-format="position-paper"
+                                     data-topics="salute ricerca istituzioni">
+
+                                <a class="cover-link"
+                                   href="assets/Position_Paper_01_Farmaco_Infrastruttura_Strategica_Fondazione_Boscacci_ETS.pdf"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   aria-label="Apri Il farmaco come infrastruttura strategica">
+
+                                    <div class="cover-frame">
+                                        <img src="assets/cover-farmaco-infrastruttura.png"
+                                             alt="Copertina Il farmaco come infrastruttura strategica"
+                                             class="pub-cover"
+                                             loading="lazy"
+                                             decoding="async">
+                                    </div>
+                                </a>
+
+                                <p class="eyebrow">
+                                    Position Paper 01 · Maggio 2026
+                                </p>
+
+                                <h3>
+                                    <a href="assets/Position_Paper_01_Farmaco_Infrastruttura_Strategica_Fondazione_Boscacci_ETS.pdf"
+                                       target="_blank"
+                                       rel="noopener noreferrer">
+                                        Il farmaco come
+                                        infrastruttura strategica
+                                    </a>
+                                </h3>
+
+                                <p class="publication-description">
+                                    Industria farmaceutica,
+                                    sicurezza sanitaria
+                                    e autonomia europea.
+                                </p>
+
+                                <ul class="publication-tags"
+                                    aria-label="Temi">
+                                    <li>Salute</li>
+                                    <li>Innovazione</li>
+                                    <li>Industria</li>
+                                </ul>
+
+                                <div class="publication-actions">
+
+                                    <a class="text-link"
+                                       href="assets/Position_Paper_01_Farmaco_Infrastruttura_Strategica_Fondazione_Boscacci_ETS.pdf"
+                                       target="_blank"
+                                       rel="noopener noreferrer">
+                                        Apri PDF ↗
+                                    </a>
+
+                                    <a class="text-link"
+                                       href="assets/Position_Paper_01_Farmaco_Infrastruttura_Strategica_Fondazione_Boscacci_ETS.pdf"
+                                       download>
+                                        Scarica ↓
+                                    </a>
+
+                                    <a class="text-link"
+                                       href="aree-interesse.html#salute">
+                                        Focus →
+                                    </a>
+
+                                </div>
+
+                            </article>
+
+                        </div>
+
+                        <p class="empty-message"
+                           id="empty-message"
+                           hidden>
+                            Nessuna pubblicazione corrisponde
+                            ai filtri selezionati.
+                            Seleziona “Tutte” e “Tutti i temi”
+                            per consultare l’intero catalogo.
+                        </p>
+
+                    </div>
+
+                    <!-- VOLUME -->
+                    <aside class="book-aside"
+                           aria-labelledby="titolo-volume">
+
+                        <p class="eyebrow">Volume</p>
+
+                        <a href="https://www.dynames.it/pubblicazioni/2026-report.html"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="Scopri il volume Cultura della Difesa">
+
+                            <img src="assets/cultura-della-difesa.png.png"
+                                 alt="Copertina Cultura della Difesa"
+                                 class="book-cover"
+                                 loading="lazy"
+                                 decoding="async">
+                        </a>
+
+                        <h3 id="titolo-volume">
+                            Cultura della Difesa
+                        </h3>
+
+                        <p class="book-description">
+                            Comunicazione, geopolitica e formazione
+                            per l’interesse nazionale.
+                        </p>
+
+                        <div class="book-credits">
+                            <p>
+                                <strong>A cura di</strong><br>
+                                Vincenzo D’Anna
+                            </p>
+                            <p>
+                                <strong>Introduzione di</strong><br>
+                                Massimo Panizzi
+                            </p>
+                            <p>
+                                <strong>Editore</strong><br>
+                                LUISS University Press · 2026
+                            </p>
+                        </div>
+
+                        <a class="text-link"
+                           href="https://www.dynames.it/pubblicazioni/2026-report.html"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Scopri il volume ↗
+                        </a>
+
+                    </aside>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- AREE EDITORIALI -->
+        <section class="section alt">
+            <div class="container">
+
+                <p class="eyebrow">Approfondimenti</p>
+                <h2>Le nostre aree editoriali</h2>
+
+                <p class="section-intro">
+                    Formati differenti per analizzare temi complessi
+                    e contribuire al confronto pubblico.
+                </p>
+
+                <div class="format-grid">
+
+                    <article class="format-card">
+                        <p class="eyebrow">01</p>
+                        <h3>Policy Brief</h3>
+                        <p>
+                            Analisi sintetiche e proposte operative
+                            sui principali temi di policy.
+                        </p>
+                    </article>
+
+                    <article class="format-card">
+                        <p class="eyebrow">02</p>
+                        <h3>Position Paper</h3>
+                        <p>
+                            Posizioni, analisi e proposte
+                            sviluppate dalla Fondazione.
+                        </p>
+                    </article>
+
+                    <article class="format-card">
+                        <p class="eyebrow">03</p>
+                        <h3>Studi &amp; Ricerche</h3>
+                        <p>
+                            Approfondimenti scientifici,
+                            accademici e istituzionali.
+                        </p>
+                    </article>
+
+                    <article class="format-card">
+                        <p class="eyebrow">04</p>
+                        <h3>Report &amp; Dossier</h3>
+                        <p>
+                            Documenti di analisi e ricerca
+                            dedicati a tematiche strategiche.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- COLLABORARE -->
+        <section class="cta-band">
+            <div class="container">
+
+                <div>
+                    <p class="eyebrow">Ricerca e produzione editoriale</p>
+                    <h2>Contribuisci al confronto.</h2>
+                    <p>
+                        Proposte di ricerca, analisi
+                        e contributi editoriali.
+                    </p>
+                </div>
+
+                <a class="button light" href="collaborare.html">
+                    Collabora con la Fondazione →
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="container footer-grid">
+
+            <div>
+                <h2>Fondazione Boscacci ETS</h2>
+                <p>
+                    Sede legale: Via Carlo Noè 45<br>
+                    Gallarate (VA)<br>
+                    C.F. 03800470126<br>
+                    P.IVA 04096960127<br>
+                    Repertorio RUNTS: 152268
+                </p>
+                <p>
+                    R.O.C. n. 44335<br>
+                    Accreditamento Ministero della Difesa<br>
+                    n. PDI-2026-000070
+                </p>
+            </div>
+
+            <div>
+                <h2>Editoria</h2>
+                <p>
+                    Editore di DYNAMES<br>
+                    Governance di Forze e Sistemi
+                </p>
+                <p>
+                    Reg. Trib. di Busto Arsizio<br>
+                    N. 01/2026 del 25 febbraio 2026
+                </p>
+            </div>
+
+            <div>
+                <h2>Contatti</h2>
+                <p>
+                    Informazioni<br>
+                    <a href="mailto:info@boscacci.it">
+                        info@boscacci.it
+                    </a>
+                </p>
+                <p>
+                    Ufficio stampa<br>
+                    <a href="mailto:e.panico@boscacci.it">
+                        e.panico@boscacci.it
+                    </a>
+                </p>
+            </div>
+
+            <div>
+                <h2>Seguici</h2>
+
+                <a class="text-link"
+                   href="https://www.linkedin.com/company/fondazione-boscacci/"
                    target="_blank"
                    rel="noopener noreferrer">
-
-                    Scarica il White Paper →
-
+                    LinkedIn ↗
                 </a>
 
-            </div>
-
-
-            <div class="pub-feature-meta">
-
                 <p>
-                    <strong>Tipologia</strong>
-                    White Paper
+                    <a class="text-link" href="privacy.html">
+                        Privacy Policy
+                    </a><br>
+                    <a class="text-link" href="cookie-policy.html">
+                        Cookie Policy
+                    </a>
                 </p>
 
-                <p>
-                    <strong>Numero</strong>
-                    02
-                </p>
-
-                <p>
-                    <strong>Pubblicazione</strong>
-                    Ottobre 2026
-                </p>
-
-                <p>
-                    <strong>Editore</strong>
-                    Fondazione Boscacci ETS
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     PUBBLICAZIONI FONDAZIONE
-===================================================== -->
-
-<section class="pub-section alt">
-
-<div class="container">
-
-
-    <span class="pub-eyebrow">
-        PRODUZIONE EDITORIALE
-    </span>
-
-
-    <h2 class="pub-heading">
-        Pubblicazioni della Fondazione Boscacci ETS
-    </h2>
-
-
-    <p class="pub-intro">
-        Documenti di analisi, ricerca e approfondimento prodotti
-        dalla Fondazione per contribuire al dibattito sui temi
-        sanitari, istituzionali, scientifici e strategici.
-    </p>
-
-
-    <div class="pub-content-layout">
-
-
-        <!-- =====================================================
-             COLONNA SINISTRA
-        ====================================================== -->
-
-        <div>
-
-
-            <div class="pub-library">
-
-
-                <!-- POLICY REPORT 01 -->
-
-                <article class="pub-item">
-
-                    <img
-                        src="assets/cover-costo-salute.png"
-                        alt="Il costo della salute"
-                        class="pub-cover">
-
-                    <div class="pub-item-number">
-                        01
-                    </div>
-
-                    <div class="pub-item-type">
-                        POLICY REPORT · 2026
-                    </div>
-
-                    <h3>
-                        Il costo della salute
-                    </h3>
-
-                    <p>
-                        Dal costo all’investimento:
-                        una nuova prospettiva per il SSN
-                        e la filiera Life Science.
-                    </p>
-
-                    <div class="pub-action">
-
-                        <a class="pub-btn"
-                           href="assets/Policy_Report_01_Il_Costo_della_Salute_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
-                           target="_blank"
-                           rel="noopener noreferrer">
-
-                            Scarica PDF →
-
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- POLICY REPORT 02 -->
-
-                <article class="pub-item">
-
-                    <img
-                        src="assets/cover-fvg-smoke-free.png"
-                        alt="FVG Smoke-Free"
-                        class="pub-cover">
-
-                    <div class="pub-item-number">
-                        02
-                    </div>
-
-                    <div class="pub-item-type">
-                        POLICY REPORT · 2026
-                    </div>
-
-                    <h3>
-                        FVG Smoke-Free
-                    </h3>
-
-                    <p>
-                        Scienza, riduzione del danno
-                        e politiche pubbliche per un
-                        Friuli Venezia Giulia smoke-free.
-                    </p>
-
-                    <div class="pub-action">
-
-                        <a class="pub-btn"
-                           href="assets/Policy_Report_02_FVG_Smoke_Free_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
-                           target="_blank"
-                           rel="noopener noreferrer">
-
-                            Scarica PDF →
-
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- POLICY BRIEF 01 -->
-
-                <article class="pub-item">
-
-                    <img
-                        src="assets/cover-scuola-epilessia.png"
-                        alt="Scuola ed Epilessia"
-                        class="pub-cover">
-
-                    <div class="pub-item-number">
-                        01
-                    </div>
-
-                    <div class="pub-item-type">
-                        POLICY BRIEF · 2026
-                    </div>
-
-                    <h3>
-                        Scuola ed Epilessia
-                    </h3>
-
-                    <p>
-                        Dall’emergenza alla piena inclusione:
-                        scuola, salute e diritto allo studio.
-                    </p>
-
-                    <div class="pub-action">
-
-                        <a class="pub-btn"
-                           href="assets/Policy_Brief_01_Scuola_ed_Epilessia_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
-                           target="_blank"
-                           rel="noopener noreferrer">
-
-                            Scarica PDF →
-
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- WHITE PAPER 01 -->
-
-                <article class="pub-item">
-
-                    <img
-                        src="assets/cover-contrabbando.png"
-                        alt="Il contrabbando cambia pelle"
-                        class="pub-cover">
-
-                    <div class="pub-item-number">
-                        01
-                    </div>
-
-                    <div class="pub-item-type">
-                        WHITE PAPER · SETTEMBRE 2026
-                    </div>
-
-                    <h3>
-                        Il contrabbando cambia pelle
-                    </h3>
-
-                    <p>
-                        Produzione clandestina di tabacco,
-                        criminalità organizzata
-                        e sicurezza economica in Italia.
-                    </p>
-
-                    <div class="pub-action">
-
-                        <a class="pub-btn"
-                           href="assets/White_Paper_01_Contrabbando_Fondazione_Boscacci_ETS.pdf"
-                           target="_blank"
-                           rel="noopener noreferrer">
-
-                            Scarica PDF →
-
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- WHITE PAPER 02 -->
-
-                <article class="pub-item">
-
-                    <img
-                        src="assets/cover-italia-egitto-regeni.png"
-                        alt="Giustizia, diplomazia e interesse nazionale"
-                        class="pub-cover">
-
-                    <div class="pub-item-number">
-                        02
-                    </div>
-
-                    <div class="pub-item-type">
-                        WHITE PAPER · OTTOBRE 2026
-                    </div>
-
-                    <h3>
-                        Giustizia, diplomazia e interesse nazionale
-                    </h3>
-
-                    <p>
-                        Il rapporto Italia–Egitto
-                        dopo la sentenza sul caso Giulio Regeni.
-                    </p>
-
-                    <div class="pub-action">
-
-                        <a class="pub-btn"
-                           href="assets/White_Paper_02_Giustizia_Diplomazia_Interesse_Nazionale_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
-                           target="_blank"
-                           rel="noopener noreferrer">
-
-                            Scarica PDF →
-
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- POSITION PAPER 01 -->
-
-                <article class="pub-item">
-
-                    <img
-                        src="assets/cover-farmaco-infrastruttura.png"
-                        alt="Il farmaco come infrastruttura strategica"
-                        class="pub-cover">
-
-                    <div class="pub-item-number">
-                        01
-                    </div>
-
-                    <div class="pub-item-type">
-                        POSITION PAPER · MAGGIO 2026
-                    </div>
-
-                    <h3>
-                        Il farmaco come infrastruttura strategica
-                    </h3>
-
-                    <p>
-                        Industria farmaceutica,
-                        sicurezza sanitaria
-                        e autonomia europea.
-                    </p>
-
-                    <div class="pub-action">
-
-                        <a class="pub-btn"
-                           href="assets/Position_Paper_01_Farmaco_Infrastruttura_Strategica_Fondazione_Boscacci_ETS.pdf"
-                           target="_blank"
-                           rel="noopener noreferrer">
-
-                            Scarica PDF →
-
-                        </a>
-
-                    </div>
-
-                </article>
-
-
+                <img src="assets/logo_bianco.svg"
+                     alt="Fondazione Boscacci ETS"
+                     class="footer-logo"
+                     loading="lazy"
+                     decoding="async">
             </div>
 
         </div>
 
-
-        <!-- =====================================================
-             COLONNA DESTRA — CULTURA DELLA DIFESA
-        ====================================================== -->
-
-        <aside class="pub-sidebar">
-
-            <span class="pub-eyebrow">
-                VOLUME
-            </span>
-
-            <img
-                src="assets/cultura-della-difesa.png.png"
-                alt="Cultura della Difesa">
-
-            <h3>
-                Cultura della Difesa
-            </h3>
-
-            <p>
-                Comunicazione, geopolitica e formazione
-                per l’interesse nazionale.
-            </p>
-
-            <p class="pub-sidebar-meta">
-
-                <strong>
-                    A cura di Vincenzo D’Anna
-                </strong>
-
-                <br>
-
-                Introduzione di Massimo Panizzi
-
-                <br>
-
-                LUISS University Press · 2026
-
-            </p>
-
-
-            <a class="pub-btn"
-               href="https://www.dynames.it/pubblicazioni/2026-report.html"
-               target="_blank"
-               rel="noopener noreferrer">
-
-                Scopri il volume →
-
-            </a>
-
-        </aside>
-
-
-    </div>
-
-</div>
-
-</section>
-
-
-<!-- =====================================================
-     AREE EDITORIALI
-===================================================== -->
-
-<section class="pub-section alt">
-
-<div class="container">
-
-    <span class="pub-eyebrow">
-        APPROFONDIMENTI
-    </span>
-
-    <h2 class="pub-heading">
-        Le nostre aree editoriali
-    </h2>
-
-    <p class="pub-intro">
-        Formati differenti per analizzare temi complessi
-        e contribuire al dibattito pubblico
-        con contenuti rigorosi e indipendenti.
-    </p>
-
-
-    <div class="pub-areas">
-
-
-        <div class="pub-area">
-
-            <span class="pub-area-index">
-                01
-            </span>
-
-            <h3>
-                Policy Brief
-            </h3>
-
-            <p>
-                Analisi sintetiche e proposte operative
-                sui principali temi di policy.
-            </p>
-
+        <div class="container footer-bottom">
+            © <span data-year>2026</span>
+            Fondazione Boscacci ETS.
+            Tutti i diritti riservati.
         </div>
 
-
-        <div class="pub-area">
-
-            <span class="pub-area-index">
-                02
-            </span>
-
-            <h3>
-                Position Paper
-            </h3>
-
-            <p>
-                Posizioni, analisi e proposte
-                sviluppate dalla Fondazione.
-            </p>
-
-        </div>
-
-
-        <div class="pub-area">
-
-            <span class="pub-area-index">
-                03
-            </span>
-
-            <h3>
-                Studi &amp; Ricerche
-            </h3>
-
-            <p>
-                Approfondimenti scientifici,
-                accademici e istituzionali.
-            </p>
-
-        </div>
-
-
-        <div class="pub-area">
-
-            <span class="pub-area-index">
-                04
-            </span>
-
-            <h3>
-                Report &amp; Dossier
-            </h3>
-
-            <p>
-                Documenti di analisi e ricerca
-                dedicati a tematiche strategiche.
-            </p>
-
-        </div>
-
-
-    </div>
-
-</div>
-
-</section>
-
-
-</div>
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer>
-
-<div class="container"
-     style="max-width:1200px; margin:0 auto; padding:4rem 1.5rem 2rem;">
-
-
-    <div style="
-        display:grid;
-        grid-template-columns:repeat(3,1fr);
-        gap:5rem;
-        align-items:start;
-        width:100%;
-    ">
-
-
-        <!-- COLONNA 1 -->
-
-        <div style="text-align:left;">
-
-            <h3 style="
-                font-family:'Lato',sans-serif;
-                color:white;
-                font-size:1rem;
-                font-weight:700;
-                margin:0 0 2rem 0;
-            ">
-                FONDAZIONE BOSCACCI ETS
-            </h3>
-
-
-            <p style="
-                color:white;
-                font-size:.75rem;
-                line-height:1.05;
-                text-align:left;
-                margin:0;
-            ">
-
-                Sede legale Via Carlo Noè 45
-
-                <br>
-
-                Gallarate (VA)
-
-                <br><br>
-
-                C.F. 03800470126
-
-                <br>
-
-                P.IVA 04096960127
-
-                <br><br>
-
-                Repertorio RUNTS: 152268
-
-                <br><br>
-
-                R.O.C. n° 44335
-
-                <br><br>
-
-                Accreditamento Min.Difesa
-                n° PDI-2026-000070
-
-            </p>
-
-
-            <p style="
-                margin-top:1rem;
-                font-size:.75rem;
-            ">
-
-                <a href="privacy.html"
-                   style="color:white; text-decoration:none;">
-
-                    Privacy Policy
-
-                </a>
-
-                <span style="color:white;">
-                    ·
-                </span>
-
-                <a href="cookie-policy.html"
-                   style="color:white; text-decoration:none;">
-
-                    Cookie Policy
-
-                </a>
-
-            </p>
-
-        </div>
-
-
-        <!-- COLONNA 2 -->
-
-        <div style="text-align:left;">
-
-
-            <h3 style="
-                font-family:'Lato',sans-serif;
-                color:white;
-                font-size:1rem;
-                font-weight:700;
-                margin:0 0 1rem 0;
-            ">
-                Editore di DYNAMES
-            </h3>
-
-
-            <h3 style="
-                font-family:'Lato',sans-serif;
-                color:white;
-                font-size:1rem;
-                font-weight:700;
-                margin:0 0 1rem 0;
-            ">
-                Dati Registrazione
-            </h3>
-
-
-            <p style="
-                color:white;
-                font-size:.75rem;
-                line-height:1.05;
-                margin:0;
-            ">
-
-                Reg. Trib. di Busto Arsizio
-
-                <br>
-
-                N. 01/2026 del 25 febbraio 2026
-
-            </p>
-
-
-            <h3 style="
-                font-family:'Lato',sans-serif;
-                color:white;
-                font-size:1rem;
-                font-weight:700;
-                margin:2rem 0 1.2rem 0;
-            ">
-                Contatti
-            </h3>
-
-
-            <p style="
-                font-size:.75rem;
-                line-height:1.05;
-                margin:0;
-            ">
-
-                <span style="
-                    color:#9b8f92;
-                    text-transform:uppercase;
-                    letter-spacing:.08em;
-                ">
-                    INFO
-                </span>
-
-                <br>
-
-                <a href="mailto:info@boscacci.it"
-                   style="color:white; text-decoration:none;">
-
-                    info@boscacci.it
-
-                </a>
-
-            </p>
-
-
-            <p style="
-                font-size:.75rem;
-                line-height:1.05;
-                margin-top:1rem;
-            ">
-
-                <span style="
-                    color:#9b8f92;
-                    text-transform:uppercase;
-                    letter-spacing:.08em;
-                ">
-                    UFFICIO STAMPA
-                </span>
-
-                <br>
-
-                <a href="mailto:e.panico@boscacci.it"
-                   style="color:white; text-decoration:none;">
-
-                    e.panico@boscacci.it
-
-                </a>
-
-            </p>
-
-
-        </div>
-
-
-        <!-- COLONNA 3 -->
-
-        <div style="text-align:left;">
-
-            <h3 style="
-                font-family:'Lato',sans-serif;
-                color:white;
-                font-size:1rem;
-                font-weight:700;
-                margin:0 0 2rem 0;
-            ">
-                Social
-            </h3>
-
-
-            <a
-                href="https://www.linkedin.com/company/fondazione-boscacci/posts/?viewAsMember=true"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn Fondazione Boscacci"
-                style="display:inline-block; text-decoration:none;"
-            >
-
-                <div style="
-                    width:58px;
-                    height:58px;
-                    background:#0A66C2;
-                    border-radius:6px;
-
-                    display:flex;
-                    align-items:center;
-                    justify-content:center;
-
-                    color:white;
-                    font-family:Arial,sans-serif;
-                    font-size:40px;
-                    font-weight:bold;
-                ">
-                    in
-                </div>
-
-            </a>
-
-        </div>
-
-
-    </div>
-
-
-    <!-- LOGO -->
-
-    <div style="
-        text-align:center;
-        margin-top:4rem;
-    ">
-
-        <img
-            src="assets/logo_bianco.svg"
-            alt="Fondazione Boscacci ETS"
-            style="height:90px; width:auto;"
-        >
-
-    </div>
-
-
-    <!-- COPYRIGHT -->
-
-    <p style="
-        color:white;
-        text-align:center;
-        margin-top:1.5rem;
-        font-size:.8rem;
-    ">
-
-        &copy; 2026 Fondazione Boscacci ETS.
-        Tutti i diritti riservati.
-
-    </p>
-
-
-</div>
-
-</footer>
-
-
-<script>
-
-document
-    .getElementById('menuToggle')
-    .addEventListener('click', function() {
-
-        document
-            .getElementById('mainNav')
-            .classList
-            .toggle('active');
-
-    });
-
-</script>
-
-
-<script
-    data-goatcounter="https://fabioboscacci.goatcounter.com/count"
-    async
-    src="//gc.zgo.at/count.js">
-</script>
-
+    </footer>
+
+    <!-- MENU E FILTRI -->
+    <script>
+        "use strict";
+
+        document.documentElement.classList.add("js");
+
+        /* MENU MOBILE */
+
+        const menuToggle = document.querySelector(".menu-toggle");
+        const mainNav = document.querySelector("#main-nav");
+
+        if (menuToggle && mainNav) {
+            menuToggle.hidden = false;
+
+            const closeMenu = () => {
+                mainNav.classList.remove("open");
+                menuToggle.setAttribute("aria-expanded", "false");
+            };
+
+            menuToggle.addEventListener("click", () => {
+                const isOpen =
+                    menuToggle.getAttribute("aria-expanded") !== "true";
+
+                menuToggle.setAttribute("aria-expanded", String(isOpen));
+                mainNav.classList.toggle("open", isOpen);
+            });
+
+            document.addEventListener("keydown", event => {
+                if (
+                    event.key === "Escape" &&
+                    mainNav.classList.contains("open")
+                ) {
+                    closeMenu();
+                    menuToggle.focus();
+                }
+            });
+
+            mainNav.addEventListener("click", event => {
+                if (event.target.closest("a")) {
+                    closeMenu();
+                }
+            });
+        }
+
+        /* ANNO NEL FOOTER */
+
+        document.querySelectorAll("[data-year]").forEach(element => {
+            element.textContent = String(new Date().getFullYear());
+        });
+
+        /* FILTRI DEL CATALOGO */
+
+        const tools = document.querySelector("#publication-tools");
+        const topicFilter = document.querySelector("#publication-topic");
+        const statusText = document.querySelector("#filter-status");
+        const emptyMessage = document.querySelector("#empty-message");
+
+        const formatButtons = [
+            ...document.querySelectorAll("[data-format-filter]")
+        ];
+
+        const publicationCards = [
+            ...document.querySelectorAll("[data-publication]")
+        ];
+
+        let activeFormat = "all";
+
+        const applyFilters = () => {
+            const selectedTopic = topicFilter.value;
+            let visibleCount = 0;
+
+            publicationCards.forEach(card => {
+                const formatMatches =
+                    activeFormat === "all" ||
+                    card.dataset.format === activeFormat;
+
+                const topicMatches =
+                    selectedTopic === "all" ||
+                    card.dataset.topics
+                        .split(" ")
+                        .includes(selectedTopic);
+
+                const visible = formatMatches && topicMatches;
+
+                card.hidden = !visible;
+
+                if (visible) {
+                    visibleCount++;
+                }
+            });
+
+            formatButtons.forEach(button => {
+                button.setAttribute(
+                    "aria-pressed",
+                    String(
+                        button.dataset.formatFilter === activeFormat
+                    )
+                );
+            });
+
+            statusText.textContent =
+                visibleCount +
+                (
+                    visibleCount === 1
+                        ? " pubblicazione visualizzata"
+                        : " pubblicazioni visualizzate"
+                );
+
+            emptyMessage.hidden = visibleCount !== 0;
+        };
+
+        if (
+            tools &&
+            topicFilter &&
+            statusText &&
+            emptyMessage
+        ) {
+            formatButtons.forEach(button => {
+                button.addEventListener("click", () => {
+                    activeFormat = button.dataset.formatFilter;
+                    applyFilters();
+                });
+            });
+
+            topicFilter.addEventListener("change", applyFilters);
+
+            const requestedFilter =
+                new URLSearchParams(window.location.search).get("f");
+
+            if (
+                formatButtons.some(button =>
+                    button.dataset.formatFilter === requestedFilter
+                )
+            ) {
+                activeFormat = requestedFilter;
+            } else if (
+                [...topicFilter.options].some(option =>
+                    option.value === requestedFilter
+                )
+            ) {
+                topicFilter.value = requestedFilter;
+            }
+
+            tools.hidden = false;
+            applyFilters();
+
+            /* Rende visibile una scheda raggiunta da un link diretto. */
+
+            const revealLinkedPublication = () => {
+                const id = window.location.hash.slice(1);
+
+                const linkedCard = publicationCards.find(card =>
+                    card.id === id
+                );
+
+                if (!linkedCard || !linkedCard.hidden) {
+                    return;
+                }
+
+                activeFormat = "all";
+                topicFilter.value = "all";
+                applyFilters();
+
+                linkedCard.scrollIntoView({
+                    behavior: "auto",
+                    block: "start"
+                });
+            };
+
+            revealLinkedPublication();
+
+            window.addEventListener(
+                "hashchange",
+                revealLinkedPublication
+            );
+        }
+    </script>
+
+    <!-- STATISTICHE GOATCOUNTER -->
+    <script
+        data-goatcounter="https://fabioboscacci.goatcounter.com/count"
+        async
+        src="https://gc.zgo.at/count.js">
+    </script>
 
 </body>
-
 </html>

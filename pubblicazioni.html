@@ -1416,11 +1416,11 @@
         return link;
     });
 
-    function aggiorna() {
+   function aggiorna(spostamento = 0) {
         const distanza = Math.min(230, scena.clientWidth * 0.36);
 
         copertine.forEach(function (copertina, indice) {
-            const differenza = indice - posizione;
+            const differenza = indice - posizione - spostamento;
             const lontananza = Math.abs(differenza);
             const rotazione =
                 differenza === 0 ? 0 : differenza < 0 ? 30 : -30;
@@ -1512,57 +1512,170 @@
         bloccoScroll = adesso + 700;
         seleziona(posizione + direzione);
     }, { passive: false });
+let movimentoVetrina = 0;
+let gestoVetrina = null;
+let frameVetrina = null;
 
-    scena.addEventListener("touchstart", function (evento) {
-        if (evento.touches.length !== 1) {
-            inizioTocco = null;
+function disegnaTrascinamento() {
+    const distanza = Math.min(230, scena.clientWidth * 0.36);
+
+    copertine.forEach(function (copertina, indice) {
+        const differenza = indice - posizione - movimentoVetrina;
+        const lontananza = Math.abs(differenza);
+        const rotazione = Math.max(-30, Math.min(30, -differenza * 30));
+
+        copertina.style.transform =
+            "translateX(calc(-50% + " +
+            (differenza * distanza) +
+            "px)) translateZ(" +
+            (-lontananza * 165) +
+            "px) rotateY(" +
+            rotazione +
+            "deg)";
+
+        const opacita =
+            (1 - 0.35 * Math.min(lontananza, 1)) *
+            Math.max(0, Math.min(1, 3 - lontananza));
+
+        copertina.style.opacity = String(opacita);
+        copertina.style.zIndex =
+            String(100 - Math.round(lontananza * 10));
+    });
+}
+
+function terminaTrascinamento(annullato) {
+    if (!inizioTocco) return;
+
+    if (gestoVetrina === "orizzontale") {
+        ignoraClickFino = Date.now() + 500;
+
+        if (frameVetrina !== null) {
+            cancelAnimationFrame(frameVetrina);
+            frameVetrina = null;
+        }
+
+        disegnaTrascinamento();
+        void scena.offsetWidth;
+
+        copertine.forEach(function (copertina) {
+            copertina.style.transition = "";
+        });
+
+        const cambio =
+            !annullato && Math.abs(movimentoVetrina) > 0.22
+                ? (movimentoVetrina > 0 ? 1 : -1)
+                : 0;
+
+        seleziona(posizione + cambio);
+        aggiorna();
+    }
+
+    inizioTocco = null;
+    movimentoVetrina = 0;
+    gestoVetrina = null;
+}
+
+scena.addEventListener("touchstart", function (evento) {
+    if (evento.touches.length !== 1) {
+        terminaTrascinamento(true);
+        return;
+    }
+
+    inizioTocco = {
+        x: evento.touches[0].clientX,
+        y: evento.touches[0].clientY
+    };
+
+    movimentoVetrina = 0;
+    gestoVetrina = null;
+}, { passive: true });
+
+scena.addEventListener("touchmove", function (evento) {
+    if (!inizioTocco) return;
+
+    if (evento.touches.length !== 1) {
+        terminaTrascinamento(true);
+        return;
+    }
+
+    const distanzaX = inizioTocco.x - evento.touches[0].clientX;
+    const distanzaY = inizioTocco.y - evento.touches[0].clientY;
+
+    if (gestoVetrina === null) {
+        if (Math.max(Math.abs(distanzaX), Math.abs(distanzaY)) < 8) {
             return;
         }
 
-        inizioTocco = {
-            x: evento.touches[0].clientX,
-            y: evento.touches[0].clientY
-        };
-    }, { passive: true });
-
-    scena.addEventListener("touchend", function (evento) {
-        if (!inizioTocco) return;
-
-        const tocco = evento.changedTouches[0];
-        const distanzaX = inizioTocco.x - tocco.clientX;
-        const distanzaY = inizioTocco.y - tocco.clientY;
-
-        if (
-            Math.abs(distanzaX) > 40 &&
+        gestoVetrina =
             Math.abs(distanzaX) > Math.abs(distanzaY)
-        ) {
-            ignoraClickFino = Date.now() + 500;
-            seleziona(posizione + (distanzaX > 0 ? 1 : -1));
+                ? "orizzontale"
+                : "verticale";
+
+        if (gestoVetrina === "orizzontale") {
+            copertine.forEach(function (copertina) {
+                copertina.style.transition = "none";
+            });
         }
-
-        inizioTocco = null;
-    }, { passive: true });
-
-    scena.addEventListener("touchcancel", function () {
-        inizioTocco = null;
-    }, { passive: true });
-
-    vetrina.addEventListener("keydown", function (evento) {
-        if (evento.key === "ArrowRight") {
-            evento.preventDefault();
-            seleziona(posizione + 1);
-        } else if (evento.key === "ArrowLeft") {
-            evento.preventDefault();
-            seleziona(posizione - 1);
-        }
-    });
-
-    if ("ResizeObserver" in window) {
-        const osservatore = new ResizeObserver(aggiorna);
-        osservatore.observe(scena);
-    } else {
-        window.addEventListener("resize", aggiorna);
     }
+
+    if (gestoVetrina !== "orizzontale") return;
+
+    if (evento.cancelable) {
+        evento.preventDefault();
+    }
+
+    const passo = Math.min(230, scena.clientWidth * 0.36);
+    let movimento = Math.max(-1, Math.min(1, distanzaX / passo));
+
+    if (
+        (posizione === 0 && movimento < 0) ||
+        (posizione === pubblicazioni.length - 1 && movimento > 0)
+    ) {
+        movimento *= 0.2;
+    }
+
+    movimentoVetrina = movimento;
+
+    if (frameVetrina === null) {
+        frameVetrina = requestAnimationFrame(function () {
+            disegnaTrascinamento();
+            frameVetrina = null;
+        });
+    }
+}, { passive: false });
+
+scena.addEventListener("touchend", function () {
+    terminaTrascinamento(false);
+}, { passive: true });
+
+scena.addEventListener("touchcancel", function () {
+    terminaTrascinamento(true);
+}, { passive: true });
+
+vetrina.addEventListener("keydown", function (evento) {
+    if (evento.key === "ArrowRight") {
+        evento.preventDefault();
+        seleziona(posizione + 1);
+    } else if (evento.key === "ArrowLeft") {
+        evento.preventDefault();
+        seleziona(posizione - 1);
+    }
+});
+
+function aggiornaDimensioniVetrina() {
+    if (gestoVetrina === "orizzontale") {
+        disegnaTrascinamento();
+    } else {
+        aggiorna();
+    }
+}
+
+if ("ResizeObserver" in window) {
+    const osservatore = new ResizeObserver(aggiornaDimensioniVetrina);
+    osservatore.observe(scena);
+} else {
+    window.addEventListener("resize", aggiornaDimensioniVetrina);
+}
 
     vetrina.querySelector(".vetrina-comandi").hidden = false;
     vetrina.querySelector(".vetrina-suggerimento").hidden = false;

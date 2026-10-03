@@ -1,344 +1,1601 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eventi | Fondazione Boscacci ETS</title>
-    <!-- Fonts unified in style.css -->
-    <link rel="stylesheet" href="css/style.css?v=4">
-    <link rel="icon" href="assets/logo_grafico.png" type="image/png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Accordi | Fondazione Boscacci ETS</title>
+
+    <meta name="description"
+          content="Accordi, convenzioni e network della Fondazione Boscacci ETS: SOCINT, Università di Roma Tor Vergata, IIHL e membership europea ELISAN.">
+
+    <link rel="canonical" href="https://www.boscacci.it/accordi.html">
+    <link rel="icon" href="assets/logo_grafico.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:site_name" content="Fondazione Boscacci ETS">
+    <meta property="og:title" content="Accordi | Fondazione Boscacci ETS">
+
+    <meta property="og:description"
+          content="Collaborazioni scientifiche, didattiche ed editoriali e partecipazione ai network europei.">
+
+    <meta property="og:url" content="https://www.boscacci.it/accordi.html">
+    <meta property="og:image"
+          content="https://www.boscacci.it/assets/logo_boscacci_rosso.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Accordi | Fondazione Boscacci ETS",
+        "url": "https://www.boscacci.it/accordi.html",
+        "description": "Accordi istituzionali, collaborazioni accademiche e membership della Fondazione Boscacci ETS.",
+        "inLanguage": "it",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Fondazione Boscacci ETS",
+            "url": "https://www.boscacci.it/",
+            "logo": "https://www.boscacci.it/assets/logo_boscacci_rosso.png"
+        }
+    }
+    </script>
+
+    <style>
+        /* =====================================================
+           IDENTITÀ VISIVA
+        ===================================================== */
+
+        :root {
+            --primary: #7d1c2b;
+            --dark: #4a0d17;
+            --accent: #cfa861;
+            --paper: #fdfcf8;
+            --ink: #2a2825;
+            --body: #514b49;
+            --line: #e6e2d8;
+            --muted: #69605d;
+            --serif: Georgia, "Times New Roman", serif;
+            --sans: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 2rem;
+        }
+
+        body {
+            margin: 0;
+            background: #ffffff;
+            color: var(--body);
+            font-family: var(--sans);
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration-thickness: 1px;
+            text-underline-offset: 4px;
+        }
+
+        button {
+            font: inherit;
+            cursor: pointer;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin: 0 0 1.1rem;
+            color: var(--primary);
+            font-family: var(--serif);
+            font-weight: 400;
+            line-height: 1.2;
+        }
+
+        h1 {
+            font-size: clamp(2.3rem, 4.3vw, 4.2rem);
+        }
+
+        h2 {
+            font-size: clamp(1.9rem, 3.2vw, 2.9rem);
+        }
+
+        h3 {
+            font-size: 1.45rem;
+        }
+
+        p {
+            margin: 0 0 1.1rem;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        :focus-visible {
+            outline: 3px solid var(--accent);
+            outline-offset: 5px;
+        }
+
+        [hidden] {
+            display: none !important;
+        }
+
+        .container {
+            width: min(1380px, calc(100% - 96px));
+            margin-inline: auto;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 1rem;
+            z-index: 100;
+            padding: 0.6rem 1rem;
+            background: #ffffff;
+        }
+
+        .skip-link:focus {
+            top: 1rem;
+        }
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        .site-header {
+            background: #ffffff;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            min-height: 116px;
+        }
+
+        .brand {
+            display: block;
+            flex: 0 0 225px;
+        }
+
+        .brand-logo {
+            width: 225px;
+            height: 105px;
+            object-fit: contain;
+        }
+
+        #main-nav {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            gap: clamp(0.7rem, 1.5vw, 1.5rem);
+        }
+
+        #main-nav a {
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+            color: var(--ink);
+            font-size: 0.84rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        #main-nav a:hover,
+        #main-nav a[aria-current="page"] {
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .menu-toggle {
+            display: none;
+            padding: 0.5rem 0.85rem;
+            border: 1px solid var(--line);
+            border-radius: 2px;
+            background: #ffffff;
+            color: var(--primary);
+        }
+
+        /* =====================================================
+           HERO E SEZIONI
+        ===================================================== */
+
+        .page-hero {
+            padding: 55px 0 58px;
+            border-bottom: 5px solid var(--accent);
+            background: var(--primary);
+            color: #ffffff;
+        }
+
+        .page-hero h1 {
+            color: #ffffff;
+        }
+
+        .page-hero .eyebrow {
+            color: #f2d5a2;
+        }
+
+        .page-hero .lead {
+            max-width: 850px;
+            color: #fff5f2;
+            font-family: var(--serif);
+            font-size: 1.15rem;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        .eyebrow {
+            margin: 0 0 0.85rem;
+            color: var(--primary);
+            font-size: 0.73rem;
+            font-weight: bold;
+            line-height: 1.6;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+
+        .section {
+            padding: 70px 0;
+        }
+
+        .section h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .section-intro {
+            max-width: 950px;
+            margin-bottom: 2rem;
+            font-size: 1.04rem;
+        }
+
+        .text-link {
+            display: inline-block;
+            font-size: 0.86rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .text-link:hover {
+            text-decoration: underline;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.8rem 1.25rem;
+            background: var(--primary);
+            color: #ffffff;
+            font-size: 0.87rem;
+            font-weight: bold;
+            line-height: 1.5;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background: var(--dark);
+        }
+
+        .button.light {
+            background: #ffffff;
+            color: var(--primary);
+        }
+
+        .button.light:hover {
+            background: #f4ece7;
+        }
+
+        /* =====================================================
+           FILTRI
+        ===================================================== */
+
+        .agreement-tools {
+            margin-bottom: 1.25rem;
+            padding: 20px;
+            border: 1px solid var(--line);
+            background: var(--paper);
+        }
+
+        .agreement-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .agreement-filters button {
+            padding: 0.55rem 1rem;
+            border: 1px solid var(--line);
+            background: #ffffff;
+            color: var(--primary);
+            font-size: 0.82rem;
+        }
+
+        .agreement-filters button[aria-pressed="true"] {
+            border-color: var(--primary);
+            background: var(--primary);
+            color: #ffffff;
+        }
+
+        .filter-status {
+            margin-bottom: 2rem;
+            color: var(--muted);
+            font-size: 0.82rem;
+        }
+
+        .empty-message {
+            padding: 25px;
+            border: 1px solid var(--line);
+            background: var(--paper);
+        }
+
+        /* =====================================================
+           SCHEDE ACCORDI
+        ===================================================== */
+
+        .agreement-list {
+            display: grid;
+            gap: 30px;
+        }
+
+        .agreement-card {
+            display: grid;
+            grid-template-columns:
+                minmax(0, 1.45fr)
+                minmax(0, 1fr);
+            align-items: start;
+            gap: 40px;
+            min-width: 0;
+            padding: 35px;
+            border: 1px solid var(--line);
+            border-top: 3px solid var(--accent);
+            background: #ffffff;
+            scroll-margin-top: 2rem;
+        }
+
+        .agreement-content {
+            min-width: 0;
+        }
+
+        .agreement-card h3 {
+            margin-bottom: 1.2rem;
+            font-size: clamp(1.65rem, 2.4vw, 2.25rem);
+            line-height: 1.25;
+        }
+
+        .agreement-type {
+            margin-bottom: 1.4rem;
+            color: var(--ink);
+            font-size: 0.87rem;
+            font-weight: bold;
+            line-height: 1.7;
+        }
+
+        .agreement-description {
+            font-size: 0.95rem;
+            line-height: 1.85;
+        }
+
+        .topic-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 1.4rem 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .topic-list li {
+            padding: 0.3rem 0.65rem;
+            border: 1px solid var(--line);
+            background: var(--paper);
+            color: var(--body);
+            font-size: 0.71rem;
+            line-height: 1.5;
+        }
+
+        .agreement-card details {
+            margin: 1.4rem 0;
+            padding-top: 1rem;
+            border-top: 1px solid var(--line);
+        }
+
+        .agreement-card summary {
+            color: var(--primary);
+            font-size: 0.82rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .agreement-card details p {
+            margin-top: 1rem;
+            font-size: 0.91rem;
+            line-height: 1.85;
+        }
+
+        .agreement-actions {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px 22px;
+            margin-top: 1.5rem;
+            padding-top: 1.1rem;
+            border-top: 1px solid var(--line);
+        }
+
+        .agreement-actions .text-link {
+            font-size: 0.8rem;
+        }
+
+        .agreement-visual {
+            min-width: 0;
+            margin: 0;
+        }
+
+        .document-link {
+            display: block;
+            padding: 15px;
+            border: 1px solid var(--line);
+            background: var(--paper);
+        }
+
+        .document-image {
+            width: 100%;
+            height: 370px;
+            object-fit: contain;
+        }
+
+        .agreement-visual figcaption {
+            margin-top: 0.8rem;
+            color: var(--muted);
+            font-size: 0.75rem;
+            line-height: 1.65;
+        }
+
+        .membership-note {
+            margin: 1.5rem 0;
+            padding: 17px 20px;
+            border-left: 3px solid var(--accent);
+            background: var(--paper);
+        }
+
+        .membership-note p {
+            font-size: 0.87rem;
+            line-height: 1.8;
+        }
+
+        /* =====================================================
+           COLLABORARE
+        ===================================================== */
+
+        .cta-band {
+            padding: 45px 0;
+            background: var(--primary);
+            color: #ffffff;
+        }
+
+        .cta-band .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 32px;
+        }
+
+        .cta-band h2 {
+            color: #ffffff;
+            font-size: 2.1rem;
+        }
+
+        .cta-band .eyebrow {
+            color: #f2d5a2;
+        }
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        .site-footer {
+            padding: 48px 0 20px;
+            background: var(--dark);
+            color: #f4e8e8;
+            font-size: 0.8rem;
+            line-height: 1.65;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 1.15fr 1fr 0.8fr;
+            gap: 35px;
+        }
+
+        .site-footer h2 {
+            margin-bottom: 1rem;
+            color: #ffffff;
+            font-family: var(--sans);
+            font-size: 0.83rem;
+            font-weight: bold;
+            line-height: 1.4;
+        }
+
+        .site-footer p {
+            margin-bottom: 1rem;
+        }
+
+        .site-footer a {
+            color: #f4e8e8;
+            font-size: 0.8rem;
+        }
+
+        .footer-logo {
+            width: 125px;
+            height: 80px;
+            margin-top: 1rem;
+            object-fit: contain;
+        }
+
+        .footer-bottom {
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 1px solid #89535a;
+            font-size: 0.72rem;
+        }
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (min-width: 1700px) {
+            .container {
+                width: min(1460px, calc(100% - 120px));
+            }
+        }
+
+        @media (max-width: 1100px) {
+            .container {
+                width: calc(100% - 56px);
+            }
+
+            .header-inner {
+                gap: 20px;
+            }
+
+            .brand {
+                flex-basis: 180px;
+            }
+
+            .brand-logo {
+                width: 180px;
+                height: 95px;
+            }
+
+            #main-nav {
+                gap: 14px;
+            }
+
+            #main-nav a {
+                font-size: 0.77rem;
+            }
+
+            .agreement-card {
+                gap: 30px;
+                padding: 28px;
+            }
+
+            .document-image {
+                height: 330px;
+            }
+
+            .footer-grid {
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 800px) {
+            .container {
+                width: calc(100% - 36px);
+            }
+
+            .header-inner {
+                flex-wrap: wrap;
+                min-height: 95px;
+                padding-block: 8px;
+            }
+
+            .brand {
+                flex-basis: 170px;
+            }
+
+            .brand-logo {
+                width: 170px;
+                height: 80px;
+            }
+
+            .menu-toggle:not([hidden]) {
+                display: block;
+            }
+
+            .js #main-nav {
+                display: none;
+                flex-basis: 100%;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                padding-bottom: 12px;
+            }
+
+            .js #main-nav.open {
+                display: flex;
+            }
+
+            #main-nav {
+                flex-basis: 100%;
+                justify-content: flex-start;
+            }
+
+            #main-nav a {
+                padding: 10px 4px;
+                font-size: 0.9rem;
+            }
+
+            .page-hero {
+                padding: 38px 0 42px;
+            }
+
+            .page-hero .lead {
+                font-size: 1.05rem;
+            }
+
+            .section {
+                padding: 45px 0;
+            }
+
+            .agreement-card {
+                grid-template-columns: 1fr;
+            }
+
+            .document-image {
+                height: 360px;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 28px;
+            }
+
+            .cta-band .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 540px) {
+            .page-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .section h2 {
+                font-size: 1.9rem;
+            }
+
+            .agreement-card {
+                padding: 24px;
+                gap: 25px;
+            }
+
+            .agreement-card h3 {
+                font-size: 1.7rem;
+            }
+
+            .agreement-tools {
+                padding: 18px;
+            }
+
+            .agreement-filters button {
+                padding: 0.5rem 0.75rem;
+                font-size: 0.77rem;
+            }
+
+            .document-image {
+                height: 290px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-band h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <header>
+
+    <a class="skip-link" href="#contenuto">
+        Vai al contenuto
+    </a>
+
+    <!-- HEADER -->
+    <header class="site-header">
         <div class="container header-inner">
-            <div class="brand">
-                <a href="index.html" style="display: flex; align-items: center;">
-                    <img src="assets/logo_boscacci_rosso.png" alt="Fondazione Boscacci ETS" style="height: 180px; width: auto;">
-                </a>
-            </div>
-            <div class="menu-toggle" id="menuToggle">
-                <span></span><span></span><span></span>
-            </div>
-         <nav class="desktop-nav" id="mainNav">
-    <a href="index.html">Home</a>
-    <a href="people.html">People</a>
-    <a href="aree-interesse.html">Focus</a>
-    <a href="eventi.html">Eventi</a>
-    <a href="progetti.html">Progetti</a>
-    <a href="pubblicazioni.html">Pubblicazioni</a>
-    <a href="accordi.html" class="active">Accordi</a>
-    <a href="collaborare.html">Collaborare</a>
-</nav>
+
+            <a class="brand"
+               href="index.html"
+               aria-label="Fondazione Boscacci ETS, Home">
+
+                <img src="assets/logo_boscacci_rosso.png"
+                     alt="Fondazione Boscacci ETS"
+                     class="brand-logo"
+                     loading="eager"
+                     decoding="async">
+            </a>
+
+            <button class="menu-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="main-nav"
+                    hidden>
+                Menu <span aria-hidden="true">☰</span>
+            </button>
+
+            <nav id="main-nav" aria-label="Navigazione principale">
+                <a href="index.html">Home</a>
+                <a href="people.html">People</a>
+                <a href="aree-interesse.html">Focus</a>
+                <a href="eventi.html">Eventi</a>
+                <a href="progetti.html">Progetti</a>
+                <a href="pubblicazioni.html">Pubblicazioni</a>
+                <a href="accordi.html" aria-current="page">Accordi</a>
+                <a href="collaborare.html">Collaborare</a>
+            </nav>
+
         </div>
     </header>
 
-    <div class="page-header">
-        <div class="container">
-            <h1>Accordi e Collaborazioni</h1>
-            <p style="display: block; width: 100%; text-align: center !important; margin: 0 auto !important;">"Momenti di dialogo tra istituzioni, accademia e società civile."</p>
-        </div>
-    </div>
+    <main id="contenuto">
 
-   <section class="container events-container">
-      <h2 class="section-title">Accordi e Collaborazioni Istituzionali</h2>
-<div class="grid-2">
+        <!-- HERO -->
+        <section class="page-hero">
+            <div class="container">
 
-    <div>
-        <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 1rem;">
-            SOCINT – Società Italiana di Intelligence
-        </h3>
+                <p class="eyebrow">Network istituzionale</p>
+                <h1>Accordi e collaborazioni</h1>
 
-        <div class="timeline-date">Protocollo d'intesa</div>
+                <p class="lead">
+                    Collaborazioni scientifiche, didattiche ed editoriali
+                    e partecipazione ai network europei.
+                </p>
 
-        <p>
-            Fondazione Boscacci ETS, attraverso la testata
-            <strong>DYNAMES – Governance di Forze e Sistemi</strong>,
-            e SOCINT hanno avviato una collaborazione culturale ed editoriale
-            per promuovere la cultura dell'intelligence, della sicurezza,
-            della difesa e della resilienza.
-        </p>
+            </div>
+        </section>
 
-        <p>
-            L'accordo prevede attività di divulgazione e valorizzazione
-            di pubblicazioni, ricerche e iniziative scientifiche e formative,
-            oltre allo sviluppo di iniziative editoriali e culturali congiunte
-            sui temi di comune interesse.
-        </p>
+        <!-- ACCORDI -->
+        <section class="section">
+            <div class="container">
 
-        <p>
-            La collaborazione favorisce inoltre il dialogo tra studiosi,
-            professionisti, istituzioni e operatori del settore.
-        </p>
+                <p class="eyebrow">Cooperazione e conoscenza</p>
 
-        <p style="margin-top: 1.5rem;">
-            <a href="https://www.socint.org/" target="_blank" rel="noopener noreferrer">
-                Visita il sito SOCINT →
-            </a>
-        </p>
-    </div>
-<div style="display: flex; align-items: flex-start; justify-content: center; padding: 0 2rem;">
-    <img src="assets/accordi/protocollo-socint-dynames.png"
-         alt="Protocollo d'intesa DYNAMES e SOCINT"
-         style="width: 100%; max-width: 600px; height: auto;">
-</div>
-</div>
-       <hr style="border: 0; border-top: 1px solid var(--border); margin: 5rem 0;">
+                <h2>
+                    Relazioni che sostengono ricerca e confronto
+                </h2>
 
-<div class="grid-2">
+                <p class="section-intro">
+                    Protocolli d’intesa, convenzioni accademiche
+                    e memorandum di cooperazione collegano
+                    le attività della Fondazione e di DYNAMES
+                    a istituzioni, comunità scientifiche e professionisti.
+                    Le adesioni ai network europei ampliano
+                    i percorsi di collaborazione e scambio.
+                </p>
 
-    <div>
-        <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 1rem;">
-            Università degli Studi di Roma “Tor Vergata”
-        </h3>
+                <!-- FILTRI -->
+                <div class="agreement-tools"
+                     id="agreement-tools"
+                     hidden>
 
-        <div class="timeline-date">
-            Convenzione quadro di collaborazione scientifica e didattica
-        </div>
+                    <div class="agreement-filters"
+                         role="group"
+                         aria-label="Filtra le relazioni">
 
-        <p>
-            Fondazione Boscacci ETS, editore di
-            <strong>DYNAMES – Governance di Forze e Sistemi</strong>,
-            e l’Università degli Studi di Roma “Tor Vergata”, attraverso il
-            Master di II livello in
-            <strong>Defence, Intelligence, Security and Protection of Human Health</strong>,
-            hanno avviato una collaborazione scientifica e didattica nei settori
-            della difesa, della sicurezza e della protezione della salute
-            umano-ambientale.
-        </p>
+                        <button type="button"
+                                data-agreement-filter="all"
+                                aria-pressed="true"
+                                aria-controls="agreement-list">
+                            Tutti
+                        </button>
 
-        <p>
-            La Convenzione prevede il coinvolgimento di docenti, ricercatori
-            ed esperti, lo scambio di materiali scientifici e didattici,
-            attività editoriali e divulgative congiunte, progetti di ricerca,
-            project work e tesi, oltre alla possibilità di stage formativi
-            per i frequentatori del Master.
-        </p>
+                        <button type="button"
+                                data-agreement-filter="protocollo"
+                                aria-pressed="false"
+                                aria-controls="agreement-list">
+                            Protocolli e memorandum
+                        </button>
 
-        <p>
-            L’accordo rafforza il rapporto tra mondo accademico e competenze
-            professionali, favorendo formazione, ricerca e confronto
-            interdisciplinare sui temi di comune interesse.
-        </p>
+                        <button type="button"
+                                data-agreement-filter="universita"
+                                aria-pressed="false"
+                                aria-controls="agreement-list">
+                            Università
+                        </button>
 
-    </div>
+                        <button type="button"
+                                data-agreement-filter="membership"
+                                aria-pressed="false"
+                                aria-controls="agreement-list">
+                            Membership e network
+                        </button>
 
-    <div style="display: flex; align-items: flex-start; justify-content: center; padding: 0 2rem;">
-        <img src="assets/accordi/protocollo-torvergata-dynames.png"
-             alt="Convenzione tra Università degli Studi di Roma Tor Vergata e Fondazione Boscacci ETS – DYNAMES"
-             style="width: 100%; max-width: 600px; height: auto;">
-    </div>
-    </div>
-<hr style="border: 0; border-top: 1px solid var(--border); margin: 5rem 0;">
-
-<div class="grid-2">
-
-    <div>
-        <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 1rem;">
-            International Istitute of Humanitarian Law – IIHL
-        </h3>
-
-        <div class="timeline-date">
-            Memorandum di Cooperazione
-        </div>
-
-        <p>
-            <strong>DYNAMES – Governance di Forze e Sistemi</strong>,
-            rivista e piattaforma editoriale della Fondazione Boscacci ETS,
-            e l’Istituto Internazionale di Diritto Umanitario di Sanremo
-            hanno definito un Memorandum di Cooperazione finalizzato a
-            rafforzare le attività di studio, ricerca, formazione e diffusione
-            della conoscenza del diritto internazionale umanitario.
-        </p>
-
-        <p>
-            La collaborazione comprende attività formative e divulgative
-            congiunte, lo scambio e lo sviluppo di studi e progetti di ricerca,
-            la collaborazione nelle attività istituzionali e la partecipazione
-            reciproca alle iniziative promosse dalle Parti.
-        </p>
-
-        <p>
-            Il Memorandum prevede inoltre la possibilità di organizzare
-            congiuntamente corsi di formazione, seminari tematici,
-            incontri di esperti, conferenze, tavole rotonde e altre
-            iniziative sui temi di comune interesse.
-        </p>
-
-    </div>
-
-    <div style="display: flex; align-items: flex-start; justify-content: center; padding: 0 2rem;">
-        <img src="assets/accordi/protocollo-iihl-dynames.png"
-             alt="Memorandum di Cooperazione tra IIHL e DYNAMES"
-             style="width: 100%; max-width: 600px; height: auto;">
-    </div>
-
-</div>
-       <hr style="border: 0; border-top: 1px solid var(--border); margin: 5rem 0;">
-
-<div class="grid-2">
-
-    <div>
-
-        <h3 style="font-size: 1.8rem; color: var(--primary); margin-bottom: 1rem;">
-            ELISAN – European Local Inclusion &amp; Social Action Network
-        </h3>
-
-        <div class="timeline-date">
-            Adesione al network europeo · 2026
-        </div>
-
-        <p>
-            La <strong>Fondazione Boscacci ETS</strong> è membro di
-            <strong>ELISAN – European Local Inclusion &amp; Social Action Network</strong>,
-            rete europea dedicata all’inclusione locale, all’azione sociale
-            e alla cooperazione tra istituzioni, professionisti ed organizzazioni
-            impegnate nelle politiche sociali.
-        </p>
-
-        <p>
-            Fondata nel 2008 presso il Comitato Europeo delle Regioni,
-            ELISAN promuove il confronto, lo scambio di esperienze,
-            la costruzione di partnership e lo sviluppo di iniziative
-            dedicate all’inclusione sociale, alla solidarietà
-            e alla tutela dei diritti fondamentali.
-        </p>
-
-        <p>
-            L’adesione rafforza la dimensione europea della Fondazione
-            e il suo impegno sui temi del welfare, dell’inclusione sociale,
-            della cooperazione istituzionale e delle politiche territoriali.
-        </p>
-
-        <p>
-            La membership della Fondazione decorre dal
-            <strong>2026</strong>. Il certificato di adesione è stato
-            rilasciato a Valencia il <strong>16 giugno 2026</strong>.
-        </p>
-
-        <p style="margin-top: 1.5rem;">
-            <a href="https://www.elisan.eu/"
-               target="_blank"
-               rel="noopener noreferrer">
-            
-            </a>
-        </p>
-
-    </div>
-
-    <div style="display: flex; align-items: flex-start; justify-content: center; padding: 0 2rem;">
-
-        <img src="assets/elisan-membership-2026.png"
-             alt="Fondazione Boscacci ETS membro di ELISAN"
-             style="width: 100%; max-width: 600px; height: auto;">
-
-    </div>
-
-</div>
-    </section>
-
-<footer>
-<div class="container" style="max-width: 1200px; margin: 0 auto; padding: 4rem 1.5rem 2rem;">
-
-    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 5rem; align-items: start; width: 100%;">
-
-        <!-- COLONNA 1 -->
-        <div style="text-align: left;">
-            <h3 style="font-family: 'Lato', sans-serif; color: white; font-size: 1.00rem; font-weight: 700; margin: 0 0 2rem 0; text-align: left;">
-                FONDAZIONE BOSCACCI ETS
-            </h3>
-
-            <p style="color: white; font-size: 0.75rem; line-height: 1.05; text-align: left; margin: 0;">
-                Sede legale Via Carlo Noè 45<br>
-                Gallarate (VA)<br><br>
-                C.F. 03800470126<br>
-                P.IVA 04096960127<br><br>
-                Repertorio RUNTS: 152268<br><br>
-                R.O.C. n° 44335<br><br>
-                Accreditamento Min.Difesa n° PDI-2026-000070
-</p>
-         <p style="margin-top:1rem; font-size:0.75rem;">
-    <a href="privacy.html" style="color:white; text-decoration:none;">
-        Privacy Policy
-    </a>
-    <span style="color:white;"> · </span>
-    <a href="cookie-policy.html" style="color:white; text-decoration:none;">
-        Cookie Policy
-    </a>
-</p>
-        </div>
-
-        <!-- COLONNA 2 -->
-        <div style="text-align: left;">
-            <h3 style="font-family: 'Lato', sans-serif; color: white; font-size: 1.00rem; font-weight: 700; margin: 0 0 1rem 0; text-align: left;">
-    Editore di DYNAMES
-</h3>
-</p>
-            <h3 style="font-family: 'Lato', sans-serif; color: white; font-size: 1.00rem; font-weight: 700; margin: 0 0 2rem 0; text-align: left;">
-                Dati Registrazione
-            <p style="color: white; font-size: 0.75rem; line-height: 1.05; text-align: left; margin: 0;">
-                Reg. Trib. di Busto Arsizio<br>
-                N. 01/2026 del 25 febbraio 2026
-            <p style="color: white; font-size: 0.75rem; line-height: 1.05; text-align: left; margin-top: 0.4rem;">
-
-            <h3 style="font-family: 'Lato', sans-serif; color: white; font-size: 1.00rem; font-weight: 700; margin: 2rem 0 1.2rem 0; text-align: left;">
-                Contatti
-            <p style="font-size: 0.75rem; line-height: 1.05; text-align: left; margin: 0;">
-                <span style="color: #9b8f92; text-transform: uppercase; letter-spacing: 0.08em;">INFO</span><br>
-                <a href="mailto:info@boscacci.it" style="color: white; text-decoration: none;">
-                    info@boscacci.it
-                </a>
-
-            <p style="font-size: 0.75rem; line-height: 1.05; text-align: left; margin-top: 1rem;">
-                <span style="color: #9b8f92; text-transform: uppercase; letter-spacing: 0.08em;">UFFICIO STAMPA</span><br>
-                <a href="mailto:e.panico@boscacci.it" style="color: white; text-decoration: none;">
-                    e.panico@boscacci.it
-                </a>
-            </p>
-        </div>
-
-        <!-- COLONNA 3 -->
-        <div style="text-align: left;">
-            <h3 style="font-family: 'Lato', sans-serif; color: white; font-size: 1.00rem; font-weight: 700; margin: 0 0 2rem 0; text-align: left;">
-                Social
-            <a href="https://www.linkedin.com/company/fondazione-boscacci/posts/?viewAsMember=true"
-               target="_blank"
-               rel="noopener noreferrer"
-               aria-label="LinkedIn Fondazione Boscacci"
-               style="display: inline-block; text-decoration: none;">
-
-                <div style="width: 58px; height: 58px; background: #0A66C2; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: white; font-family: Arial, sans-serif; font-size: 40px; font-weight: bold;">
-                    in
+                    </div>
                 </div>
-            </a>
+
+                <p class="filter-status"
+                   id="filter-status"
+                   role="status"
+                   aria-live="polite"
+                   aria-atomic="true">
+                    4 schede
+                </p>
+
+                <div class="agreement-list" id="agreement-list">
+
+                    <!-- SOCINT -->
+                    <article class="agreement-card"
+                             id="socint"
+                             data-agreement
+                             data-category="protocollo"
+                             aria-labelledby="titolo-socint">
+
+                        <div class="agreement-content">
+
+                            <p class="eyebrow">Protocollo d’intesa</p>
+
+                            <h3 id="titolo-socint">
+                                SOCINT –
+                                Società Italiana di Intelligence
+                            </h3>
+
+                            <p class="agreement-type">
+                                Collaborazione culturale ed editoriale
+                            </p>
+
+                            <p class="agreement-description">
+                                Fondazione Boscacci ETS, attraverso
+                                la testata DYNAMES – Governance di Forze
+                                e Sistemi, e SOCINT hanno avviato
+                                una collaborazione culturale ed editoriale
+                                per promuovere la cultura dell’intelligence,
+                                della sicurezza, della difesa
+                                e della resilienza.
+                            </p>
+
+                            <ul class="topic-list"
+                                aria-label="Ambiti dell’accordo SOCINT">
+                                <li>Intelligence</li>
+                                <li>Sicurezza</li>
+                                <li>Difesa</li>
+                                <li>Resilienza</li>
+                                <li>Editoria</li>
+                            </ul>
+
+                            <details>
+                                <summary>Attività previste dall’accordo</summary>
+
+                                <p>
+                                    L’accordo prevede attività
+                                    di divulgazione e valorizzazione
+                                    di pubblicazioni, ricerche e iniziative
+                                    scientifiche e formative, oltre
+                                    allo sviluppo di iniziative editoriali
+                                    e culturali congiunte sui temi
+                                    di comune interesse.
+                                </p>
+
+                                <p>
+                                    La collaborazione favorisce inoltre
+                                    il dialogo tra studiosi, professionisti,
+                                    istituzioni e operatori del settore.
+                                </p>
+                            </details>
+
+                            <div class="agreement-actions">
+
+                                <a class="text-link"
+                                   href="https://www.socint.org/"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                    Visita SOCINT ↗
+                                </a>
+
+                                <a class="text-link"
+                                   href="progetti.html#dynames">
+                                    DYNAMES →
+                                </a>
+
+                                <a class="text-link"
+                                   href="aree-interesse.html#difesa">
+                                    Focus Difesa →
+                                </a>
+
+                            </div>
+                        </div>
+
+                        <figure class="agreement-visual">
+
+                            <a class="document-link"
+                               href="assets/accordi/protocollo-socint-dynames.png"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               aria-label="Apri l’immagine del protocollo DYNAMES e SOCINT">
+
+                                <img src="assets/accordi/protocollo-socint-dynames.png"
+                                     alt="Protocollo d’intesa DYNAMES e SOCINT"
+                                     class="document-image"
+                                     loading="lazy"
+                                     decoding="async">
+                            </a>
+
+                            <figcaption>
+                                Protocollo d’intesa DYNAMES–SOCINT.
+                                Seleziona l’immagine per aprirla.
+                            </figcaption>
+
+                        </figure>
+
+                    </article>
+
+                    <!-- TOR VERGATA -->
+                    <article class="agreement-card"
+                             id="tor-vergata"
+                             data-agreement
+                             data-category="universita"
+                             aria-labelledby="titolo-tor-vergata">
+
+                        <div class="agreement-content">
+
+                            <p class="eyebrow">Convenzione quadro</p>
+
+                            <h3 id="titolo-tor-vergata">
+                                Università degli Studi di Roma
+                                “Tor Vergata”
+                            </h3>
+
+                            <p class="agreement-type">
+                                Collaborazione scientifica e didattica
+                            </p>
+
+                            <p class="agreement-description">
+                                Fondazione Boscacci ETS, editore di
+                                DYNAMES – Governance di Forze e Sistemi,
+                                e l’Università degli Studi di Roma
+                                “Tor Vergata”, attraverso il Master
+                                di II livello in Defence, Intelligence,
+                                Security and Protection of Human Health,
+                                hanno avviato una collaborazione
+                                scientifica e didattica nei settori
+                                della difesa, della sicurezza
+                                e della protezione della salute
+                                umano-ambientale.
+                            </p>
+
+                            <ul class="topic-list"
+                                aria-label="Ambiti della convenzione Tor Vergata">
+                                <li>Ricerca</li>
+                                <li>Formazione</li>
+                                <li>Difesa e sicurezza</li>
+                                <li>Salute umano-ambientale</li>
+                            </ul>
+
+                            <details>
+                                <summary>Attività previste dalla convenzione</summary>
+
+                                <p>
+                                    La Convenzione prevede
+                                    il coinvolgimento di docenti,
+                                    ricercatori ed esperti, lo scambio
+                                    di materiali scientifici e didattici,
+                                    attività editoriali e divulgative
+                                    congiunte, progetti di ricerca,
+                                    project work e tesi, oltre
+                                    alla possibilità di stage formativi
+                                    per i frequentatori del Master.
+                                </p>
+
+                                <p>
+                                    L’accordo rafforza il rapporto
+                                    tra mondo accademico e competenze
+                                    professionali, favorendo formazione,
+                                    ricerca e confronto interdisciplinare
+                                    sui temi di comune interesse.
+                                </p>
+                            </details>
+
+                            <div class="agreement-actions">
+
+                                <a class="text-link"
+                                   href="aree-interesse.html#ricerca">
+                                    Focus Ricerca →
+                                </a>
+
+                                <a class="text-link"
+                                   href="aree-interesse.html#difesa">
+                                    Focus Difesa →
+                                </a>
+
+                                <a class="text-link"
+                                   href="progetti.html#dynames">
+                                    DYNAMES →
+                                </a>
+
+                            </div>
+                        </div>
+
+                        <figure class="agreement-visual">
+
+                            <a class="document-link"
+                               href="assets/accordi/protocollo-torvergata-dynames.png"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               aria-label="Apri l’immagine della convenzione con Tor Vergata">
+
+                                <img src="assets/accordi/protocollo-torvergata-dynames.png"
+                                     alt="Convenzione tra Università di Roma Tor Vergata e Fondazione Boscacci ETS – DYNAMES"
+                                     class="document-image"
+                                     loading="lazy"
+                                     decoding="async">
+                            </a>
+
+                            <figcaption>
+                                Convenzione quadro di collaborazione
+                                scientifica e didattica.
+                                Seleziona l’immagine per aprirla.
+                            </figcaption>
+
+                        </figure>
+
+                    </article>
+
+                    <!-- IIHL -->
+                    <article class="agreement-card"
+                             id="iihl"
+                             data-agreement
+                             data-category="protocollo"
+                             aria-labelledby="titolo-iihl">
+
+                        <div class="agreement-content">
+
+                            <p class="eyebrow">Memorandum di cooperazione</p>
+
+                            <h3 id="titolo-iihl">
+                                International Institute
+                                of Humanitarian Law – IIHL
+                            </h3>
+
+                            <p class="agreement-type">
+                                Studio, ricerca e formazione
+                                nel diritto internazionale umanitario
+                            </p>
+
+                            <p class="agreement-description">
+                                DYNAMES – Governance di Forze e Sistemi,
+                                rivista e piattaforma editoriale
+                                della Fondazione Boscacci ETS,
+                                e l’Istituto Internazionale di Diritto
+                                Umanitario di Sanremo hanno definito
+                                un Memorandum di Cooperazione
+                                finalizzato a rafforzare le attività
+                                di studio, ricerca, formazione
+                                e diffusione della conoscenza
+                                del diritto internazionale umanitario.
+                            </p>
+
+                            <ul class="topic-list"
+                                aria-label="Ambiti della cooperazione IIHL">
+                                <li>Diritto umanitario</li>
+                                <li>Ricerca</li>
+                                <li>Formazione</li>
+                                <li>Cooperazione internazionale</li>
+                            </ul>
+
+                            <details>
+                                <summary>Attività previste dal memorandum</summary>
+
+                                <p>
+                                    La collaborazione comprende
+                                    attività formative e divulgative
+                                    congiunte, lo scambio e lo sviluppo
+                                    di studi e progetti di ricerca,
+                                    la collaborazione nelle attività
+                                    istituzionali e la partecipazione
+                                    reciproca alle iniziative
+                                    promosse dalle Parti.
+                                </p>
+
+                                <p>
+                                    Il Memorandum prevede inoltre
+                                    la possibilità di organizzare
+                                    congiuntamente corsi di formazione,
+                                    seminari tematici, incontri
+                                    di esperti, conferenze,
+                                    tavole rotonde e altre iniziative
+                                    sui temi di comune interesse.
+                                </p>
+                            </details>
+
+                            <div class="agreement-actions">
+
+                                <a class="text-link"
+                                   href="progetti.html#dynames">
+                                    DYNAMES →
+                                </a>
+
+                                <a class="text-link"
+                                   href="aree-interesse.html#difesa">
+                                    Focus Difesa →
+                                </a>
+
+                                <a class="text-link"
+                                   href="aree-interesse.html#ricerca">
+                                    Focus Ricerca →
+                                </a>
+
+                            </div>
+                        </div>
+
+                        <figure class="agreement-visual">
+
+                            <a class="document-link"
+                               href="assets/accordi/protocollo-iihl-dynames.png"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               aria-label="Apri l’immagine del memorandum IIHL e DYNAMES">
+
+                                <img src="assets/accordi/protocollo-iihl-dynames.png"
+                                     alt="Memorandum di Cooperazione tra IIHL e DYNAMES"
+                                     class="document-image"
+                                     loading="lazy"
+                                     decoding="async">
+                            </a>
+
+                            <figcaption>
+                                Memorandum di Cooperazione IIHL–DYNAMES.
+                                Seleziona l’immagine per aprirla.
+                            </figcaption>
+
+                        </figure>
+
+                    </article>
+
+                    <!-- ELISAN -->
+                    <article class="agreement-card"
+                             id="elisan"
+                             data-agreement
+                             data-category="membership"
+                             aria-labelledby="titolo-elisan">
+
+                        <div class="agreement-content">
+
+                            <p class="eyebrow">
+                                Membership · Network europeo
+                            </p>
+
+                            <h3 id="titolo-elisan">
+                                ELISAN – European Local Inclusion
+                                &amp; Social Action Network
+                            </h3>
+
+                            <p class="agreement-type">
+                                Adesione al network europeo · 2026
+                            </p>
+
+                            <p class="agreement-description">
+                                La Fondazione Boscacci ETS è membro
+                                di ELISAN – European Local Inclusion
+                                &amp; Social Action Network,
+                                rete europea dedicata all’inclusione
+                                locale, all’azione sociale
+                                e alla cooperazione tra istituzioni,
+                                professionisti e organizzazioni
+                                impegnate nelle politiche sociali.
+                            </p>
+
+                            <ul class="topic-list"
+                                aria-label="Ambiti del network ELISAN">
+                                <li>Welfare</li>
+                                <li>Inclusione sociale</li>
+                                <li>Politiche territoriali</li>
+                                <li>Cooperazione europea</li>
+                            </ul>
+
+                            <details>
+                                <summary>Il network e la partecipazione</summary>
+
+                                <p>
+                                    Fondata nel 2008 presso
+                                    il Comitato Europeo delle Regioni,
+                                    ELISAN promuove il confronto,
+                                    lo scambio di esperienze,
+                                    la costruzione di partnership
+                                    e lo sviluppo di iniziative
+                                    dedicate all’inclusione sociale,
+                                    alla solidarietà e alla tutela
+                                    dei diritti fondamentali.
+                                </p>
+
+                                <p>
+                                    L’adesione rafforza la dimensione
+                                    europea della Fondazione
+                                    e il suo impegno sui temi
+                                    del welfare, dell’inclusione
+                                    sociale, della cooperazione
+                                    istituzionale e delle politiche
+                                    territoriali.
+                                </p>
+                            </details>
+
+                            <div class="membership-note">
+                                <p>
+                                    <strong>Membership dal 2026.</strong><br>
+                                    Il certificato di adesione è stato
+                                    rilasciato a Valencia
+                                    il 16 giugno 2026.
+                                </p>
+                            </div>
+
+                            <div class="agreement-actions">
+
+                                <a class="text-link"
+                                   href="https://www.elisan.eu/"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                    Visita ELISAN ↗
+                                </a>
+
+                                <a class="text-link"
+                                   href="aree-interesse.html#istituzioni">
+                                    Focus Istituzioni →
+                                </a>
+
+                                <a class="text-link"
+                                   href="aree-interesse.html#salute">
+                                    Focus Salute →
+                                </a>
+
+                            </div>
+                        </div>
+
+                        <figure class="agreement-visual">
+
+                            <a class="document-link"
+                               href="assets/elisan-membership-2026.png"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               aria-label="Apri il certificato di adesione a ELISAN">
+
+                                <img src="assets/elisan-membership-2026.png"
+                                     alt="Certificato di adesione della Fondazione Boscacci ETS a ELISAN"
+                                     class="document-image"
+                                     loading="lazy"
+                                     decoding="async">
+                            </a>
+
+                            <figcaption>
+                                Certificato di adesione ELISAN · 2026.
+                                Seleziona l’immagine per aprirla.
+                            </figcaption>
+
+                        </figure>
+
+                    </article>
+
+                </div>
+
+                <p class="empty-message"
+                   id="empty-message"
+                   hidden>
+                    Nessuna scheda corrisponde al filtro selezionato.
+                    Seleziona “Tutti” per consultare l’intero elenco.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- COLLABORARE -->
+        <section class="cta-band">
+            <div class="container">
+
+                <div>
+                    <p class="eyebrow">Cooperazione e progettualità</p>
+                    <h2>Costruiamo nuove collaborazioni.</h2>
+                    <p>
+                        Ricerca, formazione, produzione editoriale
+                        e iniziative di confronto istituzionale.
+                    </p>
+                </div>
+
+                <a class="button light" href="collaborare.html">
+                    Collabora con la Fondazione →
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="container footer-grid">
+
+            <div>
+                <h2>Fondazione Boscacci ETS</h2>
+                <p>
+                    Sede legale: Via Carlo Noè 45<br>
+                    Gallarate (VA)<br>
+                    C.F. 03800470126<br>
+                    P.IVA 04096960127<br>
+                    Repertorio RUNTS: 152268
+                </p>
+                <p>
+                    R.O.C. n. 44335<br>
+                    Accreditamento Ministero della Difesa<br>
+                    n. PDI-2026-000070
+                </p>
+            </div>
+
+            <div>
+                <h2>Editoria</h2>
+                <p>
+                    Editore di DYNAMES<br>
+                    Governance di Forze e Sistemi
+                </p>
+                <p>
+                    Reg. Trib. di Busto Arsizio<br>
+                    N. 01/2026 del 25 febbraio 2026
+                </p>
+            </div>
+
+            <div>
+                <h2>Contatti</h2>
+                <p>
+                    Informazioni<br>
+                    <a href="mailto:info@boscacci.it">
+                        info@boscacci.it
+                    </a>
+                </p>
+                <p>
+                    Ufficio stampa<br>
+                    <a href="mailto:e.panico@boscacci.it">
+                        e.panico@boscacci.it
+                    </a>
+                </p>
+            </div>
+
+            <div>
+                <h2>Seguici</h2>
+
+                <a class="text-link"
+                   href="https://www.linkedin.com/company/fondazione-boscacci/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    LinkedIn ↗
+                </a>
+
+                <p>
+                    <a class="text-link" href="privacy.html">
+                        Privacy Policy
+                    </a><br>
+                    <a class="text-link" href="cookie-policy.html">
+                        Cookie Policy
+                    </a>
+                </p>
+
+                <img src="assets/logo_bianco.svg"
+                     alt="Fondazione Boscacci ETS"
+                     class="footer-logo"
+                     loading="lazy"
+                     decoding="async">
+            </div>
+
         </div>
 
-    </div>
+        <div class="container footer-bottom">
+            © <span data-year>2026</span>
+            Fondazione Boscacci ETS.
+            Tutti i diritti riservati.
+        </div>
 
-    <!-- LOGO FONDAZIONE -->
-    <div style="text-align: center; margin-top: 4rem;">
-        <img src="assets/logo_bianco.svg"
-             alt="Fondazione Boscacci ETS"
-             style="height: 90px; width: auto;">
-    </div>
+    </footer>
 
-    <!-- COPYRIGHT -->
-    <p style="color: white; text-align: center; margin-top: 1.5rem; font-size: 0.8rem;">
-        &copy; 2026 Fondazione Boscacci ETS. Tutti i diritti riservati.
-    </p>
-
-</div>
-</footer>
-
+    <!-- MENU E FILTRI -->
     <script>
-        document.getElementById('menuToggle').addEventListener('click', function() {
-            document.getElementById('mainNav').classList.toggle('active');
-        });
-</script>
+        "use strict";
 
-<script data-goatcounter="https://fabioboscacci.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+        document.documentElement.classList.add("js");
+
+        /* MENU MOBILE */
+
+        const menuToggle = document.querySelector(".menu-toggle");
+        const mainNav = document.querySelector("#main-nav");
+
+        if (menuToggle && mainNav) {
+            menuToggle.hidden = false;
+
+            const closeMenu = () => {
+                mainNav.classList.remove("open");
+                menuToggle.setAttribute("aria-expanded", "false");
+            };
+
+            menuToggle.addEventListener("click", () => {
+                const isOpen =
+                    menuToggle.getAttribute("aria-expanded") !== "true";
+
+                menuToggle.setAttribute("aria-expanded", String(isOpen));
+                mainNav.classList.toggle("open", isOpen);
+            });
+
+            document.addEventListener("keydown", event => {
+                if (
+                    event.key === "Escape" &&
+                    mainNav.classList.contains("open")
+                ) {
+                    closeMenu();
+                    menuToggle.focus();
+                }
+            });
+
+            mainNav.addEventListener("click", event => {
+                if (event.target.closest("a")) {
+                    closeMenu();
+                }
+            });
+        }
+
+        /* ANNO NEL FOOTER */
+
+        document.querySelectorAll("[data-year]").forEach(element => {
+            element.textContent = String(new Date().getFullYear());
+        });
+
+        /* FILTRI ACCORDI */
+
+        const tools = document.querySelector("#agreement-tools");
+        const statusText = document.querySelector("#filter-status");
+        const emptyMessage = document.querySelector("#empty-message");
+
+        const filterButtons = [
+            ...document.querySelectorAll("[data-agreement-filter]")
+        ];
+
+        const agreementCards = [
+            ...document.querySelectorAll("[data-agreement]")
+        ];
+
+        let activeFilter = "all";
+
+        const applyFilters = () => {
+            let visibleCount = 0;
+
+            agreementCards.forEach(card => {
+                const visible =
+                    activeFilter === "all" ||
+                    card.dataset.category === activeFilter;
+
+                card.hidden = !visible;
+
+                if (visible) {
+                    visibleCount++;
+                }
+            });
+
+            filterButtons.forEach(button => {
+                button.setAttribute(
+                    "aria-pressed",
+                    String(
+                        button.dataset.agreementFilter === activeFilter
+                    )
+                );
+            });
+
+            statusText.textContent =
+                visibleCount +
+                (
+                    visibleCount === 1
+                        ? " scheda visualizzata"
+                        : " schede visualizzate"
+                );
+
+            emptyMessage.hidden = visibleCount !== 0;
+        };
+
+        if (tools && statusText && emptyMessage) {
+            filterButtons.forEach(button => {
+                button.addEventListener("click", () => {
+                    activeFilter = button.dataset.agreementFilter;
+                    applyFilters();
+                });
+            });
+
+            const requestedFilter =
+                new URLSearchParams(window.location.search).get("f");
+
+            if (
+                filterButtons.some(button =>
+                    button.dataset.agreementFilter === requestedFilter
+                )
+            ) {
+                activeFilter = requestedFilter;
+            }
+
+            tools.hidden = false;
+            applyFilters();
+
+            /* Mantiene accessibili le schede raggiunte tramite ancoraggio. */
+
+            const revealLinkedAgreement = () => {
+                const id = window.location.hash.slice(1);
+
+                const linkedCard = agreementCards.find(card =>
+                    card.id === id
+                );
+
+                if (!linkedCard || !linkedCard.hidden) {
+                    return;
+                }
+
+                activeFilter = "all";
+                applyFilters();
+
+                linkedCard.scrollIntoView({
+                    behavior: "auto",
+                    block: "start"
+                });
+            };
+
+            revealLinkedAgreement();
+
+            window.addEventListener(
+                "hashchange",
+                revealLinkedAgreement
+            );
+        }
+    </script>
+
+    <!-- STATISTICHE GOATCOUNTER -->
+    <script
+        data-goatcounter="https://fabioboscacci.goatcounter.com/count"
+        async
+        src="https://gc.zgo.at/count.js">
+    </script>
 
 </body>
 </html>

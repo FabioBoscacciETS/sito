@@ -1041,21 +1041,536 @@
 
     <main id="contenuto">
 
-        <!-- HERO -->
-        <section class="page-hero">
-            <div class="container">
+        <!-- VETRINA DELLE PUBBLICAZIONI -->
+<style>
+#vetrina-pubblicazioni {
+    background: #fdfcf8;
+    color: #2a2825;
+    padding: 38px 0 30px;
+    overflow: hidden;
+    border-bottom: 1px solid #e6e2d8;
+}
 
-                <p class="eyebrow">Analisi, policy e ricerca</p>
-                <h1>Pubblicazioni</h1>
+#vetrina-pubblicazioni [hidden] {
+    display: none !important;
+}
 
-                <p class="lead">
-                    Documenti di analisi e approfondimento
-                    per alimentare un confronto informato
-                    sui principali temi di interesse pubblico.
-                </p>
+#vetrina-pubblicazioni .vetrina-container {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+    padding: 0 24px;
+    box-sizing: border-box;
+}
 
-            </div>
-        </section>
+#vetrina-pubblicazioni .vetrina-intestazione {
+    text-align: center;
+}
+
+#vetrina-pubblicazioni .vetrina-eyebrow {
+    margin: 0 0 8px;
+    color: #7d1c2b;
+    font: 700 12px/1.5 Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#vetrina-pubblicazioni h1 {
+    margin: 0;
+    color: #7d1c2b;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(34px, 5vw, 48px);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+#vetrina-pubblicazioni .vetrina-intro {
+    max-width: 650px;
+    margin: 14px auto 0;
+    color: #514b49;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#vetrina-pubblicazioni .vetrina-scena {
+    position: relative;
+    height: 430px;
+    margin-top: 16px;
+    perspective: 1100px;
+    overflow: hidden;
+    touch-action: pan-y;
+}
+
+#vetrina-pubblicazioni .vetrina-copertina {
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    display: block;
+    width: 260px;
+    aspect-ratio: 210 / 297;
+    background: #142d52;
+    box-shadow: 0 18px 34px rgba(16, 36, 71, 0.24);
+    transform-origin: center;
+    text-decoration: none;
+    transition:
+        transform 600ms cubic-bezier(0.22, 0.68, 0.18, 1),
+        opacity 450ms ease;
+}
+
+#vetrina-pubblicazioni .vetrina-copertina img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    object-fit: contain;
+    background: #142d52;
+}
+
+#vetrina-pubblicazioni .vetrina-copertina:focus-visible {
+    outline: 3px solid #cfa861;
+    outline-offset: 6px;
+}
+
+#vetrina-pubblicazioni .vetrina-dettagli {
+    min-height: 90px;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#vetrina-pubblicazioni .vetrina-formato {
+    display: block;
+    color: #69605d;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+#vetrina-pubblicazioni .vetrina-titolo {
+    margin: 8px 0 0;
+    color: #4a0d17;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(22px, 3vw, 28px);
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+#vetrina-pubblicazioni .vetrina-comandi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    margin-top: 12px;
+}
+
+#vetrina-pubblicazioni .vetrina-freccia {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: 1px solid #d7cdc2;
+    border-radius: 50%;
+    background: #fdfcf8;
+    color: #7d1c2b;
+    font: 25px/1 Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    transition: background 180ms ease, color 180ms ease;
+}
+
+#vetrina-pubblicazioni .vetrina-freccia:hover:not(:disabled) {
+    background: #7d1c2b;
+    color: #ffffff;
+}
+
+#vetrina-pubblicazioni .vetrina-freccia:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+#vetrina-pubblicazioni .vetrina-contatore {
+    min-width: 48px;
+    color: #514b49;
+    font-size: 14px;
+    font-variant-numeric: tabular-nums;
+    text-align: center;
+}
+
+#vetrina-pubblicazioni .vetrina-suggerimento {
+    margin: 16px 0 0;
+    color: #69605d;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+#vetrina-pubblicazioni .vetrina-nota-mobile {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    #vetrina-pubblicazioni {
+        padding: 28px 0 24px;
+    }
+
+    #vetrina-pubblicazioni .vetrina-container {
+        padding: 0 16px;
+    }
+
+    #vetrina-pubblicazioni .vetrina-intro {
+        font-size: 15px;
+    }
+
+    #vetrina-pubblicazioni .vetrina-scena {
+        height: 345px;
+        margin-top: 12px;
+    }
+
+    #vetrina-pubblicazioni .vetrina-copertina {
+        top: 22px;
+        width: 205px;
+    }
+
+    #vetrina-pubblicazioni .vetrina-dettagli {
+        min-height: 100px;
+    }
+}
+
+@media (hover: none) {
+    #vetrina-pubblicazioni .vetrina-nota-desktop {
+        display: none;
+    }
+
+    #vetrina-pubblicazioni .vetrina-nota-mobile {
+        display: inline;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #vetrina-pubblicazioni .vetrina-copertina,
+    #vetrina-pubblicazioni .vetrina-freccia {
+        transition: none;
+    }
+}
+</style>
+
+<section id="vetrina-pubblicazioni" aria-labelledby="titolo-vetrina">
+    <div class="vetrina-container">
+
+        <div class="vetrina-intestazione">
+            <p class="vetrina-eyebrow">Fondazione Boscacci ETS</p>
+            <h1 id="titolo-vetrina">Pubblicazioni</h1>
+
+            <p class="vetrina-intro">
+                Analisi, policy e ricerca per un confronto informato
+                sui principali temi di interesse pubblico.
+            </p>
+        </div>
+
+        <div
+            class="vetrina-scena"
+            role="region"
+            aria-label="Vetrina delle copertine"
+            aria-roledescription="carosello"
+        ></div>
+
+        <div class="vetrina-dettagli" aria-live="polite">
+            <span class="vetrina-formato"></span>
+            <h2 class="vetrina-titolo"></h2>
+        </div>
+
+        <div class="vetrina-comandi" hidden>
+            <button
+                class="vetrina-freccia vetrina-precedente"
+                type="button"
+                aria-label="Pubblicazione precedente"
+            >←</button>
+
+            <span class="vetrina-contatore"></span>
+
+            <button
+                class="vetrina-freccia vetrina-successiva"
+                type="button"
+                aria-label="Pubblicazione successiva"
+            >→</button>
+        </div>
+
+        <p class="vetrina-suggerimento" hidden>
+            <span class="vetrina-nota-desktop">
+                Scorri sulle copertine oppure usa le frecce.
+                Clicca sulla copertina centrale per aprire il PDF.
+            </span>
+            <span class="vetrina-nota-mobile">
+                Scorri le copertine lateralmente oppure usa le frecce.
+                Tocca la copertina centrale per aprire il PDF.
+            </span>
+        </p>
+
+        <noscript>
+            <p>
+                Consulta tutte le pubblicazioni nel catalogo qui sotto.
+            </p>
+        </noscript>
+
+    </div>
+</section>
+
+<script>
+(function () {
+    "use strict";
+
+    const vetrina = document.getElementById("vetrina-pubblicazioni");
+    if (!vetrina) return;
+
+    const pubblicazioni = [
+        {
+            titolo: "Il costo della salute",
+            formato: "Policy Report",
+            copertina: "assets/cover-costo-salute.png",
+            pdf: "assets/Policy_Report_01_Il_Costo_della_Salute_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
+        },
+        {
+            titolo: "FVG Smoke Free",
+            formato: "Policy Report",
+            copertina: "assets/cover-fvg-smoke-free.png",
+            pdf: "assets/Policy_Report_02_FVG_Smoke_Free_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
+        },
+        {
+            titolo: "Scuola ed epilessia",
+            formato: "Policy Brief",
+            copertina: "assets/cover-scuola-epilessia.png",
+            pdf: "assets/Policy_Brief_01_Scuola_ed_Epilessia_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
+        },
+        {
+            titolo: "Contrabbando",
+            formato: "White Paper",
+            copertina: "assets/cover-contrabbando.png",
+            pdf: "assets/White_Paper_01_Contrabbando_Fondazione_Boscacci_ETS.pdf"
+        },
+        {
+            titolo: "Giustizia, diplomazia e interesse nazionale",
+            formato: "White Paper",
+            copertina: "assets/cover-italia-egitto-regeni.png",
+            pdf: "assets/White_Paper_02_Giustizia_Diplomazia_Interesse_Nazionale_Fondazione_Boscacci_ETS_DEFINITIVO.pdf"
+        },
+        {
+            titolo: "Il farmaco come infrastruttura strategica",
+            formato: "Position Paper",
+            copertina: "assets/cover-farmaco-infrastruttura.png",
+            pdf: "assets/Position_Paper_01_Farmaco_Infrastruttura_Strategica_Fondazione_Boscacci_ETS.pdf"
+        },
+        {
+            titolo: "Prevenzione cardiovascolare e Safe Hearts Plan",
+            formato: "Policy Report",
+            copertina: "assets/cover-safe-hearts-plan.png",
+            pdf: "assets/Policy_Report_03_Prevenzione_Cardiovascolare_Safe_Hearts_Plan_Fondazione_Boscacci_ETS.pdf"
+        }
+    ];
+
+    const scena = vetrina.querySelector(".vetrina-scena");
+    const formato = vetrina.querySelector(".vetrina-formato");
+    const titolo = vetrina.querySelector(".vetrina-titolo");
+    const contatore = vetrina.querySelector(".vetrina-contatore");
+    const precedente = vetrina.querySelector(".vetrina-precedente");
+    const successiva = vetrina.querySelector(".vetrina-successiva");
+
+    let posizione = 0;
+    let bloccoScroll = 0;
+    let inizioTocco = null;
+    let ignoraClickFino = 0;
+
+    const copertine = pubblicazioni.map(function (pubblicazione, indice) {
+        const link = document.createElement("a");
+        link.className = "vetrina-copertina";
+        link.href = pubblicazione.pdf;
+        link.target = "_blank";
+        link.rel = "noopener";
+        link.setAttribute(
+            "aria-label",
+            "Apri il PDF: " + pubblicazione.titolo + " (nuova scheda)"
+        );
+
+        const immagine = document.createElement("img");
+        immagine.src = pubblicazione.copertina;
+        immagine.alt = "Copertina: " + pubblicazione.titolo;
+        immagine.width = 420;
+        immagine.height = 594;
+        immagine.decoding = "async";
+        link.appendChild(immagine);
+
+        link.addEventListener("click", function (evento) {
+            if (Date.now() < ignoraClickFino) {
+                evento.preventDefault();
+                return;
+            }
+
+            if (indice !== posizione) {
+                evento.preventDefault();
+                seleziona(indice);
+            }
+        });
+
+        scena.appendChild(link);
+        return link;
+    });
+
+    function aggiorna() {
+        const distanza = Math.min(230, scena.clientWidth * 0.36);
+
+        copertine.forEach(function (copertina, indice) {
+            const differenza = indice - posizione;
+            const lontananza = Math.abs(differenza);
+            const rotazione =
+                differenza === 0 ? 0 : differenza < 0 ? 30 : -30;
+
+            copertina.style.transform =
+                "translateX(calc(-50% + " +
+                (differenza * distanza) +
+                "px)) translateZ(" +
+                (-lontananza * 165) +
+                "px) rotateY(" +
+                rotazione +
+                "deg)";
+
+            copertina.style.opacity =
+                lontananza > 2 ? "0" : differenza === 0 ? "1" : "0.65";
+
+            copertina.style.zIndex = String(10 - lontananza);
+            copertina.style.pointerEvents =
+                lontananza > 2 ? "none" : "auto";
+
+            copertina.tabIndex = differenza === 0 ? 0 : -1;
+            copertina.setAttribute(
+                "aria-hidden",
+                differenza === 0 ? "false" : "true"
+            );
+        });
+
+        formato.textContent = pubblicazioni[posizione].formato;
+        titolo.textContent = pubblicazioni[posizione].titolo;
+        contatore.textContent =
+            (posizione + 1) + " / " + pubblicazioni.length;
+
+        precedente.disabled = posizione === 0;
+        successiva.disabled = posizione === pubblicazioni.length - 1;
+    }
+
+    function seleziona(indice) {
+        const nuovaPosizione = Math.max(
+            0,
+            Math.min(pubblicazioni.length - 1, indice)
+        );
+
+        if (nuovaPosizione === posizione) return;
+
+        const focusSullaCopertina =
+            copertine.includes(document.activeElement);
+
+        posizione = nuovaPosizione;
+        aggiorna();
+
+        if (focusSullaCopertina) {
+            copertine[posizione].focus({ preventScroll: true });
+        }
+    }
+
+    precedente.addEventListener("click", function () {
+        seleziona(posizione - 1);
+    });
+
+    successiva.addEventListener("click", function () {
+        seleziona(posizione + 1);
+    });
+
+    scena.addEventListener("wheel", function (evento) {
+        if (evento.ctrlKey) return;
+
+        const delta =
+            Math.abs(evento.deltaX) > Math.abs(evento.deltaY)
+                ? evento.deltaX
+                : evento.deltaY;
+
+        if (Math.abs(delta) < 3) return;
+
+        const direzione = delta > 0 ? 1 : -1;
+        const adesso = Date.now();
+
+        if (adesso < bloccoScroll) {
+            evento.preventDefault();
+            return;
+        }
+
+        const oltreInizio = posizione === 0 && direzione < 0;
+        const oltreFine =
+            posizione === pubblicazioni.length - 1 && direzione > 0;
+
+        if (oltreInizio || oltreFine) return;
+
+        evento.preventDefault();
+        bloccoScroll = adesso + 700;
+        seleziona(posizione + direzione);
+    }, { passive: false });
+
+    scena.addEventListener("touchstart", function (evento) {
+        if (evento.touches.length !== 1) {
+            inizioTocco = null;
+            return;
+        }
+
+        inizioTocco = {
+            x: evento.touches[0].clientX,
+            y: evento.touches[0].clientY
+        };
+    }, { passive: true });
+
+    scena.addEventListener("touchend", function (evento) {
+        if (!inizioTocco) return;
+
+        const tocco = evento.changedTouches[0];
+        const distanzaX = inizioTocco.x - tocco.clientX;
+        const distanzaY = inizioTocco.y - tocco.clientY;
+
+        if (
+            Math.abs(distanzaX) > 40 &&
+            Math.abs(distanzaX) > Math.abs(distanzaY)
+        ) {
+            ignoraClickFino = Date.now() + 500;
+            seleziona(posizione + (distanzaX > 0 ? 1 : -1));
+        }
+
+        inizioTocco = null;
+    }, { passive: true });
+
+    scena.addEventListener("touchcancel", function () {
+        inizioTocco = null;
+    }, { passive: true });
+
+    vetrina.addEventListener("keydown", function (evento) {
+        if (evento.key === "ArrowRight") {
+            evento.preventDefault();
+            seleziona(posizione + 1);
+        } else if (evento.key === "ArrowLeft") {
+            evento.preventDefault();
+            seleziona(posizione - 1);
+        }
+    });
+
+    if ("ResizeObserver" in window) {
+        const osservatore = new ResizeObserver(aggiorna);
+        osservatore.observe(scena);
+    } else {
+        window.addEventListener("resize", aggiorna);
+    }
+
+    vetrina.querySelector(".vetrina-comandi").hidden = false;
+    vetrina.querySelector(".vetrina-suggerimento").hidden = false;
+
+    aggiorna();
+})();
+</script>
+<!-- FINE VETRINA DELLE PUBBLICAZIONI -->
 
         <!-- IN EVIDENZA -->
         <section class="section alt"

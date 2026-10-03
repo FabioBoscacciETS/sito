@@ -1,254 +1,640 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Privacy Policy | Fondazione Boscacci ETS</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="description"
+          content="Informativa sul trattamento dei dati personali degli utenti del sito della Fondazione Boscacci ETS.">
+
+    <link rel="canonical" href="https://www.boscacci.it/privacy.html">
+    <link rel="icon" href="assets/logo_grafico.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:site_name" content="Fondazione Boscacci ETS">
+    <meta property="og:title" content="Privacy Policy | Fondazione Boscacci ETS">
+    <meta property="og:description"
+          content="Informativa sul trattamento dei dati personali.">
+    <meta property="og:url" content="https://www.boscacci.it/privacy.html">
+    <meta property="og:image"
+          content="https://www.boscacci.it/assets/logo_boscacci_rosso.png">
 
     <style>
-        .privacy-page {
-            max-width: 950px;
-            margin: 0 auto;
-            padding: 4rem 1.5rem 6rem;
+        :root {
+            --primary: #7d1c2b;
+            --dark: #4a0d17;
+            --accent: #cfa861;
+            --paper: #fdfcf8;
+            --ink: #2a2825;
+            --body: #514b49;
+            --line: #e6e2d8;
+            --serif: Georgia, "Times New Roman", serif;
+            --sans: Arial, Helvetica, sans-serif;
         }
 
-        .privacy-page h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
-            margin-bottom: 1rem;
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            margin: 0;
+            background: #ffffff;
+            color: var(--body);
+            font-family: var(--sans);
+            font-size: 16px;
+            line-height: 1.7;
         }
 
-        .privacy-page h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            margin-top: 2.5rem;
-            margin-bottom: 0.8rem;
-        }
-
-        .privacy-page p,
-        .privacy-page li {
-            line-height: 1.75;
-        }
-
-        .privacy-page ul {
-            padding-left: 1.4rem;
-        }
-
-        .privacy-meta {
+        img { display: block; max-width: 100%; height: auto; }
+        a {
             color: var(--primary);
-            font-weight: 700;
-            font-size: 0.8rem;
-            letter-spacing: 0.08em;
+            text-underline-offset: 4px;
+        }
+        button { font: inherit; cursor: pointer; }
+        [hidden] { display: none !important; }
+        :focus-visible {
+            outline: 3px solid var(--accent);
+            outline-offset: 5px;
+        }
+
+        h1, h2 {
+            margin: 0 0 1.1rem;
+            font-family: var(--serif);
+            font-weight: 400;
+            line-height: 1.2;
+            color: var(--primary);
+        }
+        h1 { font-size: clamp(2.3rem, 4.3vw, 4.2rem); }
+        p { margin: 0 0 1.1rem; }
+        p:last-child { margin-bottom: 0; }
+
+        .container {
+            width: min(1380px, calc(100% - 96px));
+            margin-inline: auto;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 1rem;
+            z-index: 100;
+            padding: 0.6rem 1rem;
+            background: #ffffff;
+        }
+        .skip-link:focus { top: 1rem; }
+
+        .site-header {
+            background: #ffffff;
+            border-bottom: 1px solid var(--line);
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            min-height: 116px;
+        }
+        .brand { display: block; flex: 0 0 225px; }
+        .brand-logo {
+            width: 225px;
+            height: 105px;
+            object-fit: contain;
+        }
+        #main-nav {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            gap: clamp(0.7rem, 1.5vw, 1.5rem);
+        }
+        #main-nav a {
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+            color: var(--ink);
+            font-size: 0.84rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        #main-nav a:hover {
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+        .menu-toggle {
+            display: none;
+            padding: 0.5rem 0.85rem;
+            border: 1px solid var(--line);
+            background: #ffffff;
+            color: var(--primary);
+        }
+
+        .page-hero {
+            padding: 55px 0 58px;
+            border-bottom: 5px solid var(--accent);
+            background: var(--primary);
+            color: #ffffff;
+        }
+        .page-hero h1 { color: #ffffff; }
+        .eyebrow {
+            margin: 0 0 0.85rem;
+            font-size: 0.73rem;
+            font-weight: bold;
+            letter-spacing: 0.14em;
             text-transform: uppercase;
-            margin-bottom: 0.7rem;
+        }
+        .page-hero .eyebrow { color: #f2d5a2; }
+        .lead {
+            font-family: var(--serif);
+            font-size: 1.15rem;
+            font-style: italic;
+            color: #fff5f2;
         }
 
-        .privacy-box {
+        .legal {
+            width: min(960px, calc(100% - 96px));
+            margin-inline: auto;
+            padding: 65px 0;
+        }
+        .legal h2 {
+            margin: 2.5rem 0 1rem;
+            font-size: 1.65rem;
+            line-height: 1.35;
+        }
+        .legal ul { padding-left: 1.3rem; }
+        .legal li { margin-bottom: 0.5rem; }
+        .legal-box {
             margin-top: 2rem;
-            padding: 1.5rem;
-            background: #f7f5f0;
-            border-left: 4px solid var(--primary);
+            padding: 22px;
+            border-left: 3px solid var(--accent);
+            background: var(--paper);
+            font-size: 0.9rem;
         }
 
-        @media (max-width: 768px) {
-            .privacy-page h1 {
-                font-size: 2.1rem;
+        .site-footer {
+            padding: 48px 0 20px;
+            background: var(--dark);
+            color: #f4e8e8;
+            font-size: 0.8rem;
+            line-height: 1.65;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 1.15fr 1fr 0.8fr;
+            gap: 35px;
+        }
+        .site-footer h2 {
+            margin-bottom: 1rem;
+            color: #ffffff;
+            font-family: var(--sans);
+            font-size: 0.83rem;
+            font-weight: bold;
+            line-height: 1.4;
+        }
+        .site-footer p { margin-bottom: 1rem; }
+        .site-footer a {
+            color: #f4e8e8;
+            font-size: 0.8rem;
+        }
+        .footer-logo {
+            width: 125px;
+            height: 80px;
+            margin-top: 1rem;
+            object-fit: contain;
+        }
+        .footer-bottom {
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 1px solid #89535a;
+            font-size: 0.72rem;
+        }
+
+        @media (min-width: 1700px) {
+            .container { width: min(1460px, calc(100% - 120px)); }
+        }
+
+        @media (max-width: 1100px) {
+            .container { width: calc(100% - 56px); }
+            .header-inner { gap: 20px; }
+            .brand { flex-basis: 180px; }
+            .brand-logo { width: 180px; height: 95px; }
+            #main-nav { gap: 14px; }
+            #main-nav a { font-size: 0.77rem; }
+            .footer-grid { gap: 20px; }
+        }
+
+        @media (max-width: 800px) {
+            .container, .legal { width: calc(100% - 36px); }
+            .header-inner {
+                flex-wrap: wrap;
+                min-height: 95px;
+                padding-block: 8px;
             }
+            .brand { flex-basis: 170px; }
+            .brand-logo { width: 170px; height: 80px; }
+            .menu-toggle:not([hidden]) { display: block; }
+            .js #main-nav {
+                display: none;
+                flex-basis: 100%;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                padding-bottom: 12px;
+            }
+            .js #main-nav.open { display: flex; }
+            #main-nav {
+                flex-basis: 100%;
+                justify-content: flex-start;
+            }
+            #main-nav a { padding: 10px 4px; font-size: 0.9rem; }
+            .page-hero { padding: 38px 0 42px; }
+            .legal { padding: 45px 0; }
+            .footer-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 28px;
+            }
+        }
+
+        @media (max-width: 540px) {
+            h1 { font-size: 2.2rem; }
+            .legal h2 { font-size: 1.45rem; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
         }
     </style>
 </head>
 
 <body>
 
-<main class="privacy-page">
+    <a class="skip-link" href="#contenuto">Vai al contenuto</a>
 
-    <div class="privacy-meta">Informativa privacy</div>
+    <header class="site-header">
+        <div class="container header-inner">
 
-    <h1>Privacy Policy</h1>
+            <a class="brand" href="index.html"
+               aria-label="Fondazione Boscacci ETS, Home">
+                <img src="assets/logo_boscacci_rosso.png"
+                     alt="Fondazione Boscacci ETS"
+                     class="brand-logo"
+                     loading="eager" decoding="async">
+            </a>
 
-    <p>
-        La presente informativa descrive le modalità di trattamento dei dati personali
-        degli utenti che consultano il sito <strong>www.boscacci.it</strong>,
-        ai sensi del Regolamento (UE) 2016/679 (“GDPR”) e della normativa nazionale
-        applicabile in materia di protezione dei dati personali.
-    </p>
+            <button class="menu-toggle" type="button"
+                    aria-expanded="false"
+                    aria-controls="main-nav" hidden>
+                Menu <span aria-hidden="true">☰</span>
+            </button>
 
-    <h2>1. Titolare del trattamento</h2>
+            <nav id="main-nav" aria-label="Navigazione principale">
+                <a href="index.html">Home</a>
+                <a href="people.html">People</a>
+                <a href="aree-interesse.html">Focus</a>
+                <a href="eventi.html">Eventi</a>
+                <a href="progetti.html">Progetti</a>
+                <a href="pubblicazioni.html">Pubblicazioni</a>
+                <a href="accordi.html">Accordi</a>
+                <a href="collaborare.html">Collaborare</a>
+            </nav>
 
-    <p>
-        Il Titolare del trattamento è:
-    </p>
+        </div>
+    </header>
 
-    <p>
-        <strong>Fondazione Boscacci ETS</strong><br>
-        Via Carlo Noè 45<br>
-        Gallarate (VA)<br>
-        C.F. 03800470126<br>
-        P.IVA 04096960127<br>
-        Repertorio RUNTS n. 152268
-    </p>
+    <main id="contenuto">
 
-    <p>
-        Email:
-        <a href="mailto:info@boscacci.it">info@boscacci.it</a>
-    </p>
+        <section class="page-hero">
+            <div class="container">
+                <p class="eyebrow">Informative</p>
+                <h1>Privacy Policy</h1>
+                <p class="lead">
+                    Informativa sul trattamento dei dati personali.
+                </p>
+            </div>
+        </section>
 
-    <h2>2. Dati trattati durante la navigazione</h2>
+        <div class="legal">
 
-    <p>
-        Durante la normale consultazione del sito, i sistemi informatici e i servizi
-        utilizzati per il suo funzionamento possono trattare alcuni dati tecnici
-        necessari alla trasmissione delle informazioni attraverso Internet.
-    </p>
+            <p>
+                La presente informativa descrive le modalità di trattamento
+                dei dati personali degli utenti che consultano il sito
+                <strong>www.boscacci.it</strong>, ai sensi del Regolamento
+                (UE) 2016/679 (“GDPR”) e della normativa nazionale
+                applicabile in materia di protezione dei dati personali.
+            </p>
 
-    <p>
-        Tali informazioni possono comprendere, ad esempio, dati relativi alla richiesta
-        effettuata dal browser, alla pagina visitata, alla data e all’ora della richiesta
-        e altre informazioni tecniche necessarie al corretto funzionamento e alla
-        sicurezza del sito.
-    </p>
+            <h2>1. Titolare del trattamento</h2>
 
-    <h2>3. Statistiche di utilizzo del sito</h2>
+            <p>Il Titolare del trattamento è:</p>
 
-    <p>
-        La Fondazione utilizza <strong>GoatCounter</strong> per ottenere statistiche
-        aggregate sull’utilizzo del sito, quali il numero di visite e le pagine
-        maggiormente consultate.
-    </p>
+            <p>
+                <strong>Fondazione Boscacci ETS</strong><br>
+                Via Carlo Noè 45<br>
+                Gallarate (VA)<br>
+                C.F. 03800470126<br>
+                P.IVA 04096960127<br>
+                Repertorio RUNTS n. 152268
+            </p>
 
-    <p>
-        GoatCounter è configurato come strumento di analisi orientato alla tutela della
-        privacy e non utilizza cookie o identificatori persistenti sul dispositivo del
-        visitatore per le normali statistiche del sito.
-    </p>
+            <p>
+                Email:
+                <a href="mailto:info@boscacci.it">info@boscacci.it</a>
+            </p>
 
-    <p>
-        Secondo la documentazione del fornitore, GoatCounter non conserva gli indirizzi
-        IP completi degli utenti, il contenuto completo dello User-Agent né identificatori
-        individuali di tracciamento.
-    </p>
+            <h2>2. Dati trattati durante la navigazione</h2>
 
-    <p>
-        Il trattamento delle statistiche è effettuato nell’interesse della Fondazione
-        a comprendere il funzionamento e l’utilizzo del proprio sito e a migliorarne
-        contenuti e servizi.
-    </p>
+            <p>
+                Durante la normale consultazione del sito, i sistemi
+                informatici e i servizi utilizzati per il suo funzionamento
+                possono trattare alcuni dati tecnici necessari
+                alla trasmissione delle informazioni attraverso Internet.
+            </p>
 
-    <h2>4. Contatti tramite email</h2>
+            <p>
+                Tali informazioni possono comprendere, ad esempio,
+                dati relativi alla richiesta effettuata dal browser,
+                alla pagina visitata, alla data e all’ora della richiesta
+                e altre informazioni tecniche necessarie
+                al corretto funzionamento e alla sicurezza del sito.
+            </p>
 
-    <p>
-        Qualora l’utente contatti volontariamente la Fondazione tramite gli indirizzi
-        email pubblicati sul sito, saranno trattati i dati forniti dall’interessato,
-        quali indirizzo email, nome, eventuale organizzazione di appartenenza e contenuto
-        della comunicazione.
-    </p>
+            <h2>3. Statistiche di utilizzo del sito</h2>
 
-    <p>
-        Tali dati vengono utilizzati esclusivamente per rispondere alla richiesta,
-        gestire i rapporti con l’interessato e svolgere le attività istituzionali della
-        Fondazione connesse alla comunicazione ricevuta.
-    </p>
+            <p>
+                La Fondazione utilizza <strong>GoatCounter</strong>
+                per ottenere statistiche aggregate sull’utilizzo del sito,
+                quali il numero di visite e le pagine maggiormente consultate.
+            </p>
 
-    <h2>5. Finalità e basi giuridiche</h2>
+            <p>
+                GoatCounter è configurato come strumento di analisi
+                orientato alla tutela della privacy e non utilizza cookie
+                o identificatori persistenti sul dispositivo del visitatore
+                per le normali statistiche del sito.
+            </p>
 
-    <p>I dati possono essere trattati per:</p>
+            <p>
+                Secondo la documentazione del fornitore, GoatCounter
+                non conserva gli indirizzi IP completi degli utenti,
+                il contenuto completo dello User-Agent né identificatori
+                individuali di tracciamento.
+            </p>
 
-    <ul>
-        <li>garantire il funzionamento tecnico e la sicurezza del sito;</li>
-        <li>rispondere alle richieste inviate dagli utenti;</li>
-        <li>gestire rapporti istituzionali o precontrattuali richiesti dall’interessato;</li>
-        <li>ottenere statistiche aggregate sull’utilizzo del sito;</li>
-        <li>adempiere ad eventuali obblighi previsti dalla legge.</li>
-    </ul>
+            <p>
+                Il trattamento delle statistiche è effettuato nell’interesse
+                della Fondazione a comprendere il funzionamento e l’utilizzo
+                del proprio sito e a migliorarne contenuti e servizi.
+            </p>
 
-    <p>
-        Le basi giuridiche possono essere costituite, a seconda dei casi,
-        dall’esecuzione di misure richieste dall’interessato, dall’adempimento di
-        obblighi legali e dal legittimo interesse del Titolare al funzionamento,
-        alla sicurezza e al miglioramento del proprio sito.
-    </p>
+            <h2>4. Contatti tramite email</h2>
 
-    <h2>6. Modalità di trattamento e conservazione</h2>
+            <p>
+                Qualora l’utente contatti volontariamente la Fondazione
+                tramite gli indirizzi email pubblicati sul sito,
+                saranno trattati i dati forniti dall’interessato,
+                quali indirizzo email, nome, eventuale organizzazione
+                di appartenenza e contenuto della comunicazione.
+            </p>
 
-    <p>
-        I dati personali sono trattati con strumenti informatici e telematici,
-        adottando misure adeguate a tutelarne sicurezza, integrità e riservatezza.
-    </p>
+            <p>
+                Tali dati vengono utilizzati esclusivamente per rispondere
+                alla richiesta, gestire i rapporti con l’interessato
+                e svolgere le attività istituzionali della Fondazione
+                connesse alla comunicazione ricevuta.
+            </p>
 
-    <p>
-        I dati vengono conservati per il tempo strettamente necessario al conseguimento
-        delle finalità per cui sono stati raccolti, salvo eventuali obblighi di legge
-        che richiedano periodi di conservazione più lunghi.
-    </p>
+            <h2>5. Finalità e basi giuridiche</h2>
 
-    <h2>7. Fornitori tecnici</h2>
+            <p>I dati possono essere trattati per:</p>
 
-    <p>
-        Per il funzionamento del sito e dei relativi servizi possono essere utilizzati
-        fornitori tecnici esterni, tra cui servizi di hosting, infrastruttura web e
-        analisi statistica.
-    </p>
+            <ul>
+                <li>
+                    garantire il funzionamento tecnico e la sicurezza del sito;
+                </li>
+                <li>rispondere alle richieste inviate dagli utenti;</li>
+                <li>
+                    gestire rapporti istituzionali o precontrattuali
+                    richiesti dall’interessato;
+                </li>
+                <li>ottenere statistiche aggregate sull’utilizzo del sito;</li>
+                <li>adempiere ad eventuali obblighi previsti dalla legge.</li>
+            </ul>
 
-    <p>
-        In particolare, il sito è pubblicato attraverso infrastruttura GitHub Pages e
-        utilizza GoatCounter per le statistiche di navigazione.
-    </p>
+            <p>
+                Le basi giuridiche possono essere costituite,
+                a seconda dei casi, dall’esecuzione di misure richieste
+                dall’interessato, dall’adempimento di obblighi legali
+                e dal legittimo interesse del Titolare al funzionamento,
+                alla sicurezza e al miglioramento del proprio sito.
+            </p>
 
-    <h2>8. Comunicazione e diffusione dei dati</h2>
+            <h2>6. Modalità di trattamento e conservazione</h2>
 
-    <p>
-        I dati personali non vengono diffusi, salvo quando la pubblicazione sia prevista
-        dall’interessato, necessaria per le attività istituzionali della Fondazione o
-        richiesta dalla legge.
-    </p>
+            <p>
+                I dati personali sono trattati con strumenti informatici
+                e telematici, adottando misure adeguate a tutelarne
+                sicurezza, integrità e riservatezza.
+            </p>
 
-    <p>
-        I dati possono essere comunicati a soggetti che forniscono servizi tecnici alla
-        Fondazione esclusivamente quando necessario per il funzionamento del sito o per
-        l’erogazione dei servizi richiesti.
-    </p>
+            <p>
+                I dati vengono conservati per il tempo strettamente
+                necessario al conseguimento delle finalità per cui
+                sono stati raccolti, salvo eventuali obblighi di legge
+                che richiedano periodi di conservazione più lunghi.
+            </p>
 
-    <h2>9. Diritti dell’interessato</h2>
+            <h2>7. Fornitori tecnici</h2>
 
-    <p>
-        Nei casi previsti dal GDPR, l’interessato può esercitare i diritti di accesso,
-        rettifica, cancellazione, limitazione del trattamento, opposizione e portabilità
-        dei dati.
-    </p>
+            <p>
+                Per il funzionamento del sito e dei relativi servizi
+                possono essere utilizzati fornitori tecnici esterni,
+                tra cui servizi di hosting, infrastruttura web
+                e analisi statistica.
+            </p>
 
-    <p>
-        Le richieste possono essere inviate a:
-        <a href="mailto:info@boscacci.it">info@boscacci.it</a>.
-    </p>
+            <p>
+                In particolare, il sito è pubblicato attraverso
+                infrastruttura GitHub Pages e utilizza GoatCounter
+                per le statistiche di navigazione.
+            </p>
 
-    <p>
-        L’interessato ha inoltre il diritto di proporre reclamo al
-        Garante per la protezione dei dati personali.
-    </p>
+            <h2>8. Comunicazione e diffusione dei dati</h2>
 
-    <h2>10. Collegamenti verso siti esterni</h2>
+            <p>
+                I dati personali non vengono diffusi, salvo quando
+                la pubblicazione sia prevista dall’interessato,
+                necessaria per le attività istituzionali della Fondazione
+                o richiesta dalla legge.
+            </p>
 
-    <p>
-        Il sito può contenere collegamenti a siti, piattaforme o servizi di soggetti
-        terzi. La Fondazione non controlla le modalità di trattamento dei dati effettuate
-        da tali soggetti, ai quali si applicano le rispettive informative privacy.
-    </p>
+            <p>
+                I dati possono essere comunicati a soggetti che forniscono
+                servizi tecnici alla Fondazione esclusivamente quando
+                necessario per il funzionamento del sito
+                o per l’erogazione dei servizi richiesti.
+            </p>
 
-    <h2>11. Aggiornamenti</h2>
+            <h2>9. Diritti dell’interessato</h2>
 
-    <p>
-        La presente informativa potrà essere aggiornata in caso di modifiche normative,
-        tecniche o organizzative relative al sito e ai servizi utilizzati.
-    </p>
+            <p>
+                Nei casi previsti dal GDPR, l’interessato può esercitare
+                i diritti di accesso, rettifica, cancellazione,
+                limitazione del trattamento, opposizione
+                e portabilità dei dati.
+            </p>
 
-    <div class="privacy-box">
-        <strong>Ultimo aggiornamento:</strong> 1 ottobre 2026.
-    </div>
+            <p>
+                Le richieste possono essere inviate a:
+                <a href="mailto:info@boscacci.it">info@boscacci.it</a>.
+            </p>
 
-</main>
+            <p>
+                L’interessato ha inoltre il diritto di proporre reclamo
+                al Garante per la protezione dei dati personali.
+            </p>
+
+            <h2>10. Collegamenti verso siti esterni</h2>
+
+            <p>
+                Il sito può contenere collegamenti a siti, piattaforme
+                o servizi di soggetti terzi. La Fondazione non controlla
+                le modalità di trattamento dei dati effettuate da tali
+                soggetti, ai quali si applicano le rispettive
+                informative privacy.
+            </p>
+
+            <h2>11. Aggiornamenti</h2>
+
+            <p>
+                La presente informativa potrà essere aggiornata
+                in caso di modifiche normative, tecniche o organizzative
+                relative al sito e ai servizi utilizzati.
+            </p>
+
+            <div class="legal-box">
+                <strong>Ultimo aggiornamento:</strong> 1 ottobre 2026.
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+
+            <div>
+                <h2>Fondazione Boscacci ETS</h2>
+                <p>
+                    Sede legale: Via Carlo Noè 45<br>
+                    Gallarate (VA)<br>
+                    C.F. 03800470126<br>
+                    P.IVA 04096960127<br>
+                    Repertorio RUNTS: 152268
+                </p>
+                <p>
+                    R.O.C. n. 44335<br>
+                </p>
+            </div>
+
+            <div>
+                <h2>Editoria</h2>
+                <p>
+                    Editore di DYNAMES<br>
+                    Governance di Forze e Sistemi
+                </p>
+                <p>
+                    Reg. Trib. di Busto Arsizio<br>
+                    N. 01/2026 del 25 febbraio 2026
+                </p>
+            </div>
+
+            <div>
+                <h2>Contatti</h2>
+                <p>
+                    Informazioni<br>
+                    <a href="mailto:info@boscacci.it">info@boscacci.it</a>
+                </p>
+                <p>
+                    Ufficio stampa<br>
+                    <a href="mailto:e.panico@boscacci.it">
+                        e.panico@boscacci.it
+                    </a>
+                </p>
+            </div>
+
+            <div>
+                <h2>Seguici</h2>
+                <p>
+                    <a href="https://www.linkedin.com/company/fondazione-boscacci/"
+                       target="_blank" rel="noopener noreferrer">
+                        LinkedIn ↗
+                    </a>
+                </p>
+                <p>
+                    <a href="privacy.html" aria-current="page">
+                        Privacy Policy
+                    </a><br>
+                    <a href="cookie-policy.html">Cookie Policy</a>
+                </p>
+                <img src="assets/logo_bianco.svg"
+                     alt="Fondazione Boscacci ETS"
+                     class="footer-logo"
+                     loading="lazy" decoding="async">
+            </div>
+
+        </div>
+
+        <div class="container footer-bottom">
+            © <span data-year>2026</span>
+            Fondazione Boscacci ETS. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <script>
+        "use strict";
+
+        document.documentElement.classList.add("js");
+
+        const menuToggle = document.querySelector(".menu-toggle");
+        const mainNav = document.querySelector("#main-nav");
+
+        if (menuToggle && mainNav) {
+            menuToggle.hidden = false;
+
+            const closeMenu = () => {
+                mainNav.classList.remove("open");
+                menuToggle.setAttribute("aria-expanded", "false");
+            };
+
+            menuToggle.addEventListener("click", () => {
+                const open =
+                    menuToggle.getAttribute("aria-expanded") !== "true";
+
+                menuToggle.setAttribute("aria-expanded", String(open));
+                mainNav.classList.toggle("open", open);
+            });
+
+            document.addEventListener("keydown", event => {
+                if (
+                    event.key === "Escape" &&
+                    mainNav.classList.contains("open")
+                ) {
+                    closeMenu();
+                    menuToggle.focus();
+                }
+            });
+
+            mainNav.addEventListener("click", event => {
+                if (event.target.closest("a")) closeMenu();
+            });
+        }
+
+        document.querySelectorAll("[data-year]").forEach(element => {
+            element.textContent = String(new Date().getFullYear());
+        });
+    </script>
+
+    <script data-goatcounter="https://fabioboscacci.goatcounter.com/count"
+            async src="https://gc.zgo.at/count.js"></script>
 
 </body>
 </html>
